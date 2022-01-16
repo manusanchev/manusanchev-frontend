@@ -25,3 +25,4 @@ jobs:
         cache: 'npm'
     - run: yarn install
     - run: yarn build
+    - run: pm2 reload frontend
