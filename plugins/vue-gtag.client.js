@@ -1,5 +1,5 @@
 import { defineNuxtPlugin } from '#app'
-import VueGtag from 'vue-gtag'
+import VueGtag from 'vue-gtag-next'
 
 export default defineNuxtPlugin((nuxtApp) => {
     const router = nuxtApp.vueApp.$nuxt.$router
