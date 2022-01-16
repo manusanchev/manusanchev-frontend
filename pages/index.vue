@@ -44,7 +44,7 @@
 import { defineComponent } from 'vue'
 export default defineComponent({
   mounted() {
-    this.$gtag.pageview("/")
+    // this.$gtag.pageview("/")
   }
 })
 </script>
