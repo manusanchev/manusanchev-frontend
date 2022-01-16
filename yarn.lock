@@ -503,6 +503,14 @@
     webpack-virtual-modules "^0.4.3"
     webpackbar "^5.0.2"
 
+"@nuxtjs/router@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/router/-/router-1.7.0.tgz#631b85c1e853580d558aa49572da2d0474e0c832"
+  integrity sha512-7OXEYqE/7uM/7Bx1Ab8udyFgBux9h5IisJqNLMNa5hxt9oBtF43VXHEnnQV4FtYpKyg8ysTFDT9FJlC+tGqpQg==
+  dependencies:
+    consola "^2.15.3"
+    defu "^5.0.0"
+
 "@polka/url@^1.0.0-next.20":
   version "1.0.0-next.21"
   resolved "https://registry.npmjs.org/@polka/url/-/url-1.0.0-next.21.tgz"
@@ -5292,6 +5300,11 @@ vue-loader@^17.0.0:
     chalk "^4.1.0"
     hash-sum "^2.0.0"
     loader-utils "^2.0.0"
+
+vue-router@^3.5.3:
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.5.3.tgz#041048053e336829d05dafacf6a8fb669a2e7999"
+  integrity sha512-FUlILrW3DGitS2h+Xaw8aRNvGTwtuaxrRkNSHWTizOfLUie7wuYwezeZ50iflRn8YPV5kxmU2LQuu3nM/b3Zsg==
 
 vue-router@^4.0.12:
   version "4.0.12"

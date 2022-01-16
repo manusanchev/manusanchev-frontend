@@ -42,7 +42,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-export default defineComponent({})
+export default defineComponent({
+  mounted() {
+    this.$gtag.pageview("/");
+  },
+})
 </script>
 
 <style scoped>

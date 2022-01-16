@@ -1,15 +1,11 @@
 import { defineNuxtPlugin } from '#app'
-import VueGtag from 'vue-gtag-next'
+import VueGtag from 'vue-gtag'
 
 export default defineNuxtPlugin((nuxtApp) => {
-    const router = nuxtApp.vueApp.$nuxt.$router;
-    nuxtApp.vueApp.use(
-        VueGtag,
-        {
-            config: {
-                id: 'UA-186191303-1'
-            },
-        },
-        router
-    );
+    const router = nuxtApp.vueApp.$nuxt.$router
+    nuxtApp.vueApp.use(VueGtag, {
+        property: {
+            id: 'UA-186191303-1'
+        }
+    }, router)
 })

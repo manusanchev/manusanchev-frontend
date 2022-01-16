@@ -6,6 +6,7 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
+    "@nuxtjs/router": "^1.7.0",
     "autoprefixer": "^10.4.2",
     "nuxt3": "latest",
     "postcss": "^8.4.5",
@@ -13,6 +14,7 @@
     "vue-gtag-next": "^1.14.0"
   },
   "dependencies": {
-    "vue-gtag": "^2.0.1"
+    "vue-gtag": "^2.0.1",
+    "vue-router": "^3.5.3"
   }
 }
