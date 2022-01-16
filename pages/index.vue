@@ -1,6 +1,6 @@
 <template>
     <div>
-Bienvenidos a mi web
+        Bienvenidos a mi web
     </div>
 </template>
 
