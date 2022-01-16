@@ -1,6 +1,6 @@
 <template>
   <div class="bg-gray-800 min-h-screen flex justify-center items-center">
-    <h1 class="text-white animate-bounce text-6xl md:text-7xl lg:text-9xl underline decoration-sky-500">En construcción</h1>
+    <h1 class="text-white animate-bounce text-5xl md:text-7xl lg:text-9xl underline decoration-sky-500">En construcción</h1>
   </div>
 </template>
 
