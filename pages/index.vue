@@ -73,7 +73,7 @@ export default defineComponent({
   }
 }
 .ms-home-subtitle {
-  @apply text-3xl text-gray-200;
+  @apply text-3xl text-gray-300;
 }
 @screen md {
   .ms-home-subtitle {
@@ -97,7 +97,7 @@ export default defineComponent({
 
 
 .ms-home-info {
-  @apply text-sm font-light italic text-gray-500 text-center;
+  @apply text-sm font-light italic text-gray-300 text-center;
 }
 
 @screen md {
