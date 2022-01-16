@@ -10,6 +10,7 @@ export default defineNuxtConfig({
         title: 'Frontend Developer - Manuel Sanchez',
         meta: [
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+            { name: 'google-site-verification', content: 'dPbYI3pAlXBeum68Tb_zxLK_kOmWy5BhkG5HlZvzXGc' },
             {
                 hid: 'description',
                 name: 'description',
