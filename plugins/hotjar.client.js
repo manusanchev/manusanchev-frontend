@@ -1,5 +1,4 @@
 import { defineNuxtPlugin } from '#app'
-import VueGtag, {trackRouter} from 'vue-gtag-next'
 
 export default defineNuxtPlugin((nuxtApp) => {
 return (function(h,o,t,j,a,r){

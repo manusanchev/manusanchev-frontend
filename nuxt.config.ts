@@ -21,6 +21,7 @@ export default defineNuxtConfig({
     },
     css: [
         '@/assets/main.css',
+        'animate.css/animate.min.css'
     ],
     build: {
         postcss: {

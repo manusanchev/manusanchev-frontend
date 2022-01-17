@@ -1,5 +1,5 @@
 <template>
-  <div class="ms-home">
+  <div class="ms-home  animate__animated animate__backInDown">
     <header class="ms-home-header">
       <h1 class="ms-home-title">Manuel Sánchez</h1>
       <h2 class="ms-home-subtitle">Desarrollador web</h2>
@@ -36,7 +36,7 @@ export default defineComponent({
 
 <style scoped>
 .ms-home {
-  @apply min-h-screen flex flex-col justify-around items-center;
+  @apply h-screen flex flex-col justify-around items-center;
 }
 
 .ms-home-header {
@@ -72,7 +72,7 @@ export default defineComponent({
 }
 
 .ms-home-links {
-  @apply text-gray-300 flex justify-around mt-4;
+  @apply text-gray-300 flex justify-around mt-8;
 }
 @screen md {
   .ms-home-links {
