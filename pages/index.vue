@@ -11,7 +11,7 @@
           <githubIcon class="ms-home-icon" />
         </a>
         <a href="https://mamby.com/u/manueh/posts" target="_blank" rel="noopener">
-          <blogIcon class="ms-home-icon animate-bounce" />
+          <blogIcon class="ms-home-icon ms-home-icon-bounce" />
         </a>
       </div>
     </header>
@@ -103,6 +103,9 @@ export default defineComponent({
   }
 }
 
+.ms-home-icon-bounce {
+@apply animate-bounce;
+}
 @screen md {
   .ms-home-icon {
     @apply h-14 w-14;
