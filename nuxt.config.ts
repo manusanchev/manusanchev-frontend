@@ -17,7 +17,8 @@ export default defineNuxtConfig({
                 content: 'Desarrollador web con experiencia en aplicaciones web zero downtime, aplicando clean architecture y buenas practicas con SOLID'
             }
         ],
-        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+        script: [{src: '/assets/hotjar.js'}],
     },
     css: [
         '@/assets/main.css',
