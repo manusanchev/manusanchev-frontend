@@ -4,8 +4,8 @@
       <h1 class="ms-home-title">Manuel Sánchez</h1>
       <h2 class="ms-home-subtitle">Desarrollador web</h2>
       <div class="ms-home-links">
-        <NuxtLink to="/">
-          <linkedInIcon class="ms-home-icon" />
+        <NuxtLink to="/writings">
+          <WritingsIcon class="ms-home-icon" />
         </NuxtLink>
         <a href="https://github.com/manusanchev" target="_blank" rel="noopener">
           <githubIcon class="ms-home-icon" />
@@ -28,15 +28,16 @@ import { defineComponent } from 'vue'
 import githubIcon from "~/components/icons/GithubIcon.vue";
 import linkedInIcon from "~/components/icons/LinkedInIcon.vue";
 import blogIcon from "~/components/icons/BlogIcon.vue";
+import WritingsIcon from "~/components/icons/WritingsIcon.vue";
 
 export default defineComponent({
-  components: {githubIcon, linkedInIcon, blogIcon}
+  components: {githubIcon, linkedInIcon, blogIcon, WritingsIcon}
 })
 </script>
 
 <style scoped>
 .ms-home {
-  @apply h-screen flex flex-col justify-around items-center;
+  @apply min-h-screen flex flex-col justify-around items-center;
 }
 
 .ms-home-header {

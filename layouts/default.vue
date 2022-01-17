@@ -9,7 +9,7 @@
 
 <style scoped>
 .ms-default {
-  @apply bg-black select-none;
+  @apply min-h-screen bg-black select-none;
 }
 
 </style>
