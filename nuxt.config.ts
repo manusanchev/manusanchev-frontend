@@ -18,7 +18,6 @@ export default defineNuxtConfig({
             }
         ],
         link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-        script: [{src: '/assets/hotjar.js'}],
     },
     css: [
         '@/assets/main.css',
