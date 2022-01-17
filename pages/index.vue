@@ -1,7 +1,7 @@
 <template>
-  <div class="ms-home  animate__animated animate__backInDown">
-    <header class="ms-home-header">
-      <h1 class="ms-home-title">Manuel Sánchez</h1>
+  <div class="ms-home  ">
+    <header class="ms-home-header ">
+      <h1 class="ms-home-title animate__animated animate__fadeInDown">Manuel Sánchez</h1>
       <h2 class="ms-home-subtitle">Desarrollador web</h2>
       <div class="ms-home-links">
         <NuxtLink to="/">
