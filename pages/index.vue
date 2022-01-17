@@ -44,7 +44,8 @@ export default defineComponent({
 }
 
 .ms-home-title {
-  @apply text-4xl font-bold text-white;
+  @apply font-bold text-white;
+  font-size: 2.5rem;
 }
 
 @screen md {
