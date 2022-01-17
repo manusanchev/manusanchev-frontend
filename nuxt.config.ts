@@ -26,5 +26,6 @@ export default defineNuxtConfig({
         postcss: {
             postcssOptions: require('./postcss.config.ts'),
         },
-    }
+    },
+    components: false,
 })
