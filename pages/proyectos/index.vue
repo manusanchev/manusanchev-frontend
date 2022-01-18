@@ -8,7 +8,9 @@
     </p><p>Realmente el hecho de construir sus productos o startups en publico, les estaba dando cierta visibilidad, trafico que posteriormente acababa en sus aplicaciones y que indirecta o directamente se convertían en posibles compradores. Mataba de raiz la creencia de que las ideas valen oro, estaban exponiendo sus ideas, su forma de hacer las cosas, su metodología, a cambio de generar trafico y ganar dinero.</p><p>
     </p><p>Aunque no es oro todo lo que reluce, realmente, hay desventajas en todo esto, y es que cada cosa que esta gente construya en publico, llevará su imagen como señal distintiva en todos ellos, por lo que cualquier cagada en publico repercutirá directamente en todos aquellos productos que han desarrollado en publico. Estas realmente, siendo condicionado por mostrar una imagen publica de ti lo mas aceptable posible para los demás.</p><p>
     </p><p>En definitiva, como todo en esta vida, hay ventajas y desventajas, quizás me haya saltado alguna que otra ventaja o desventaja, de momento son las que he podido apreciar. Al final de todo, solo estoy escribiendo este articulo para decirte que en este web voy a subir todos los proyectos que haga, acompañado de una explicación del proceso, tecnologias que he usado y un sin fin de historias mas que no vienen hoy al caso. Creare proyectos o startups, un poco imitando el estilo de build in public pero mas discreto, porque simplemente no me apetece dar expectaculo a cambio de que me des un simple click en una de mis aplicaciones.</p><p>
-    </p><p>Un saludo, se despide Manuel. Feliz dia.</p><p>
+    </p><p>Un saludo, se despide <NuxtLink to="/">
+      Manuel
+    </NuxtLink>. Feliz dia.</p><p>
     </p><p>
     </p><p>
     </p><p>
