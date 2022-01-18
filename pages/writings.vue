@@ -14,7 +14,7 @@ export default defineComponent({
       {
         hid: 'description',
         name: 'description',
-        content: '"Si estas aprendiendo a programar o ya tienes experiencia senior, te invito a leer lo que escribo, quizas aprendamos algo nuevo juntos. ✅ Hablo sobre Frontend ✅"'
+        content: '"Si estas aprendiendo a programar o ya tienes experiencia senior, te invito a leer lo que escribo, quizas aprendamos algo nuevo juntos. ✅ Hablo sobre Tecnologia ✅"'
       },
     ],
   }
