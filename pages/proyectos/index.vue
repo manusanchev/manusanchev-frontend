@@ -34,7 +34,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
 .ms-writings {
   @apply mx-4 text-white;
 }
@@ -66,6 +65,7 @@ p {
   }
 
 }
+
 a {
   @apply font-semibold bg-indigo-800 rounded px-2;
   font-family: Impact, sans-serif;
