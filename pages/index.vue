@@ -1,10 +1,10 @@
 <template>
   <div class="ms-home">
-    <header class="ms-home-header  animate__animated animate__fadeInDown">
+    <header class="ms-home-header animate__animated animate__fadeInDown">
       <h1 class="ms-home-title">Manuel Sánchez</h1>
       <h2 class="ms-home-subtitle">Desarrollador web</h2>
       <div class="ms-home-links">
-        <NuxtLink to="/writings">
+        <NuxtLink to="/proyectos">
           <WritingsIcon class="ms-home-icon" />
         </NuxtLink>
         <a href="https://github.com/manusanchev" target="_blank" rel="noopener">
