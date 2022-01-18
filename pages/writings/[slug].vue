@@ -1,6 +1,6 @@
 <template>
   <div class="ms-writings">
-   En construcción
+ssssssss
   </div>
 </template>
 
