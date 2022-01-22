@@ -1,28 +1,26 @@
-# This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
-name: Node.js CI
+name: Node.js CI/CD
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
-  build:
-
-    runs-on: self-hosted
-
-    strategy:
-      matrix:
-        node-version: [16.x]
-
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: yarn install
-    - run: yarn build
-    - run: pm2 reload frontend
+      - name: Deploying to Digitalocean droplet
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            mkdir -p frontend
+            cd frontend
+            git pull
+            yarn prune
+            yarn install
+            yarn build
+            pm2 reload all
