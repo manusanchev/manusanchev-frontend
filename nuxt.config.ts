@@ -29,4 +29,6 @@ export default defineNuxtConfig({
         },
     },
     components: false,
+    target: 'server',
+    ssr: true,
 })
