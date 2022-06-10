@@ -1,0 +1,71 @@
+{
+  "vite/modulepreload-polyfill": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "node_modules/@vue/shared/dist/shared.esm-bundler.js": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "src/assets/logo.png": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "src/components/HelloWorld.vue?vue&type=style&index=0&scoped=true&lang.css": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "plugin-vue:export-helper": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "src/components/HelloWorld.vue": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "src/App.vue?vue&type=style&index=0&lang.css": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "src/App.vue": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "node_modules/vue-router/dist/vue-router.esm-bundler.js": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "node_modules/vite-ssr/utils/deserialize-state.js": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "node_modules/vite-ssr/utils/response.js": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "node_modules/vite-ssr/core/entry-client.js": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "node_modules/vite-ssr/utils/route.js": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "node_modules/vite-ssr/vue/utils.js": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "node_modules/vite-ssr/vue/components.js": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "node_modules/vite-ssr/vue/entry-client.js": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "src/pages/Index.vue": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "routes/routes.ts": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "src/main.ts": [
+    "/assets/logo.03d6d6da.png"
+  ],
+  "index.html": [
+    "/assets/logo.03d6d6da.png"
+  ]
+}
