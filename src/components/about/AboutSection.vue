@@ -1,12 +1,15 @@
 <template>
   <section>
-    <HeaderSection >
+    <SectionHeader>
       <template #title>Sobre mi </template>
       <template #subtitle> Un poco de mi historia </template>
-    </HeaderSection>
+    </SectionHeader>
+    <AboutTimeline :data="aboutMeData" />
   </section>
 </template>
 
 <script setup lang="ts">
-import HeaderSection from "@components/shared/HeaderSection.vue";
+import SectionHeader from "@components/shared/SectionHeader.vue";
+import AboutTimeline from "@components/about/AboutTimeline.vue";
+import { AboutMeData as aboutMeData } from "@data/AboutMe";
 </script>

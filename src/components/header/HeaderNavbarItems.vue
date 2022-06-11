@@ -5,7 +5,8 @@
     >
       <li
         class="text-4xl font-extrabold md:text-lg lg:text-xl md:font-bold md:hover:border-b-2 md:hover:border-[#4D9BFB]"
-        v-for="item in navbarItems"
+        v-for="(item, index) in navbarItems"
+        :key="index"
         @click="$emit('closeMenuFullScreen')"
       >
         <a :href="`#${item.text.toLowerCase().replace(' ', '-')}`">
