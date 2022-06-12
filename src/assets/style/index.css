@@ -13,7 +13,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  @apply w-2;
 }
 
 ::-webkit-scrollbar-track {
@@ -21,7 +21,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-400;
+  @apply bg-slate-400 rounded;
 }
 
 ::-webkit-scrollbar-thumb:hover {

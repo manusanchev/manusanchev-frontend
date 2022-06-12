@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 import { ExperienceItem } from "@data/ExperienceData";
-import RightArrow from "@components/icons/RightArrow.vue";
+import RightArrow from "@components/icons/ArrowRight.vue";
 
 defineProps<{
   item: ExperienceItem;
