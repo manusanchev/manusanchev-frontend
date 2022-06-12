@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import viteSSR from 'vite-ssr/plugin'
 import pathLib from "path";
 const tsConfig = require("./tsconfig.json");
 
@@ -18,12 +17,10 @@ const alias = Object.entries(tsConfig.compilerOptions.paths)
     }, {});
 
 export default defineConfig({
+  preview: {
+    port: 3000
+  },
   plugins: [
-    viteSSR({
-      build: {
-        keepIndexHtml: true,
-      },
-    }),
     vue(),
   ],
   envPrefix: 'APP_', // change to name app

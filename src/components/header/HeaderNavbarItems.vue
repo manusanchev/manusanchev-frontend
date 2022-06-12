@@ -9,7 +9,7 @@
         :key="index"
         @click="$emit('closeMenuFullScreen')"
       >
-        <a :href="`#${item.text.toLowerCase().replace(' ', '-')}`">
+        <a href="#" @click="goToSection(item)">
           {{ item.text }}
         </a>
       </li>
@@ -18,5 +18,9 @@
 </template>
 
 <script setup lang="ts">
-import { navbarItemsData } from "@data/NavbarItemsData";
+import { navbarItem, navbarItemsData } from "@data/NavbarItemsData";
+import vueScroll from "vue-scrollto";
+function goToSection(item: navbarItem) {
+  vueScroll.scrollTo(`#${item.id}`, 100, { offset: -100, easing: "ease-in" });
+}
 </script>
