@@ -1,5 +1,6 @@
 <template>
   <Header />
+
   <div class="py-32 w-11/12 mx-auto md:w-full xl:max-w-[120rem]">
     <HeroSection class="md:mt-20" />
     <AboutSection id="sobre-mi" />
