@@ -3,11 +3,11 @@
     <div
       ref="header"
       :class="classesScroll"
-      class="fixed py-5 bg-slate-900 w-full md:py-[1.5rem] flex items-center justify-between px-4 lg:px-24 xl:px-[10rem] z-10"
+      class="fixed z-10 flex w-full items-center justify-between bg-slate-900 py-5 px-4 md:py-[1.5rem] lg:px-24 xl:px-[10rem]"
     >
       <HeaderLogo />
       <BarsIcon
-        class="fill-current text-white w-[2.313rem] h-[2.313rem] md:hidden"
+        class="h-[2.313rem] w-[2.313rem] fill-current text-white md:hidden"
         @click="toggleMenu = !toggleMenu"
       />
       <HeaderNavbarItems class="hidden md:flex" />
@@ -15,7 +15,7 @@
     <Transition name="header-menu">
       <HeaderMenuFullScreen
         v-if="toggleMenu"
-        class="md:hidden z-20"
+        class="z-20 md:hidden"
         @close-menu-fullScreen="toggleMenu = false"
       />
     </Transition>

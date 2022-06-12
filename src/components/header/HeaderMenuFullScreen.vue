@@ -1,7 +1,7 @@
 <template>
-  <div class="fixed w-full h-screen bg-[#253246] overflow-hidden">
+  <div class="fixed h-screen w-full overflow-hidden bg-[#253246]">
     <CloseIcon
-      class="fill-current text-white h-10 w-10 ml-auto mr-5 mt-5"
+      class="ml-auto mr-5 mt-5 h-10 w-10 fill-current text-white"
       @click="$emit('closeMenuFullScreen')"
     />
     <HeaderNavbarItems @close-menu-fullScreen="$emit('closeMenuFullScreen')" />

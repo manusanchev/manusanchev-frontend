@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-slate-900 relative;
+  @apply relative bg-slate-900;
 }
 
 html,

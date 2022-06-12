@@ -1,7 +1,7 @@
 <template>
   <a
     href="https://manusanchev.com"
-    class="font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-[#4EA1ED] to-[#FEFDFF] xl:text-3xl"
+    class="bg-gradient-to-r from-[#4EA1ED] to-[#FEFDFF] bg-clip-text text-2xl font-extrabold text-transparent xl:text-3xl"
   >
     Manuel Sánchez
   </a>

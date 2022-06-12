@@ -1,12 +1,12 @@
 <template>
   <div
-    class="md:w-[20rem] md:h-[20rem] lg:w-[30rem] lg:h-[30rem] xl:w-[35rem] xl:h-[35rem] rounded-full hero_animation--green relative animate-spin--custom"
+    class="hero_animation--green animate-spin--custom relative rounded-full md:h-[20rem] md:w-[20rem] lg:h-[30rem] lg:w-[30rem] xl:h-[35rem] xl:w-[35rem]"
   >
     <div
-      class="md:w-[12rem] md:h-[12rem] lg:w-[20rem] lg:h-[20rem] xl:w-[25rem] xl:h-[25rem] rounded-full hero_animation--blue"
+      class="hero_animation--blue rounded-full md:h-[12rem] md:w-[12rem] lg:h-[20rem] lg:w-[20rem] xl:h-[25rem] xl:w-[25rem]"
     />
     <div
-      class="md:w-[15rem] md:h-[15rem] lg:w-[20rem] lg:h-[25rem] xl:w-[25rem] xl:h-[25rem] rounded-full hero_animation--pink"
+      class="hero_animation--pink rounded-full md:h-[15rem] md:w-[15rem] lg:h-[25rem] lg:w-[20rem] xl:h-[25rem] xl:w-[25rem]"
     />
   </div>
 </template>
@@ -16,11 +16,7 @@
 <style scoped>
 .hero_animation--blue {
   @apply absolute right-4 top-44;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #2095d7 0%,
-    rgba(133, 121, 206, 0) 100%
-  );
+  background: radial-gradient(50% 50% at 50% 50%, #2095d7 0%, rgba(133, 121, 206, 0) 100%);
 }
 
 .hero_animation--green {
@@ -33,11 +29,7 @@
 
 .hero_animation--pink {
   @apply absolute right-0 top-0;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #ce79a2 0%,
-    rgba(206, 121, 167, 0) 100%
-  );
+  background: radial-gradient(50% 50% at 50% 50%, #ce79a2 0%, rgba(206, 121, 167, 0) 100%);
 }
 
 .animate-spin--custom {

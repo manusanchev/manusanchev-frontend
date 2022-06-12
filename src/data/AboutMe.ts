@@ -4,7 +4,10 @@ export interface AboutMe {
 }
 
 export const AboutMeData: AboutMe[] = [
-  { year: "1998", text: "Nací un 31 de julio de 1998 en Sevilla en una noche con aire veraniego" },
+  {
+    year: "1998",
+    text: "Nací un 31 de julio de 1998 en Sevilla en una noche con aire veraniego",
+  },
   {
     year: "2006",
     text: "Me compraron mi primer ordenador con windows XP, en este año comprendí el potencial de internet y todo lo que se podía hacer",

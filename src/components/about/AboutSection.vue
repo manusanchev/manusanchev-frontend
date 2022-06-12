@@ -4,7 +4,7 @@
       <template #title>Sobre mi </template>
       <template #subtitle> Un poco de mi historia </template>
     </SectionHeader>
-    <div class="flex flex-start md:block mt-16 md:mt-40">
+    <div class="flex-start mt-16 flex md:mt-40 md:block">
       <AboutTimeline :data="aboutMeData" />
     </div>
     <AboutMessage class="mt-12 md:mt-24" />

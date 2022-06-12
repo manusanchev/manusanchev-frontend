@@ -1,4 +1,4 @@
-export const NavbarItemsData: { text: string}[] = [
+export const NavbarItemsData: { text: string }[] = [
   {
     text: "Sobre mi",
   },

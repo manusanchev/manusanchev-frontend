@@ -1,12 +1,10 @@
 <template>
-  <section class="grid grid-cols-1 md:grid-cols-2 items-center justify-items-center">
+  <section class="grid grid-cols-1 items-center justify-items-center md:grid-cols-2">
     <HeroAnimation class="hidden md:flex" />
     <div class="mx-auto text-center md:text-left">
       <HeroTitle />
       <HeroSubtitle />
-      <Button class="mt-12" theme="3dimension" @click="handleClick">
-        Contacto
-      </Button>
+      <Button class="mt-12" theme="3dimension" @click="handleClick"> Contacto </Button>
     </div>
   </section>
 </template>
@@ -19,6 +17,8 @@ import HeroSubtitle from "@components/hero/HeroSubtitle.vue";
 
 function handleClick() {
   const contactSection = document.getElementById("#contacto");
-  window.scrollTo({ top: contactSection?.offsetTop });
+  window.scrollTo({
+    top: contactSection?.offsetTop,
+  });
 }
 </script>

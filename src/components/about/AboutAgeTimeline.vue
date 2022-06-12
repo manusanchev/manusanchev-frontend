@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <div
-      class="w-16 h-16 text-white flex items-center justify-center border rounded-full border-[#6BB8FF] text-xl md:w-[5rem] md:h-[5rem] md:text-2xl lg:w-24 lg:h-24 lg:text-3xl"
+      class="flex h-16 w-16 items-center justify-center rounded-full border border-[#6BB8FF] text-xl text-white md:h-[5rem] md:w-[5rem] md:text-2xl lg:h-24 lg:w-24 lg:text-3xl"
     >
       {{ year }}
     </div>
@@ -10,8 +10,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from "vue";
-
 defineProps<{
   year: string;
 }>();

@@ -1,10 +1,10 @@
 <template>
   <nav>
     <ul
-      class="text-white flex flex-col gap-11 mt-[35px] ml-[25px] md:flex-row md:items-center md:gap-6 md:mt-0 md:ml-0"
+      class="mt-[35px] ml-[25px] flex flex-col gap-11 text-white md:mt-0 md:ml-0 md:flex-row md:items-center md:gap-6"
     >
       <li
-        class="text-4xl font-extrabold md:text-lg lg:text-xl md:font-bold md:hover:border-b-2 md:hover:border-[#4D9BFB]"
+        class="text-4xl font-extrabold md:text-lg md:font-bold md:hover:border-b-2 md:hover:border-[#4D9BFB] lg:text-xl"
         v-for="(item, index) in navbarItems"
         :key="index"
         @click="$emit('closeMenuFullScreen')"
