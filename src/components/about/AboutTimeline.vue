@@ -11,13 +11,13 @@
 </template>
 
 <script setup lang="ts">
-import { AboutMe } from "@data/AboutMe";
+import { AboutMeItem } from "@data/AboutMeData";
 import AboutTimelineSeparator from "@components/about/AboutTimelineSeparator.vue";
 import AboutAgeTimeline from "@components/about/AboutAgeTimeline.vue";
 import AboutTextTimeline from "@components/about/AboutTextTimeline.vue";
 
 defineProps<{
-  data: AboutMe[];
+  data: AboutMeItem[];
 }>();
 
 function isEven(index: number): boolean {

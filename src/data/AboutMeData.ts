@@ -1,9 +1,9 @@
-export interface AboutMe {
+export interface AboutMeItem {
   year: string;
   text: string;
 }
 
-export const AboutMeData: AboutMe[] = [
+export const aboutMeData: AboutMeItem[] = [
   {
     year: "1998",
     text: "Nací un 31 de julio de 1998 en Sevilla en una noche con aire veraniego",

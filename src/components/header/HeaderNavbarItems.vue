@@ -5,7 +5,7 @@
     >
       <li
         class="text-4xl font-extrabold md:text-lg md:font-bold md:hover:border-b-2 md:hover:border-[#4D9BFB] lg:text-xl"
-        v-for="(item, index) in navbarItems"
+        v-for="(item, index) in navbarItemsData"
         :key="index"
         @click="$emit('closeMenuFullScreen')"
       >
@@ -18,5 +18,5 @@
 </template>
 
 <script setup lang="ts">
-import { NavbarItemsData as navbarItems } from "@data/NavbarItemsData";
+import { navbarItemsData } from "@data/NavbarItemsData";
 </script>
