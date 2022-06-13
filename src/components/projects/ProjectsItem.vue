@@ -18,7 +18,7 @@ import { IProjectSectionItem } from "@src/types";
 import ArrowDown from "@components/icons/ArrowDown.vue";
 import { ref } from "vue";
 
-const expand = ref(false);
+const expand = ref<boolean>(false);
 
 defineProps<{
   item: IProjectSectionItem;

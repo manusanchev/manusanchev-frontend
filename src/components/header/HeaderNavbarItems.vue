@@ -9,7 +9,7 @@
         :key="index"
         @click="$emit('closeMenuFullScreen')"
       >
-        <a href="#" @click="goToSection(item)">
+        <a href="#" @click="useScrollToSection(item)">
           {{ item.text }}
         </a>
       </li>
@@ -18,13 +18,10 @@
 </template>
 
 <script setup lang="ts">
-import vueScroll from "vue-scrollto";
-import { inject } from "vue";
 import { INavbarHeaderSectionItem } from "@src/types";
+import useScrollToSection from "@src/composables/ScrollToSection";
 
-const navbarItemsData = inject<INavbarHeaderSectionItem[]>("navbarData");
-
-function goToSection(item: INavbarHeaderSectionItem) {
-  vueScroll.scrollTo(`#${item.id}`, 100, { offset: -100, easing: "ease-in" });
-}
+defineProps<{
+  navbarItemsData: INavbarHeaderSectionItem[];
+}>();
 </script>

@@ -25,12 +25,25 @@ export interface IApi {
   fetchExperienceData(): IExperienceSectionItem[];
   fetchAboutMeData(): IAboutMeSectionItem[];
   fetchNavbarData(): INavbarHeaderSectionItem[];
+  fetchProjectsData(): IProjectSectionItem[];
 }
 
-export enum SectionName {
+export enum NavbarSectionName {
   aboutSection = "about",
   experienceSection = "experience",
   projectsSection = "projects",
   contactSection = "contact",
   blogSection = "blog",
 }
+
+
+export enum SectionNameData {
+  aboutSectionData = "aboutData",
+  experienceSectionData = "experienceData",
+  projectsSectionData = "projectsData",
+  blogSectionData = "blogData",
+  headerSectionData = "headerData",
+}
+
+
+

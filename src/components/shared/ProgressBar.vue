@@ -9,18 +9,19 @@
 import { onBeforeUnmount, onMounted, ref } from "vue";
 
 onMounted(() => {
-  document.addEventListener("scroll", onscroll);
+  document.addEventListener("scroll", onScroll);
 });
 
 onBeforeUnmount(() => {
-  document.removeEventListener("scroll", onscroll);
+  document.removeEventListener("scroll", onScroll);
 });
 
-const progress = ref(null);
-function onscroll() {
+const progress = ref<HTMLElement>();
+
+function onScroll() {
   const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   let scrolled = (winScroll / height) * 100;
-  progress.value.style.width = scrolled + "%";
+  progress.value!.style.width = scrolled + "%";
 }
 </script>

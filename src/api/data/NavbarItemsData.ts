@@ -1,24 +1,24 @@
-import { INavbarHeaderSectionItem, SectionName } from "@src/types";
+import { INavbarHeaderSectionItem, NavbarSectionName } from "@src/types";
 
 export const navbarItemsData: INavbarHeaderSectionItem[] = [
   {
     text: "Sobre mi",
-    id: SectionName.aboutSection,
+    id: NavbarSectionName.aboutSection,
   },
   {
     text: "Experiencia",
-    id: SectionName.experienceSection,
+    id: NavbarSectionName.experienceSection,
   },
   {
     text: "Proyectos",
-    id: SectionName.projectsSection,
+    id: NavbarSectionName.projectsSection,
   },
   {
     text: "Contacto",
-    id: SectionName.contactSection,
+    id: NavbarSectionName.contactSection,
   },
   {
     text: "Blog",
-    id: SectionName.blogSection,
+    id: NavbarSectionName.blogSection,
   },
 ];

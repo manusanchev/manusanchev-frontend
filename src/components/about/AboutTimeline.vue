@@ -1,11 +1,15 @@
 <template>
   <div class="flex flex-col">
-    <div v-for="(item, index) in aboutMeData" :key="index" class="flex select-none flex-col items-center">
+    <div
+      v-for="(item, index) in data"
+      :key="index"
+      class="flex select-none flex-col items-center"
+    >
       <AboutTimelineSeparator :is-first-element="index === 0" />
       <AboutAgeTimeline :year="item.year">
         <AboutTextTimeline :is-even="isEven(index)" :text="item.text" />
       </AboutAgeTimeline>
-      <AboutTimelineSeparator :is-last-one-element="index === aboutMeData.length - 1" />
+      <AboutTimelineSeparator :is-last-one-element="index === data.length - 1" />
     </div>
   </div>
 </template>
@@ -15,9 +19,10 @@ import { IAboutMeSectionItem } from "@src/types";
 import AboutTimelineSeparator from "@components/about/AboutTimelineSeparator.vue";
 import AboutAgeTimeline from "@components/about/AboutAgeTimeline.vue";
 import AboutTextTimeline from "@components/about/AboutTextTimeline.vue";
-import { inject } from "vue";
 
-const aboutMeData = inject<IAboutMeSectionItem[]>("aboutMeData")
+defineProps<{
+  data: IAboutMeSectionItem[];
+}>();
 
 function isEven(index: number): boolean {
   return index % 2 === 0;
