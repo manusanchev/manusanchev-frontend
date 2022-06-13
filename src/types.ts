@@ -1,3 +1,6 @@
+import { Component } from "vue";
+
+
 export interface IAboutMeSectionItem {
   year: string;
   text: string;
@@ -26,12 +29,20 @@ export interface IBlogSectionItem {
   url: string;
 }
 
+export interface IContactSectionItem {
+  icon: Component;
+  url: string;
+  additionalData?: string | undefined;
+  hintTime: string;
+}
+
 export interface IApi {
   fetchExperienceData(): IExperienceSectionItem[];
   fetchAboutMeData(): IAboutMeSectionItem[];
   fetchNavbarData(): INavbarHeaderSectionItem[];
   fetchProjectsData(): IProjectSectionItem[];
   fetchBlogData(): IBlogSectionItem[];
+  fetchContactData(): IContactSectionItem[];
 }
 
 export enum NavbarSectionName {
@@ -42,14 +53,11 @@ export enum NavbarSectionName {
   blogSection = "blog",
 }
 
-
 export enum SectionNameData {
   aboutSectionData = "aboutData",
   experienceSectionData = "experienceData",
   projectsSectionData = "projectsData",
   blogSectionData = "blogData",
   headerSectionData = "headerData",
+  contactSectionData = "contactData",
 }
-
-
-

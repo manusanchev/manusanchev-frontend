@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex max-w-3xl cursor-pointer justify-between rounded bg-slate-800 p-4 md:mx-auto"
+    class="flex max-w-[45rem] cursor-pointer justify-between rounded bg-slate-800 p-4 md:mx-auto"
     @click="expand = !expand"
   >
     <div class="h-auto w-[90%]">

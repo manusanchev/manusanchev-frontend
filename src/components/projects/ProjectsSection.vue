@@ -3,12 +3,9 @@
     <SectionHeader title="Proyectos" subtitle="Proyectos en los que trabajo" />
     <ItemsListLayout>
       <ProjectsItem v-for="(item, index) in projectsData" :key="index" :item="item" />
-      <p
-        v-if="projectsDataArray.length <= pageSize"
-        class="bg-gradient-to-r from-[#6BB8FF] to-[#D04EDB] bg-clip-text text-center text-lg italic text-transparent underline md:text-2xl"
-      >
+      <HintSection v-if="projectsDataArray.length <= pageSize">
         Pronto aparecerán más proyectos por aquí
-      </p>
+      </HintSection>
     </ItemsListLayout>
     <SectionToggleButtons
       v-if="projectsDataArray.length > pageSize"
@@ -27,6 +24,7 @@ import SectionHeader from "@components/shared/SectionHeader.vue";
 import ProjectsItem from "@components/projects/ProjectsItem.vue";
 import ItemsListLayout from "@components/shared/ItemsListLayout.vue";
 import SectionToggleButtons from "@components/shared/SectionToggleButtons.vue";
+import HintSection from "@components/shared/HintSection.vue";
 
 import { IProjectSectionItem, SectionNameData } from "@src/types";
 import usePaginateItems from "@src/composables/PaginateItems";

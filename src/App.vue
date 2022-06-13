@@ -6,7 +6,9 @@
     <ExperienceSection :id="NavbarSectionName.experienceSection" />
     <ProjectsSection :id="NavbarSectionName.projectsSection" />
     <BlogSection :id="NavbarSectionName.blogSection" />
+    <ContactSection :id="NavbarSectionName.contactSection" />
   </main>
+  <Footer />
 </template>
 
 <script setup lang="ts">
@@ -17,6 +19,7 @@ import ExperienceSection from "@components/experience/ExperienceSection.vue";
 import ProjectsSection from "@components/projects/ProjectsSection.vue";
 import { NavbarSectionName } from "@src/types";
 import BlogSection from "@components/blog/BlogSection.vue";
-
+import ContactSection from "@components/contact/ContactSection.vue";
+import Footer from "@components/footer/Footer.vue";
 
 </script>

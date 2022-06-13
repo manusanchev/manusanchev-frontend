@@ -14,11 +14,10 @@ import Button from "@components/shared/BaseButton.vue";
 import HeroAnimation from "@components/hero/HeroAnimation.vue";
 import HeroTitle from "@components/hero/HeroTitle.vue";
 import HeroSubtitle from "@components/hero/HeroSubtitle.vue";
+import useScrollToSection from "@src/composables/ScrollToSection";
+import { INavbarHeaderSectionItem, NavbarSectionName } from "@src/types";
 
 function handleClick() {
-  const contactSection = document.getElementById("#contacto");
-  window.scrollTo({
-    top: contactSection?.offsetTop,
-  });
+  useScrollToSection(document.getElementById(NavbarSectionName.contactSection) as HTMLElement);
 }
 </script>
