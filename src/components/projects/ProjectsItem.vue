@@ -1,7 +1,6 @@
 <template>
   <div
     class="flex max-w-3xl cursor-pointer justify-between rounded bg-slate-800 p-4 md:mx-auto"
-    :class="{ 'items-center': !expand }"
     @click="expand = !expand"
   >
     <div class="h-auto w-[90%]">
@@ -12,12 +11,12 @@
       >
         {{ item.description }}
       </p>
-      <div class="mt-4 flex flex-col gap-2" v-if="expand">
+      <div class="flex flex-col gap-2" :class="expand ? 'visible mt-4' : 'invisible h-0'">
         <ProjectsItemLink
           v-if="item.websiteUrl"
           :url="item.websiteUrl"
           :alt="`Enlace al sitio web del proyecto ${item.title}`"
-          class="md:hover:text-blue-500 text-blue-400"
+          class="text-blue-400 md:hover:text-blue-500"
         >
           <template #icon> <LinkIcon /></template>
           <template #text> {{ item.websiteUrl }}</template>
