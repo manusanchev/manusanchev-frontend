@@ -18,9 +18,13 @@
 </template>
 
 <script setup lang="ts">
-import { navbarItem, navbarItemsData } from "@data/NavbarItemsData";
 import vueScroll from "vue-scrollto";
-function goToSection(item: navbarItem) {
+import { inject } from "vue";
+import { INavbarHeaderSectionItem } from "@src/types";
+
+const navbarItemsData = inject<INavbarHeaderSectionItem[]>("navbarData");
+
+function goToSection(item: INavbarHeaderSectionItem) {
   vueScroll.scrollTo(`#${item.id}`, 100, { offset: -100, easing: "ease-in" });
 }
 </script>

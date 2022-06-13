@@ -1,11 +1,6 @@
-export interface projectItem {
-  title: string;
-  description: string;
-  websiteUrl?: string;
-  sourceCodeUrl?: string;
-}
+import { IProjectSectionItem } from "@src/types";
 
-export const projectsData: projectItem[] = [
+export const projectsData: IProjectSectionItem[] = [
   {
     title: "Portfolio",
     description:

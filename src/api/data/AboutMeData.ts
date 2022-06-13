@@ -1,9 +1,7 @@
-export interface AboutMeItem {
-  year: string;
-  text: string;
-}
+import { IAboutMeSectionItem } from "@src/types";
 
-export const aboutMeData: AboutMeItem[] = [
+
+export const aboutMeData: IAboutMeSectionItem[] = [
   {
     year: "1998",
     text: "Nací un 31 de julio de 1998 en Sevilla en una noche con aire veraniego",

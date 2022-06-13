@@ -1,10 +1,6 @@
-export interface ExperienceItem {
-  techName: string;
-  summary: string;
-  link: string;
-}
+import { IExperienceSectionItem } from "@src/types";
 
-export const experienceData: ExperienceItem[] = [
+export const experienceData: IExperienceSectionItem[] = [
   {
     techName: "Nuxt.js",
     summary:

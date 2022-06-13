@@ -14,13 +14,13 @@
 </template>
 
 <script setup lang="ts">
-import { projectItem } from "@data/ProjectsData";
+import { IProjectSectionItem } from "@src/types";
 import ArrowDown from "@components/icons/ArrowDown.vue";
 import { ref } from "vue";
 
 const expand = ref(false);
 
 defineProps<{
-  item: projectItem;
+  item: IProjectSectionItem;
 }>();
 </script>

@@ -11,11 +11,11 @@
 </template>
 
 <script setup lang="ts">
-import { ExperienceItem } from "@data/ExperienceData";
 import RightArrow from "@components/icons/ArrowRight.vue";
+import { IExperienceSectionItem } from "@src/types";
 
 defineProps<{
-  item: ExperienceItem;
+  item: IExperienceSectionItem;
 }>();
 </script>
 
