@@ -14,11 +14,12 @@ export const navbarItemsData: INavbarHeaderSectionItem[] = [
     id: NavbarSectionName.projectsSection,
   },
   {
-    text: "Contacto",
-    id: NavbarSectionName.contactSection,
-  },
-  {
     text: "Blog",
     id: NavbarSectionName.blogSection,
+  },
+
+  {
+    text: "Contacto",
+    id: NavbarSectionName.contactSection,
   },
 ];
