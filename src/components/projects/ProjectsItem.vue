@@ -16,7 +16,7 @@
           v-if="item.websiteUrl"
           :url="item.websiteUrl"
           :alt="`Enlace al sitio web del proyecto ${item.title}`"
-          class="text-blue-400 md:hover:text-blue-500"
+          class="text-blue-400 md:hover:text-blue-300"
         >
           <template #icon> <LinkIcon /></template>
           <template #text> {{ item.websiteUrl }}</template>
@@ -25,7 +25,7 @@
           v-if="item.sourceCodeUrl"
           :url="item.sourceCodeUrl"
           :alt="`Enlace al repositorio de github del proyecto ${item.title}`"
-          class="text-white md:hover:text-gray-200"
+          class="text-gray-300 md:hover:text-white"
         >
           <template #icon> <GithubIcon /></template>
           <template #text> Repositorio de Github</template>

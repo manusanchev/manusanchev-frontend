@@ -21,11 +21,17 @@ export interface IProjectSectionItem {
   sourceCodeUrl?: string;
 }
 
+export interface IBlogSectionItem {
+  title: string;
+  url: string;
+}
+
 export interface IApi {
   fetchExperienceData(): IExperienceSectionItem[];
   fetchAboutMeData(): IAboutMeSectionItem[];
   fetchNavbarData(): INavbarHeaderSectionItem[];
   fetchProjectsData(): IProjectSectionItem[];
+  fetchBlogData(): IBlogSectionItem[];
 }
 
 export enum NavbarSectionName {

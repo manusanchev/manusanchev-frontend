@@ -1,14 +1,15 @@
 import {
   IAboutMeSectionItem,
-  IApi,
+  IApi, IBlogSectionItem,
   IExperienceSectionItem,
   INavbarHeaderSectionItem,
-  IProjectSectionItem,
+  IProjectSectionItem
 } from "@src/types";
 import { experienceData } from "@src/api/data/ExperienceData";
 import { aboutMeData } from "@src/api/data/AboutMeData";
 import { navbarItemsData } from "@src/api/data/NavbarItemsData";
 import { projectsData } from "@src/api/data/ProjectsData";
+import { blogPostsData } from "@src/api/data/BlogPostsData";
 
 export class Api implements IApi {
   fetchAboutMeData(): IAboutMeSectionItem[] {
@@ -25,5 +26,10 @@ export class Api implements IApi {
 
   fetchProjectsData(): IProjectSectionItem[] {
     return projectsData;
+  }
+
+  fetchBlogData(): IBlogSectionItem[] {
+    return blogPostsData;
+
   }
 }

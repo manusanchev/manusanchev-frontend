@@ -10,4 +10,5 @@ export const createApp = ViteSSG(App, (context) => {
   context.app.provide(SectionNameData.aboutSectionData, api.fetchAboutMeData());
   context.app.provide(SectionNameData.headerSectionData, api.fetchNavbarData());
   context.app.provide(SectionNameData.projectsSectionData, api.fetchProjectsData());
+  context.app.provide(SectionNameData.blogSectionData, api.fetchBlogData());
 });
