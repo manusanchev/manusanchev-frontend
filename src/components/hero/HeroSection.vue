@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import Button from "@components/shared/Button.vue";
+import Button from "@components/shared/BaseButton.vue";
 import HeroAnimation from "@components/hero/HeroAnimation.vue";
 import HeroTitle from "@components/hero/HeroTitle.vue";
 import HeroSubtitle from "@components/hero/HeroSubtitle.vue";

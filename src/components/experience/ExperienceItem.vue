@@ -2,7 +2,7 @@
   <a :href="item.link" target="_blank" class="experience-item p-4 md:cursor-pointer">
     <div class="flex items-center gap-2">
       <h4 class="text-2xl font-bold text-white lg:text-3xl">{{ item.techName }}</h4>
-      <RightArrow
+      <ArrowRightIcon
         class="experience-item__arrow invisible h-4 w-4 fill-current text-white xl:h-5 xl:w-5"
       />
     </div>
@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import RightArrow from "@components/icons/ArrowRight.vue";
+import ArrowRightIcon from "@components/icons/ArrowRightIcon.vue";
 import { IExperienceSectionItem } from "@src/types";
 
 defineProps<{

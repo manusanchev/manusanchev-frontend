@@ -1,22 +1,49 @@
 <template>
   <div
-    class="md:mx-auto flex max-w-3xl cursor-pointer items-center justify-between rounded bg-slate-800 p-4"
-    @click="expand"
+    class="flex max-w-3xl cursor-pointer justify-between rounded bg-slate-800 p-4 md:mx-auto"
+    :class="{ 'items-center': !expand }"
+    @click="expand = !expand"
   >
-    <div class="w-[90%]">
-      <h4 class="text-lg font-bold text-white">{{ item.title }}</h4>
-      <p class="truncate overflow-ellipsis whitespace-nowrap text-slate-400">
+    <div class="h-auto w-[90%]">
+      <h4 class="text-lg font-bold text-white md:text-xl">{{ item.title }}</h4>
+      <p
+        class="mt-4 text-slate-400 md:text-lg"
+        :class="{ 'mt-0 truncate overflow-ellipsis whitespace-nowrap': !expand }"
+      >
         {{ item.description }}
       </p>
+      <div class="mt-4 flex flex-col gap-2" v-if="expand">
+        <ProjectsItemLink
+          v-if="item.websiteUrl"
+          :url="item.websiteUrl"
+          :alt="`Enlace al sitio web del proyecto ${item.title}`"
+          class="md:hover:text-blue-500 text-blue-400"
+        >
+          <template #icon> <LinkIcon /></template>
+          <template #text> {{ item.websiteUrl }}</template>
+        </ProjectsItemLink>
+        <ProjectsItemLink
+          v-if="item.sourceCodeUrl"
+          :url="item.sourceCodeUrl"
+          :alt="`Enlace al repositorio de github del proyecto ${item.title}`"
+          class="text-white md:hover:text-gray-200"
+        >
+          <template #icon> <GithubIcon /></template>
+          <template #text> Repositorio de Github</template>
+        </ProjectsItemLink>
+      </div>
     </div>
-    <ArrowDown class="h-10 w-10 fill-current text-white" />
+    <ArrowDownIcon class="h-10 w-10 fill-current text-white" :class="{ 'rotate-180': expand }" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { IProjectSectionItem } from "@src/types";
-import ArrowDown from "@components/icons/ArrowDown.vue";
 import { ref } from "vue";
+import { IProjectSectionItem } from "@src/types";
+import ArrowDownIcon from "@components/icons/ArrowDownIcon.vue";
+import LinkIcon from "@components/icons/LinkIcon.vue";
+import GithubIcon from "@components/icons/GithubIcon.vue";
+import ProjectsItemLink from "@components/projects/ProjectsItemLink.vue";
 
 const expand = ref<boolean>(false);
 
