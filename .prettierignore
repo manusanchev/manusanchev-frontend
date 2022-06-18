@@ -1,0 +1,16 @@
+dist
+node_modules
+.github
+index.html
+package.json
+package-lock.json
+postcss.config.js
+robots.txt
+server.js
+sitemap.xml
+tailwind.config.js
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+yarn.lock
+src/env.d.ts

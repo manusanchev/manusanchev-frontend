@@ -1,0 +1,41 @@
+{
+  "name": "-port",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "rm -rf dist && vite-ssg build",
+    "preview": "vite preview",
+    "prettier-check": "prettier --check .",
+    "test": "vitest --run",
+    "coverage": "vitest run --coverage",
+    "prettier": "prettier --write ."
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "js-cookie": "^3.0.1",
+    "node-fetch": "^2.6.7",
+    "vite-ssr": "^0.16.0",
+    "vue": "3",
+    "vue-scrollto": "^2.20.0"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.2",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "@vue/test-utils": "^2.0.0",
+    "@vueuse/head": "^0.7.6",
+    "autoprefixer": "^10.4.7",
+    "c8": "^7.11.3",
+    "i": "^0.3.7",
+    "jsdom": "^19.0.0",
+    "postcss": "^8.4.14",
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.11",
+    "tailwindcss": "^3.1.2",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9",
+    "vite-ssg": "^0.20.1",
+    "vitest": "^0.14.2",
+    "vue-router": "^4.0.16"
+  }
+}
