@@ -10,7 +10,7 @@ export const contactData: IContactSectionItem[] = [
     icon: LinkedinIcon,
   },
   {
-    url: "https://twitter.com/messages/compose?recipient_id=3805104374&text=Hola Manuel, me gustaria poder hablar contigo",
+    url: "https://twitter.com/messages/compose?recipient_id=2317765355&text=Hola Manuel, me gustaria poder hablar contigo",
     additionalData: "@manuelsv_98",
     hintTime: "Suelo responder en <span class='contact-hint'>2 horas</span>",
     icon: TwitterIcon,
