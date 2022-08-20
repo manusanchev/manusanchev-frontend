@@ -9,4 +9,8 @@ export const blogPostsData: IBlogSectionItem[] = [
     title: "Despliega tu aplicación web en Digital Ocean con Github Actions [Configuración de nuestro VPS]",
     url: "https://mamby.com/p/despliega-tu-aplicacion-web-en-digital-ocean-con-github-actions-configuracion-de-nuestro-vps-33359d65",
   },
+  {
+    title: "Despliega tu aplicación web en Digital Ocean con Github Actions [Configurando Github Actions]",
+    url: "https://mamby.com/p/despliega-tu-aplicacion-web-en-digital-ocean-con-github-actions-configurando-github-actions-95e6efb3",
+  },
 ];
