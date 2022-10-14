@@ -5,17 +5,17 @@
   "scripts": {
     "dev": "vite",
     "build": "rm -rf dist && vite-ssg build",
+    "build-prod": "vite-ssg build",
     "preview": "vite preview",
+    "docker-build": "docker build -t manusanchev .",
+    "docker-start": "docker run -dp 3000:3000 manusanchev",
     "prettier-check": "prettier --check .",
     "test": "vitest --run",
     "coverage": "vitest run --coverage",
     "prettier": "prettier --write ."
   },
   "dependencies": {
-    "express": "^4.18.1",
     "js-cookie": "^3.0.1",
-    "node-fetch": "^2.6.7",
-    "vite-ssr": "^0.16.0",
     "vue": "3",
     "vue-scrollto": "^2.20.0"
   },

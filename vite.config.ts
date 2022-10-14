@@ -27,6 +27,10 @@ export default defineConfig({
   preview: {
     port: 3000
   },
+  server: {
+    host: true,
+    port: 3000
+  },
   plugins: [
     vue(),
   ],
