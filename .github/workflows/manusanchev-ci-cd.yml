@@ -13,12 +13,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build container image
-        run: docker build -t $(echo $REGISTRY)/$(echo $IMAGE_NAME):$(echo $GITHUB_SHA | head -c7) .
+        run: docker build -t manusanchev/portfolio:$(echo $GITHUB_SHA | head -c7) .
 
       - name: Login to Docker Hub
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+        run:  docker login -u ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} -p ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
+      - name: Push container image to docker hub
+        run: docker push manusanchev/portfolio:$(echo $GITHUB_SHA | head -c7)
 
 
 
@@ -29,11 +30,11 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSHKEY }}
         port: ${{ secrets.PORT }}
-        key: ${{ secrets.KEY }}
         script: |
           # Login to registry
-          docker login -u ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} -p ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} registry.digitalocean.com
+          docker login -u ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} -p ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
           # Stop running container
           docker stop $(echo $IMAGE_NAME)
           # Remove old container
