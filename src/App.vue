@@ -2,11 +2,21 @@
   <Header />
   <main class="mx-auto w-11/12 py-32 md:w-full md:py-48 xl:max-w-[120rem]">
     <HeroSection />
-    <AboutSection :id="NavbarSectionName.aboutSection" />
-    <ExperienceSection :id="NavbarSectionName.experienceSection" />
-    <ProjectsSection :id="NavbarSectionName.projectsSection" />
-    <BlogSection :id="NavbarSectionName.blogSection" />
-    <ContactSection :id="NavbarSectionName.contactSection" />
+    <Suspense>
+      <AboutSection :id="NavbarSectionName.aboutSection" />
+    </Suspense>
+    <Suspense>
+      <ExperienceSection :id="NavbarSectionName.experienceSection" />
+    </Suspense>
+    <Suspense>
+      <ProjectsSection :id="NavbarSectionName.projectsSection" />
+    </Suspense>
+    <Suspense>
+      <BlogSection :id="NavbarSectionName.blogSection" />
+    </Suspense>
+    <Suspense>
+      <ContactSection :id="NavbarSectionName.contactSection" />
+    </Suspense>
   </main>
   <PolicyBanner v-if="showBanner" @close-banner="closeBannerPolicy" />
   <Footer />

@@ -15,6 +15,8 @@ import AboutMessage from "@components/about/AboutMessage.vue";
 import { AboutSectionItem } from "@src/services/portfolio/types/AboutSectionItem";
 import usePortfolioService from "@src/composables/PortfolioService";
 
-const portfolioService = usePortfolioService()
+const portfolioService = usePortfolioService();
 const aboutMeData: AboutSectionItem[] = await portfolioService.getAboutMeData();
+
+
 </script>
