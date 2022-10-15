@@ -3,11 +3,7 @@ name: manusanchev-CI-CD
 on:
   push:
     branches: [ master ]
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'Image version'
-        required: true
+
 env:
   IMAGE_REPO: "manusanchev/portfolio"
 
