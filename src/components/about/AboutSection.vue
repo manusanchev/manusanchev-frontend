@@ -12,9 +12,9 @@
 import SectionHeader from "@components/shared/SectionHeader.vue";
 import AboutTimeline from "@components/about/AboutTimeline.vue";
 import AboutMessage from "@components/about/AboutMessage.vue";
+import { AboutSectionItem } from "@src/services/portfolio/types/AboutSectionItem";
+import usePortfolioService from "@src/composables/PortfolioService";
 
-import { inject } from "vue";
-import { IAboutMeSectionItem, SectionNameData } from "@src/types";
-
-const aboutMeData = inject<IAboutMeSectionItem[]>(SectionNameData.aboutSectionData);
+const portfolioService = usePortfolioService()
+const aboutMeData: AboutSectionItem[] = await portfolioService.getAboutMeData();
 </script>

@@ -6,12 +6,12 @@ export enum NavbarSectionName {
   blogSection = "blog",
 }
 
-export interface NavbarItems {
+export interface NavbarItem {
   text: string;
   id: string;
 }
 
-export const navbarItemsData: NavbarItems[] = [
+const NavbarItemsData: NavbarItem[] = [
   {
     text: "Sobre mi",
     id: NavbarSectionName.aboutSection,
@@ -34,3 +34,5 @@ export const navbarItemsData: NavbarItems[] = [
     id: NavbarSectionName.contactSection,
   },
 ];
+
+export default NavbarItemsData;

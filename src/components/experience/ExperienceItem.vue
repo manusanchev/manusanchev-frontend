@@ -12,10 +12,10 @@
 
 <script setup lang="ts">
 import ArrowRightIcon from "@components/icons/ArrowRightIcon.vue";
-import { IExperienceSectionItem } from "@src/types";
+import { ExperienceSectionItem } from "@src/services/portfolio/types/ExperienceSectionItem";
 
 defineProps<{
-  item: IExperienceSectionItem;
+  item: ExperienceSectionItem;
 }>();
 </script>
 

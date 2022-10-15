@@ -15,7 +15,7 @@ import HeroAnimation from "@components/hero/HeroAnimation.vue";
 import HeroTitle from "@components/hero/HeroTitle.vue";
 import HeroSubtitle from "@components/hero/HeroSubtitle.vue";
 import useScrollToSection from "@src/composables/ScrollToSection";
-import { INavbarHeaderSectionItem, NavbarSectionName } from "@src/types";
+import { NavbarSectionName } from "@src/services/portfolio/types/NavbarItemsData";
 
 function handleClick() {
   useScrollToSection(document.getElementById(NavbarSectionName.contactSection) as HTMLElement);

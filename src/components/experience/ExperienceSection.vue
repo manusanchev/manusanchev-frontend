@@ -13,7 +13,9 @@ import { inject } from "vue";
 import SectionHeader from "@components/shared/SectionHeader.vue";
 import ExperienceItem from "@components/experience/ExperienceItem.vue";
 import ExperienceItemsList from "@components/experience/ExperienceItemsList.vue";
-import { IExperienceSectionItem, SectionNameData } from "@src/types";
+import { ExperienceSectionItem } from "@src/services/portfolio/types/ExperienceSectionItem";
+import usePortfolioService from "@src/composables/PortfolioService";
 
-const experienceData = inject<IExperienceSectionItem[]>(SectionNameData.experienceSectionData);
+const portfolioService = usePortfolioService();
+const experienceData: ExperienceSectionItem[] = await portfolioService.getExperienceData();
 </script>

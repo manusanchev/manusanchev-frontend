@@ -18,10 +18,10 @@
 </template>
 
 <script setup lang="ts">
-import { INavbarHeaderSectionItem } from "@src/types";
+import { NavbarItem } from "@src/services/portfolio/types/NavbarItemsData";
 import useScrollToSection from "@src/composables/ScrollToSection";
 
 defineProps<{
-  navbarItemsData: INavbarHeaderSectionItem[];
+  navbarItemsData: NavbarItem[];
 }>();
 </script>

@@ -18,7 +18,7 @@ import HeroSection from "@components/hero/HeroSection.vue";
 import AboutSection from "@components/about/AboutSection.vue";
 import ExperienceSection from "@components/experience/ExperienceSection.vue";
 import ProjectsSection from "@components/projects/ProjectsSection.vue";
-import { NavbarSectionName } from "@src/types";
+import { NavbarSectionName } from "@src/services/portfolio/types/NavbarItemsData";
 import BlogSection from "@components/blog/BlogSection.vue";
 import ContactSection from "@components/contact/ContactSection.vue";
 import Footer from "@components/footer/Footer.vue";

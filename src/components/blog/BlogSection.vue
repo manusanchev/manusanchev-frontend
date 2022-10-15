@@ -1,7 +1,7 @@
 <template>
   <section>
     <SectionHeader title="Blog" subtitle="Publico contenido relacionado con lo que aprendo" />
-    <ItemsListLayout class="md:max-w-[40rem] md:mx-auto">
+    <ItemsListLayout class="md:mx-auto md:max-w-[40rem]">
       <BlogItem v-for="(item, index) in blogData" :item="item" :key="index" />
 
       <HintSection v-if="blogDataArray.length <= pageSize">
@@ -31,13 +31,15 @@ import HintSection from "@components/shared/HintSection.vue";
 import usePaginateItems from "@src/composables/PaginateItems";
 import useScrollToSection from "@src/composables/ScrollToSection";
 import { inject, ref } from "vue";
-import { IBlogSectionItem, SectionNameData } from "@src/types";
+import { BlogSectionItem } from "@src/services/portfolio/types/BlogSectionItem";
+import usePortfolioService from "@src/composables/PortfolioService";
 
 const pageNumber = ref<number>(0);
 const isLastPage = ref(false);
 const pageSize = 3;
 
-const blogDataArray = inject<IBlogSectionItem[]>(SectionNameData.blogSectionData);
+const portfolioService = usePortfolioService();
+const blogDataArray: BlogSectionItem[] = await portfolioService.getBlogData();
 const { items } = usePaginateItems(blogDataArray, pageNumber, pageSize);
 const blogData = ref(items);
 

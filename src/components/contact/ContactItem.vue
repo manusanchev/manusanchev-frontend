@@ -1,6 +1,6 @@
 <template>
   <div class="mx-auto flex items-end gap-4">
-    <component class="h-16 w-16 md:h-20 md:w-20 fill-current text-white" :is="item.icon" />
+<!--    <component class="h-16 w-16 md:h-20 md:w-20 fill-current text-white" :is="item.contactType" />-->
     <div>
       <a :href="item.url" :alt="item.url" target="_blank" :data-screen-name="item.additionalData" class="block text-center md:text-lg text-white border py-1.5 border-white rounded hover:text-slate-900 hover:bg-white"
         >Enviar mensaje</a
@@ -11,9 +11,10 @@
 </template>
 
 <script setup lang="ts">
-import { IContactSectionItem } from "@src/types";
+import { ContactSectionItem } from "@src/services/portfolio/types/ContactSectionItem";
+
 defineProps<{
-  item: IContactSectionItem;
+  item: ContactSectionItem;
 }>();
 </script>
 
