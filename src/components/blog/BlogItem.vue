@@ -1,12 +1,15 @@
 <template>
-  <a
-    :href="item.url"
-    target="_blank"
-    class="md:hover:bg-slate-700 flex md:min-w-[45rem] cursor-pointer justify-between rounded bg-slate-800 p-4 md:mx-auto text-white font-semibold items-center md:text-2xl text-lg"
-  >
-    {{ item.title }}
-    <ArrowRightIcon class="h-10 w-10 fill-current text-blue-400" />
-  </a>
+  <div>
+    <a
+      :href="item.url"
+      target="_blank"
+      class="flex cursor-pointer text-white font-semibold items-start md:text-xl text-lg"
+    >
+      <p class="md:hover:text-blue-400 transition-colors">{{ item.title }}</p>
+      <ArrowRightIcon class="md:h-7 md:w-7 flex-shrink-0 fill-current text-blue-400" />
+    </a>
+    <p class="text-slate-400 text-sm italic select-none">{{ item.date }}</p>
+  </div>
 </template>
 
 <script setup lang="ts">

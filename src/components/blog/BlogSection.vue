@@ -1,7 +1,7 @@
 <template>
   <section>
     <SectionHeader title="Blog" subtitle="Publico contenido relacionado con lo que aprendo" />
-    <ItemsListLayout>
+    <ItemsListLayout class="md:max-w-[40rem] md:mx-auto">
       <BlogItem v-for="(item, index) in blogData" :item="item" :key="index" />
 
       <HintSection v-if="blogDataArray.length <= pageSize">

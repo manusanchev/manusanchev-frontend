@@ -27,6 +27,7 @@ export interface IProjectSectionItem {
 export interface IBlogSectionItem {
   title: string;
   url: string;
+  date: string;
 }
 
 export interface IContactSectionItem {
