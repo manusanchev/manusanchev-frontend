@@ -13,7 +13,7 @@ import { inject } from "vue";
 import SectionHeader from "@components/shared/SectionHeader.vue";
 import ExperienceItem from "@components/experience/ExperienceItem.vue";
 import ExperienceItemsList from "@components/experience/ExperienceItemsList.vue";
-import { ExperienceSectionItem } from "@src/services/portfolio/types/ExperienceSectionItem";
+import { ExperienceSectionItem } from "@services/portfolio/types/ExperienceSectionItem";
 import usePortfolioService from "@src/composables/PortfolioService";
 
 const portfolioService = usePortfolioService();

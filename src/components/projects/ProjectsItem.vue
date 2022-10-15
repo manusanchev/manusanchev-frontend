@@ -38,7 +38,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { ProjectSectionItem } from "@src/services/portfolio/types/ProjectSectionItem";
+import { ProjectSectionItem } from "@services/portfolio/types/ProjectSectionItem";
 import ArrowDownIcon from "@components/icons/ArrowDownIcon.vue";
 import LinkIcon from "@components/icons/LinkIcon.vue";
 import GithubIcon from "@components/icons/GithubIcon.vue";

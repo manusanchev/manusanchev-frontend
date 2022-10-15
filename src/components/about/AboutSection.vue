@@ -12,7 +12,7 @@
 import SectionHeader from "@components/shared/SectionHeader.vue";
 import AboutTimeline from "@components/about/AboutTimeline.vue";
 import AboutMessage from "@components/about/AboutMessage.vue";
-import { AboutSectionItem } from "@src/services/portfolio/types/AboutSectionItem";
+import { AboutSectionItem } from "@services/portfolio/types/AboutSectionItem";
 import usePortfolioService from "@src/composables/PortfolioService";
 
 const portfolioService = usePortfolioService();

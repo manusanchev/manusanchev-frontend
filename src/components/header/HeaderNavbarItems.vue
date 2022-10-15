@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import { NavbarItem } from "@src/services/portfolio/types/NavbarItemsData";
+import { NavbarItem } from "@services/portfolio/types/NavbarItemsData";
 import useScrollToSection from "@src/composables/ScrollToSection";
 
 defineProps<{

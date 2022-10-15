@@ -1,5 +1,5 @@
 import { inject } from "vue";
-import { IPortfolioService } from "@src/services/portfolio/types/IPortfolioService";
+import { IPortfolioService } from "@services/portfolio/types/IPortfolioService";
 
 const usePortfolioService = () => {
   const container = inject<any>("container");

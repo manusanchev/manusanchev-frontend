@@ -31,7 +31,7 @@ import HintSection from "@components/shared/HintSection.vue";
 import usePaginateItems from "@src/composables/PaginateItems";
 import useScrollToSection from "@src/composables/ScrollToSection";
 import { inject, ref } from "vue";
-import { BlogSectionItem } from "@src/services/portfolio/types/BlogSectionItem";
+import { BlogSectionItem } from "@services/portfolio/types/BlogSectionItem";
 import usePortfolioService from "@src/composables/PortfolioService";
 
 const pageNumber = ref<number>(0);

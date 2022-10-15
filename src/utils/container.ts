@@ -1,5 +1,5 @@
 import {createContainer, AwilixContainer, asClass, Lifetime, InjectionMode} from "awilix";
-import PortfolioService from "@src/services/portfolio/PortfolioService";
+import PortfolioService from "@services/portfolio/PortfolioService";
 
 class Container {
   container!: AwilixContainer;

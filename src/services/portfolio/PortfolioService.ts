@@ -1,9 +1,9 @@
-import { IPortfolioService } from "@src/services/portfolio/types/IPortfolioService";
-import { ExperienceSectionItem } from "@src/services/portfolio/types/ExperienceSectionItem";
-import { BlogSectionItem } from "@src/services/portfolio/types/BlogSectionItem";
-import { AboutSectionItem } from "@src/services/portfolio/types/AboutSectionItem";
-import { ContactSectionItem } from "@src/services/portfolio/types/ContactSectionItem";
-import { ProjectSectionItem } from "@src/services/portfolio/types/ProjectSectionItem";
+import { IPortfolioService } from "@services/portfolio/types/IPortfolioService";
+import { ExperienceSectionItem } from "@services/portfolio/types/ExperienceSectionItem";
+import { BlogSectionItem } from "@services/portfolio/types/BlogSectionItem";
+import { AboutSectionItem } from "@services/portfolio/types/AboutSectionItem";
+import { ContactSectionItem } from "@services/portfolio/types/ContactSectionItem";
+import { ProjectSectionItem } from "@services/portfolio/types/ProjectSectionItem";
 
 import about from "@static/data/about.json";
 import contact from "@static/data/contact.json";

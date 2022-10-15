@@ -10,7 +10,7 @@
 <script setup lang="ts">
 import SectionHeader from "@components/shared/SectionHeader.vue";
 import ItemsListLayout from "@components/shared/ItemsListLayout.vue";
-import { ContactSectionItem } from "@src/services/portfolio/types/ContactSectionItem";
+import { ContactSectionItem } from "@services/portfolio/types/ContactSectionItem";
 import ContactItem from "@components/contact/ContactItem.vue";
 import usePortfolioService from "@src/composables/PortfolioService";
 

@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { ContactSectionItem } from "@src/services/portfolio/types/ContactSectionItem";
+import { ContactSectionItem } from "@services/portfolio/types/ContactSectionItem";
 
 defineProps<{
   item: ContactSectionItem;

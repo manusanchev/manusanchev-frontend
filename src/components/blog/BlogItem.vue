@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { BlogSectionItem } from "@src/services/portfolio/types/BlogSectionItem";
+import { BlogSectionItem } from "@services/portfolio/types/BlogSectionItem";
 import ArrowRightIcon from "@components/icons/ArrowRightIcon.vue";
 
 defineProps<{

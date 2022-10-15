@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import { AboutSectionItem } from "@src/services/portfolio/types/AboutSectionItem";
+import { AboutSectionItem } from "@services/portfolio/types/AboutSectionItem";
 import AboutTimelineSeparator from "@components/about/AboutTimelineSeparator.vue";
 import AboutAgeTimeline from "@components/about/AboutAgeTimeline.vue";
 import AboutTextTimeline from "@components/about/AboutTextTimeline.vue";

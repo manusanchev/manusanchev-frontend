@@ -15,7 +15,7 @@
 <script setup lang="ts">
 import CloseIcon from "@components/icons/CloseIcon.vue";
 import HeaderNavbarItems from "@components/header/HeaderNavbarItems.vue";
-import { NavbarItem } from "@src/services/portfolio/types/NavbarItemsData";
+import { NavbarItem } from "@services/portfolio/types/NavbarItemsData";
 
 defineProps<{
   navbarItemsData: NavbarItem[];

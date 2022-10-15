@@ -26,11 +26,11 @@ import ItemsListLayout from "@components/shared/ItemsListLayout.vue";
 import SectionToggleButtons from "@components/shared/SectionToggleButtons.vue";
 import HintSection from "@components/shared/HintSection.vue";
 
-import { ProjectSectionItem } from "@src/services/portfolio/types/ProjectSectionItem";
+import { ProjectSectionItem } from "@services/portfolio/types/ProjectSectionItem";
 
 import usePaginateItems from "@src/composables/PaginateItems";
 import useScrollToSection from "@src/composables/ScrollToSection";
-import { SectionNameRef } from "@src/services/portfolio/types/SectionNameRef";
+import { SectionNameRef } from "@services/portfolio/types/SectionNameRef";
 import usePortfolioService from "@src/composables/PortfolioService";
 
 const pageNumber = ref<number>(0);

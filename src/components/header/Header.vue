@@ -30,7 +30,7 @@ import HeaderLogo from "@components/header/HeaderLogo.vue";
 import HeaderMenuMobile from "@components/header/HeaderMenuMobile.vue";
 import HeaderNavbarItems from "@components/header/HeaderNavbarItems.vue";
 import ProgressBar from "@components/shared/ProgressBar.vue";
-import NavbarItemsData, { NavbarItem } from "@src/services/portfolio/types/NavbarItemsData";
+import NavbarItemsData, { NavbarItem } from "@services/portfolio/types/NavbarItemsData";
 
 const toggleMenu = ref<boolean>(false);
 const header = ref<HTMLElement>();
