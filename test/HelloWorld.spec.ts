@@ -6,6 +6,6 @@ import Header from "@components/header/Header.vue";
 describe("All sections should appear with data", () => {
   it("Header section must be visible", () => {
     const wrapper = shallowMount(Header);
-    expect(wrapper.isVisible()).toBe(true)
+    expect(wrapper.isVisible()).toBe(false)
   });
 });
