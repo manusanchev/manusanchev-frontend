@@ -45,7 +45,4 @@ jobs:
               # Remove old container
               docker rm portfolio
               # Run a new container from a new image
-              docker run -dp 3000:3000 \
-              --restart always \
-              --name portfolio \
-              $(echo $IMAGE_REPO):$(echo $GITHUB_SHA | head -c7)
+              docker run -dp 3000:3000  --restart always --name portfolio $(echo $IMAGE_REPO):$(echo $GITHUB_SHA | head -c7)
