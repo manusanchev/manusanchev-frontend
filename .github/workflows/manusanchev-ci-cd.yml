@@ -8,23 +8,23 @@ env:
   IMAGE_REPO: "manusanchev/portfolio"
 
 jobs:
-  tests:
-    name: Run tests
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout the repo
-      uses: actions/checkout@v2
-
-    - name: install dependencies
-      run: yarn install --frozen-lockfile
-
-    - name: run tests
-      run: yarn test
+#  tests:
+#    name: Run tests
+#    runs-on: ubuntu-latest
+#    steps:
+#    - name: Checkout the repo
+#      uses: actions/checkout@v2
+#
+#    - name: install dependencies
+#      run: yarn install --frozen-lockfile
+#
+#    - name: run tests
+#      run: yarn test
 
   build_and_push:
     name: Build and push image
     runs-on: ubuntu-latest
-    needs: tests
+#    needs: tests
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v2
