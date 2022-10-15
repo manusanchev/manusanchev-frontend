@@ -19,7 +19,7 @@ jobs:
         run: docker build -t $(echo $IMAGE_REPO):$(echo $GITHUB_SHA | head -c7) .
 
       - name: Login to Docker Hub
-        run:  docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+        run:  echo "${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}" | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
 
       - name: Push container image to docker hub
         run: docker push $(echo $IMAGE_REPO):$(echo $GITHUB_SHA | head -c7)
