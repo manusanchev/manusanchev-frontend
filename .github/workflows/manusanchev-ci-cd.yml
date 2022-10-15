@@ -43,9 +43,9 @@ jobs:
             script: |
               # pull from registry
               docker pull $(echo $IMAGE_REPO):$(echo $GITHUB_SHA | head -c7)
-              # Stop running container
-              docker stop portfolio
+              # Stop running $(echo $DOCKER_PROCESS_NAME)
+              docker stop $(echo $DOCKER_PROCESS_NAME)
               # Remove old container
-              docker rm portfolio
+              docker rm $(echo $DOCKER_PROCESS_NAME)
               # Run a new container from a new image
-              docker run -dp 3000:3000  --restart always --name portfolio $IMAGE_REPO:$(echo $GITHUB_SHA | head -c7)
+              docker run -dp 3000:3000  --restart always --name $(echo $DOCKER_PROCESS_NAME) $IMAGE_REPO:$(echo $GITHUB_SHA | head -c7)

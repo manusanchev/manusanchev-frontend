@@ -7,7 +7,7 @@ package-lock.json
 postcss.config.js
 robots.txt
 server.js
-sitemap.xml
+public/sitemap.xml
 tailwind.config.js
 tsconfig.json
 tsconfig.node.json
