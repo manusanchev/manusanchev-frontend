@@ -1,19 +1,19 @@
-import * as awilix from "awilix";
+import {createContainer, AwilixContainer, asClass, Lifetime, InjectionMode} from "awilix";
 import PortfolioService from "@src/services/portfolio/PortfolioService";
 
 class Container {
-  container!: awilix.AwilixContainer;
+  container!: AwilixContainer;
 
   constructor() {
-    this.container = awilix.createContainer({
-      injectionMode: awilix.InjectionMode.PROXY,
+    this.container = createContainer({
+      injectionMode: InjectionMode.PROXY,
     });
     this.registerServices();
   }
 
   registerServices() {
     this.container.register({
-      portfolioService: awilix.asClass(PortfolioService, { lifetime: awilix.Lifetime.SINGLETON }),
+      portfolioService: asClass(PortfolioService, { lifetime: Lifetime.SINGLETON }),
     });
   }
 
