@@ -31,11 +31,11 @@ jobs:
           with:
             host: ${{ secrets.HOST }}
             username: ${{ secrets.USERNAME }}
-            key: ${{ secrets.SSH_KEY }}
+            key: ${{ secrets.KEY }}
             port: ${{ secrets.PORT }}
             script: |
-              # Login to registry
-              docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+              # pull from registry
+              docker pull manusanchev/portfolio:$(echo $GITHUB_SHA | head -c7)
               # Stop running container
               docker stop portfolio
               # Remove old container
