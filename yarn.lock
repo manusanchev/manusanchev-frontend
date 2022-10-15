@@ -1491,6 +1491,11 @@ rollup@~2.78.0:
   optionalDependencies:
     fsevents "~2.3.2"
 
+rsdi@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/rsdi/-/rsdi-2.2.2.tgz#35101d6c0bb3258b5ab427cb7f8c5e0a48d8b436"
+  integrity sha512-oPLlRnbgsERjyTQdZ6G/6geu0tCniFW7/EmgHBdr+pjL85lh0Q4o0+IEsLFaQ0UZt35zWQpgYQ6iyqGm9uAaPg==
+
 run-parallel@^1.1.9:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/run-parallel/-/run-parallel-1.2.0.tgz#66d1368da7bdf921eb9d95bd1a9229e7f21a43ee"

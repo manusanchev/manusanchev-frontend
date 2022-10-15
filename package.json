@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "js-cookie": "^3.0.1",
+    "rsdi": "^2.2.2",
     "vue": "3",
     "vue-scrollto": "^2.20.0"
   },

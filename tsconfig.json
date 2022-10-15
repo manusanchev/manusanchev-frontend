@@ -20,7 +20,8 @@
       "@routes/*": ["./src/routes/*"],
       "@pages/*": ["./src/pages/*"],
       "@components/*": ["./src/components/*"],
-      "@data/*": ["./src/data/*"]
+      "@data/*": ["./src/data/*"],
+      "@context/*": ["./src/context/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
