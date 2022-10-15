@@ -22,7 +22,7 @@ jobs:
         run:  docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
       - name: Push container image to docker hub
-        run: docker push $(echo IMAGE_REPO):$(echo $GITHUB_SHA | head -c7)
+        run: docker push $(echo $IMAGE_REPO):$(echo $GITHUB_SHA | head -c7)
 
   deploy:
       name: Deploy to digital ocean
@@ -39,7 +39,7 @@ jobs:
             port: ${{ secrets.PORT }}
             script: |
               # pull from registry
-              docker pull $(echo IMAGE_REPO):$(echo $GITHUB_SHA | head -c7)
+              docker pull $(echo $IMAGE_REPO):$(echo $GITHUB_SHA | head -c7)
               # Stop running container
               docker stop portfolio
               # Remove old container
@@ -48,4 +48,4 @@ jobs:
               docker run -dp 3000:3000 \
               --restart always \
               --name portfolio \
-              $(echo IMAGE_REPO):$(echo $GITHUB_SHA | head -c7)
+              $(echo $IMAGE_REPO):$(echo $GITHUB_SHA | head -c7)
