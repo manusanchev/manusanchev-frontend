@@ -26,15 +26,20 @@ import ItemsListLayout from "@components/shared/ItemsListLayout.vue";
 import SectionToggleButtons from "@components/shared/SectionToggleButtons.vue";
 import HintSection from "@components/shared/HintSection.vue";
 
-import { IProjectSectionItem, SectionNameData } from "@src/types";
+import { ProjectSectionItem } from "@services/portfolio/types/ProjectSectionItem";
+
 import usePaginateItems from "@src/composables/PaginateItems";
 import useScrollToSection from "@src/composables/ScrollToSection";
+import { SectionNameRef } from "@services/portfolio/types/SectionNameRef";
+import usePortfolioService from "@src/composables/PortfolioService";
 
 const pageNumber = ref<number>(0);
 const isLastPage = ref(false);
 const pageSize = 3;
 
-const projectsDataArray = inject<IProjectSectionItem[]>(SectionNameData.projectsSectionData);
+const portfolioService = usePortfolioService();
+const projectsDataArray: ProjectSectionItem[] = await portfolioService.getProjectsData();
+
 const { items } = usePaginateItems(projectsDataArray, pageNumber, pageSize);
 const projectsData = ref(items);
 

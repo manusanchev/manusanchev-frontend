@@ -1,6 +1,17 @@
-import { INavbarHeaderSectionItem, NavbarSectionName } from "@src/types";
+export enum NavbarSectionName {
+  aboutSection = "about",
+  experienceSection = "experience",
+  projectsSection = "projects",
+  contactSection = "contact",
+  blogSection = "blog",
+}
 
-export const navbarItemsData: INavbarHeaderSectionItem[] = [
+export interface NavbarItem {
+  text: string;
+  id: string;
+}
+
+const NavbarItemsData: NavbarItem[] = [
   {
     text: "Sobre mi",
     id: NavbarSectionName.aboutSection,
@@ -23,3 +34,5 @@ export const navbarItemsData: INavbarHeaderSectionItem[] = [
     id: NavbarSectionName.contactSection,
   },
 ];
+
+export default NavbarItemsData;

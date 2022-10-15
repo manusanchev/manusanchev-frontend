@@ -2,11 +2,21 @@
   <Header />
   <main class="mx-auto w-11/12 py-32 md:w-full md:py-48 xl:max-w-[120rem]">
     <HeroSection />
-    <AboutSection :id="NavbarSectionName.aboutSection" />
-    <ExperienceSection :id="NavbarSectionName.experienceSection" />
-    <ProjectsSection :id="NavbarSectionName.projectsSection" />
-    <BlogSection :id="NavbarSectionName.blogSection" />
-    <ContactSection :id="NavbarSectionName.contactSection" />
+    <Suspense>
+      <AboutSection :id="NavbarSectionName.aboutSection" />
+    </Suspense>
+    <Suspense>
+      <ExperienceSection :id="NavbarSectionName.experienceSection" />
+    </Suspense>
+    <Suspense>
+      <ProjectsSection :id="NavbarSectionName.projectsSection" />
+    </Suspense>
+    <Suspense>
+      <BlogSection :id="NavbarSectionName.blogSection" />
+    </Suspense>
+    <Suspense>
+      <ContactSection :id="NavbarSectionName.contactSection" />
+    </Suspense>
   </main>
   <PolicyBanner v-if="showBanner" @close-banner="closeBannerPolicy" />
   <Footer />
@@ -18,7 +28,7 @@ import HeroSection from "@components/hero/HeroSection.vue";
 import AboutSection from "@components/about/AboutSection.vue";
 import ExperienceSection from "@components/experience/ExperienceSection.vue";
 import ProjectsSection from "@components/projects/ProjectsSection.vue";
-import { NavbarSectionName } from "@src/types";
+import { NavbarSectionName } from "@services/portfolio/types/NavbarItemsData";
 import BlogSection from "@components/blog/BlogSection.vue";
 import ContactSection from "@components/contact/ContactSection.vue";
 import Footer from "@components/footer/Footer.vue";

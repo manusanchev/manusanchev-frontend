@@ -1,7 +1,7 @@
 import vueScroll from "vue-scrollto";
-import { INavbarHeaderSectionItem } from "@src/types";
+import { NavbarItem } from "@services/portfolio/types/NavbarItemsData";
 
-const useScrollToSection = (item: INavbarHeaderSectionItem | HTMLElement, offset: number = -100) => {
+const useScrollToSection = (item: NavbarItem | HTMLElement, offset: number = -100) => {
   vueScroll.scrollTo(`#${item.id}`, 400, { offset, easing: "smooth" });
 };
 

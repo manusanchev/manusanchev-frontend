@@ -10,9 +10,10 @@
 <script setup lang="ts">
 import SectionHeader from "@components/shared/SectionHeader.vue";
 import ItemsListLayout from "@components/shared/ItemsListLayout.vue";
-import { inject } from "vue";
-import { IContactSectionItem, SectionNameData } from "@src/types";
+import { ContactSectionItem } from "@services/portfolio/types/ContactSectionItem";
 import ContactItem from "@components/contact/ContactItem.vue";
+import usePortfolioService from "@src/composables/PortfolioService";
 
-const contactData = inject<IContactSectionItem[]>(SectionNameData.contactSectionData);
+const portfolioService = usePortfolioService();
+const contactData: ContactSectionItem[] = await portfolioService.getContactData();
 </script>

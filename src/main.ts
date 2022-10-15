@@ -1,15 +1,10 @@
 import App from "./App.vue";
 import { ViteSSG } from "vite-ssg/single-page";
 import "@src/assets/style/index.css";
-import { Api } from "@src/api/Api";
-import { IApi, SectionNameData } from "@src/types";
+import Container from "@src/utils/container";
 
 export const createApp = ViteSSG(App, (context) => {
-  const api: IApi = new Api();
-  context.app.provide(SectionNameData.experienceSectionData, api.fetchExperienceData());
-  context.app.provide(SectionNameData.aboutSectionData, api.fetchAboutMeData());
-  context.app.provide(SectionNameData.headerSectionData, api.fetchNavbarData());
-  context.app.provide(SectionNameData.projectsSectionData, api.fetchProjectsData());
-  context.app.provide(SectionNameData.blogSectionData, api.fetchBlogData());
-  context.app.provide(SectionNameData.contactSectionData, api.fetchContactData());
+  const container = new Container();
+  const { cradle } = container.getContainerInstance();
+  context.app.provide<any>("container", cradle);
 });

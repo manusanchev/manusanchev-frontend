@@ -15,13 +15,13 @@
 </template>
 
 <script setup lang="ts">
-import { IAboutMeSectionItem } from "@src/types";
+import { AboutSectionItem } from "@services/portfolio/types/AboutSectionItem";
 import AboutTimelineSeparator from "@components/about/AboutTimelineSeparator.vue";
 import AboutAgeTimeline from "@components/about/AboutAgeTimeline.vue";
 import AboutTextTimeline from "@components/about/AboutTextTimeline.vue";
 
 defineProps<{
-  data: IAboutMeSectionItem[];
+  data: AboutSectionItem[];
 }>();
 
 function isEven(index: number): boolean {

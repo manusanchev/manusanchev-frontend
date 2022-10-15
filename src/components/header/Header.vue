@@ -22,9 +22,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, inject } from "vue";
-
-import { INavbarHeaderSectionItem, SectionNameData } from "@src/types";
+import { ref } from "vue";
 import useShadowOnScroll from "@src/composables/ShadowOnScroll";
 
 import BarsIcon from "@components/icons/BarsIcon.vue";
@@ -32,12 +30,12 @@ import HeaderLogo from "@components/header/HeaderLogo.vue";
 import HeaderMenuMobile from "@components/header/HeaderMenuMobile.vue";
 import HeaderNavbarItems from "@components/header/HeaderNavbarItems.vue";
 import ProgressBar from "@components/shared/ProgressBar.vue";
+import NavbarItemsData, { NavbarItem } from "@services/portfolio/types/NavbarItemsData";
 
 const toggleMenu = ref<boolean>(false);
 const header = ref<HTMLElement>();
 
 useShadowOnScroll(header, { shadowColor: "shadow-cyan-500/20", shadowSize: "shadow-lg" });
 
-const navbarItemsData = inject<INavbarHeaderSectionItem[]>(SectionNameData.headerSectionData);
+const navbarItemsData: NavbarItem[] = NavbarItemsData;
 </script>
-

@@ -15,10 +15,10 @@
 <script setup lang="ts">
 import CloseIcon from "@components/icons/CloseIcon.vue";
 import HeaderNavbarItems from "@components/header/HeaderNavbarItems.vue";
-import { INavbarHeaderSectionItem } from "@src/types";
+import { NavbarItem } from "@services/portfolio/types/NavbarItemsData";
 
 defineProps<{
-  navbarItemsData: INavbarHeaderSectionItem[];
+  navbarItemsData: NavbarItem[];
   show: boolean;
 }>();
 </script>

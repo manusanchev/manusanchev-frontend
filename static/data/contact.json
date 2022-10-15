@@ -1,0 +1,18 @@
+ [
+  {
+    "url": "https://www.linkedin.com/in/manusanchev",
+    "hintTime": "Suelo responder en <span class='contact-hint'>1 hora</span>",
+    "contactType": 1
+  },
+  {
+    "url": "https://twitter.com/messages/compose?recipient_id=2317765355&text=Hola Manuel, me gustaria poder hablar contigo",
+    "additionalData": "@manuelsv_98",
+    "hintTime": "Suelo responder en <span class='contact-hint'>2 horas</span>",
+    "contactType": 2
+  },
+  {
+    "url": "mailto:manuvempleo@gmail.com",
+    "hintTime": "Suelo responder en <span class='contact-hint'>4 horas</span>",
+    "contactType": 3
+  }
+]
