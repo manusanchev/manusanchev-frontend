@@ -1,19 +1,17 @@
 <template>
-  <div class="mx-auto flex items-end gap-4">
-    <component
-      class="h-16 w-16 fill-current text-white md:h-20 md:w-20"
-      :is="contactIconMap.get(item.contactType)"
-    />
+  <div class="contact-item">
+    <component class="contact-item__icon" :is="contactIconMap.get(item.contactType)" />
     <div>
       <a
         :href="item.url"
         :title="item.url"
         target="_blank"
         :data-screen-name="item.additionalData"
-        class="block rounded border border-white py-1.5 text-center text-white hover:bg-white hover:text-slate-900 md:text-lg"
-        >Enviar mensaje</a
+        class="contact-item__link"
       >
-      <p class="text-white md:text-lg" v-html="item.hintTime" />
+        Enviar mensaje
+      </a>
+      <p class="contact-item__hint" v-html="item.hintTime" />
     </div>
   </div>
 </template>
@@ -26,8 +24,46 @@ defineProps<{
 }>();
 </script>
 
-<style>
-.contact-hint {
+<style scoped>
+.contact-item {
+  @apply mx-auto flex items-end gap-4;
+}
+
+.contact-item__icon {
+  @apply h-16 w-16 fill-current text-white;
+}
+
+@screen md {
+  .contact-item__icon {
+    @apply h-20 w-20;
+  }
+}
+
+.contact-item__link {
+  @apply block rounded border border-white py-1.5 text-center text-white;
+}
+
+@screen md {
+  .contact-item__link {
+    @apply text-lg;
+  }
+
+  .contact-item__link:hover {
+    @apply bg-white text-slate-900;
+  }
+}
+
+.contact-item__hint {
+  @apply text-white;
+}
+
+@screen md {
+  .contact-item__hint {
+    @apply text-lg;
+  }
+}
+
+:global(.contact-hint) {
   @apply text-blue-400;
 }
 </style>

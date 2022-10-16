@@ -14,7 +14,7 @@ import Button from "@components/shared/BaseButton.vue";
 import HeroAnimation from "@components/hero/HeroAnimation.vue";
 import HeroTitle from "@components/hero/HeroTitle.vue";
 import HeroSubtitle from "@components/hero/HeroSubtitle.vue";
-import useScrollToSection from "@src/composables/ScrollToSection";
+import useScrollToSection from "@composables/ScrollToSection";
 import { NavbarSectionName } from "@services/portfolio/types/NavbarItemsData";
 
 function handleClick() {

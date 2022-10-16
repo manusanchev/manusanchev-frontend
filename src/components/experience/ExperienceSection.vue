@@ -8,13 +8,11 @@
 </template>
 
 <script setup lang="ts">
-import { inject } from "vue";
-
 import SectionHeader from "@components/shared/SectionHeader.vue";
 import ExperienceItem from "@components/experience/ExperienceItem.vue";
 import ExperienceItemsList from "@components/experience/ExperienceItemsList.vue";
 import { ExperienceSectionItem } from "@services/portfolio/types/ExperienceSectionItem";
-import usePortfolioService from "@src/composables/PortfolioService";
+import usePortfolioService from "@composables/PortfolioService";
 
 const portfolioService = usePortfolioService();
 const experienceData: ExperienceSectionItem[] = await portfolioService.getExperienceData();

@@ -16,7 +16,7 @@
     "experimentalDecorators": true,
     "paths": {
       "@": ["./*"],
-      "@src/*": ["./src/*"],
+      "@composables/*": ["./src/composables/*"],
       "@assets/*": ["./src/assets/*"],
       "@utils/*": ["./src/utils/*"],
       "@components/*": ["./src/components/*"],

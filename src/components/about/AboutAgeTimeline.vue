@@ -1,8 +1,6 @@
 <template>
-  <div class="relative">
-    <div
-      class="flex h-16 w-16 items-center justify-center rounded-full border border-[#6BB8FF] text-xl text-white md:h-[5rem] md:w-[5rem] md:text-2xl lg:h-24 lg:w-24 lg:text-3xl"
-    >
+  <div class="about-age-timeline">
+    <div class="about-age-timeline__year">
       {{ year }}
     </div>
     <slot />
@@ -14,3 +12,26 @@ defineProps<{
   year: string;
 }>();
 </script>
+
+<style scoped>
+.about-age-timeline {
+  @apply relative;
+}
+
+.about-age-timeline__year {
+  @apply flex h-16 w-16 items-center justify-center rounded-full;
+  @apply border border-[#6BB8FF] text-xl text-white;
+}
+
+@screen md {
+  .about-age-timeline__year {
+    @apply h-[5rem] w-[5rem] text-2xl;
+  }
+}
+
+@screen lg {
+  .about-age-timeline__year {
+    @apply h-24 w-24 text-3xl;
+  }
+}
+</style>

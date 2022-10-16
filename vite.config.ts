@@ -1,20 +1,6 @@
 import vue from '@vitejs/plugin-vue'
-import pathLib from "path";
-const tsConfig = require("./tsconfig.json");
 import { defineConfig } from 'vitest/config'
-
-const alias = Object.entries(tsConfig.compilerOptions.paths)
-    .map((path) => {
-      return {
-        [path[0].replace("/*", "")]: pathLib.resolve(
-            __dirname,
-            path[1][0].replace("/*", "")
-        ),
-      };
-    })
-    .reduce((current, next) => {
-      return { ...current, ...next };
-    }, {});
+import { fileURLToPath, URL } from "url";
 
 export default defineConfig({
   test: {
@@ -34,10 +20,15 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  envPrefix: 'APP_', // change to name app
   resolve: {
     alias: {
-      ...alias,
+      "@assets": fileURLToPath(new URL("./src/assets", import.meta.url)),
+      "@components": fileURLToPath(new URL("./src/components", import.meta.url)),
+      "@composables": fileURLToPath(new URL("./src/composables", import.meta.url)),
+      "@utils": fileURLToPath(new URL("./src/utils", import.meta.url)),
+      "@services": fileURLToPath(new URL("./src/services", import.meta.url)),
+      "@static": fileURLToPath(new URL("./static", import.meta.url)),
+      "@context": fileURLToPath(new URL("./src/context", import.meta.url)),
     },
   },
 });

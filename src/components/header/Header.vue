@@ -23,7 +23,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import useShadowOnScroll from "@src/composables/ShadowOnScroll";
+import useShadowOnScroll from "@composables/ShadowOnScroll";
 
 import BarsIcon from "@components/icons/BarsIcon.vue";
 import HeaderLogo from "@components/header/HeaderLogo.vue";

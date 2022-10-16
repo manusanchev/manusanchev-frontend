@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import { inject, ref } from "vue";
+import { ref } from "vue";
 
 import SectionHeader from "@components/shared/SectionHeader.vue";
 import ProjectsItem from "@components/projects/ProjectsItem.vue";
@@ -28,10 +28,8 @@ import HintSection from "@components/shared/HintSection.vue";
 
 import { ProjectSectionItem } from "@services/portfolio/types/ProjectSectionItem";
 
-import usePaginateItems from "@src/composables/PaginateItems";
-import useScrollToSection from "@src/composables/ScrollToSection";
-import { SectionNameRef } from "@services/portfolio/types/SectionNameRef";
-import usePortfolioService from "@src/composables/PortfolioService";
+import usePaginateItems from "@composables/PaginateItems";
+import usePortfolioService from "@composables/PortfolioService";
 
 const pageNumber = ref<number>(0);
 const isLastPage = ref(false);
@@ -43,14 +41,14 @@ const projectsDataArray: ProjectSectionItem[] = await portfolioService.getProjec
 const { items } = usePaginateItems(projectsDataArray, pageNumber, pageSize);
 const projectsData = ref(items);
 
+// TODO reuse this function into composable
 function handleShowMore() {
   const { items, isLastPageReached } = usePaginateItems(projectsDataArray, pageNumber, pageSize);
   projectsData.value = items;
   isLastPage.value = isLastPageReached.value;
-
-  useScrollToSection(document.getElementById("buttonProjects") as HTMLElement, -20);
 }
 
+// TODO reuse this function into composable
 function handleCollapseAll() {
   pageNumber.value = 1;
   isLastPage.value = false;

@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <main class="mx-auto w-11/12 py-32 md:w-full md:py-48 xl:max-w-[120rem]">
+  <main class="app__main">
     <HeroSection />
     <Suspense>
       <AboutSection :id="NavbarSectionName.aboutSection" />
@@ -34,7 +34,7 @@ import ContactSection from "@components/contact/ContactSection.vue";
 import Footer from "@components/footer/Footer.vue";
 import PolicyBanner from "@components/generic/PolicyBanner.vue";
 import { onBeforeMount, ref } from "vue";
-import useCookie from "@src/composables/Cookie";
+import useCookie from "@composables/Cookie";
 
 const { setCookie, getCookie } = useCookie("policyBannerAccepted");
 const showBanner = ref<boolean>(false);
@@ -54,3 +54,21 @@ function closeBannerPolicy() {
   }
 }
 </script>
+
+<style scoped>
+.app__main {
+  @apply mx-auto w-11/12 py-32;
+}
+
+@screen md {
+  .app__main {
+    @apply w-full py-48;
+  }
+}
+
+@screen xl {
+  .app__main {
+    @apply max-w-[120rem];
+  }
+}
+</style>

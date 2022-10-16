@@ -1,10 +1,6 @@
 <template>
-  <div class="flex flex-col">
-    <div
-      v-for="(item, index) in data"
-      :key="index"
-      class="flex select-none flex-col items-center"
-    >
+  <div class="about-timeline">
+    <div v-for="(item, index) in data" :key="index" class="about-timeline__content">
       <AboutTimelineSeparator :is-first-element="index === 0" />
       <AboutAgeTimeline :year="item.year">
         <AboutTextTimeline :is-even="isEven(index)" :text="item.text" />
@@ -28,3 +24,13 @@ function isEven(index: number): boolean {
   return index % 2 === 0;
 }
 </script>
+
+<style scoped>
+.about-timeline {
+  @apply flex flex-col;
+}
+
+.about-timeline__content {
+  @apply flex select-none flex-col items-center;
+}
+</style>
