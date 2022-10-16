@@ -1,23 +1,17 @@
 <template>
   <header>
-    <div
-      ref="header"
-      class="fixed z-10 flex w-full items-center justify-between bg-slate-900 py-5 px-4 md:py-[1.5rem] lg:px-24 xl:px-[10rem]"
-    >
+    <div ref="header" class="header__container">
       <HeaderLogo />
-      <BarsIcon
-        class="h-[2.313rem] w-[2.313rem] fill-current text-white md:hidden"
-        @click="toggleMenu = !toggleMenu"
-      />
-      <HeaderNavbarItems class="hidden md:flex" :navbar-items-data="navbarItemsData" />
+      <BarsIcon class="header-mobile__icon" @click="toggleMenu = !toggleMenu" />
+      <HeaderNavbarItems class="header__items" :navbar-items-data="navbarItemsData" />
     </div>
     <HeaderMenuMobile
       :navbar-items-data="navbarItemsData"
       :show="toggleMenu"
-      class="z-20 md:hidden"
+      class="header-mobile__menu"
       @close-menu-fullScreen="toggleMenu = false"
     />
-    <ProgressBar class="mt-[4.7rem] md:mt-[5rem]" />
+    <ProgressBar class="header__progress-bar" />
   </header>
 </template>
 
@@ -39,3 +33,67 @@ useShadowOnScroll(header, { shadowColor: "shadow-cyan-500/20", shadowSize: "shad
 
 const navbarItemsData: NavbarItem[] = NavbarItemsData;
 </script>
+
+<style scoped>
+.header__container {
+  @apply fixed z-10 flex w-full items-center justify-between bg-slate-900 py-5 px-4;
+}
+
+@screen md {
+  .header__container {
+    @apply py-[1.5rem];
+  }
+}
+
+@screen lg {
+  .header__container {
+    @apply px-24;
+  }
+}
+
+@screen xl {
+  .header__container {
+    @apply px-[10rem];
+  }
+}
+
+.header-mobile__icon {
+  @apply h-[2.313rem] w-[2.313rem] fill-current text-white;
+}
+
+@screen md {
+  .header-mobile__icon {
+    @apply hidden;
+  }
+}
+
+.header__items {
+  @apply hidden;
+}
+
+@screen md {
+  .header__items {
+    @apply flex;
+  }
+}
+
+.header-mobile__menu {
+  @apply z-20;
+}
+
+@screen md {
+  .header-mobile__menu {
+    @apply hidden;
+  }
+}
+
+.header__progress-bar {
+  @apply mt-[4.7rem];
+}
+
+@screen md {
+  .header__progress-bar {
+    @apply mt-[5rem];
+  }
+}
+</style>

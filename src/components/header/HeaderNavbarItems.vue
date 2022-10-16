@@ -1,10 +1,8 @@
 <template>
   <nav>
-    <ul
-      class="mt-[35px] ml-[25px] flex flex-col gap-11 text-white md:mt-0 md:ml-0 md:flex-row md:items-center md:gap-6"
-    >
+    <ul class="header-navbar-items__list">
       <li
-        class="text-4xl font-extrabold md:text-lg md:font-bold md:hover:border-b-2 md:hover:border-[#4D9BFB] lg:text-xl"
+        class="header-navbar-items__item"
         v-for="(item, index) in navbarItemsData"
         :key="index"
         @click="$emit('closeMenuFullScreen')"
@@ -25,3 +23,35 @@ defineProps<{
   navbarItemsData: NavbarItem[];
 }>();
 </script>
+
+<style scoped>
+.header-navbar-items__list {
+  @apply mt-[35px] ml-[25px] flex flex-col gap-11 text-white;
+}
+
+@screen md {
+  .header-navbar-items__list {
+    @apply mt-0 ml-0 flex-row items-center gap-6;
+  }
+}
+
+.header-navbar-items__item {
+  @apply text-4xl font-extrabold ;
+}
+
+@screen md {
+  .header-navbar-items__item:hover {
+    @apply border-b-2 border-[#4D9BFB];
+  }
+
+  .header-navbar-items__item {
+    @apply text-lg font-bold;
+  }
+}
+
+@screen lg {
+  .header-navbar-items__item {
+    @apply text-xl;
+  }
+}
+</style>

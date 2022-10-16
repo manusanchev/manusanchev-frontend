@@ -1,10 +1,12 @@
 <template>
-  <section class="grid grid-cols-1 items-center justify-items-center md:grid-cols-2">
-    <HeroAnimation class="hidden md:flex" />
-    <div class="mx-auto text-center md:text-left">
+  <section class="hero-section">
+    <HeroAnimation class="hero-section__animation" />
+    <div class="hero-section__content">
       <HeroTitle />
       <HeroSubtitle />
-      <Button class="mt-12" theme="3dimension" @click="handleClick"> Contacto </Button>
+      <Button class="hero-section__button" theme="3dimension" @click="handleClick">
+        Contacto
+      </Button>
     </div>
   </section>
 </template>
@@ -21,3 +23,39 @@ function handleClick() {
   useScrollToSection(document.getElementById(NavbarSectionName.contactSection) as HTMLElement);
 }
 </script>
+
+<style scoped>
+.hero-section {
+  @apply grid grid-cols-1 items-center justify-items-center;
+}
+
+@screen md {
+  .hero-section {
+    @apply grid-cols-2;
+  }
+}
+
+.hero-section__animation {
+  @apply hidden;
+}
+
+@screen md {
+  .hero-section__animation {
+    @apply flex;
+  }
+}
+
+.hero-section__content {
+  @apply mx-auto text-center;
+}
+
+@screen md {
+  .hero-section__content {
+    @apply text-left;
+  }
+}
+
+.hero-section__button {
+  @apply mt-12;
+}
+</style>
