@@ -4,7 +4,6 @@
     <div>
       <a
         :href="item.url"
-        :title="item.url"
         target="_blank"
         :data-screen-name="item.additionalData"
         class="contact-item__link"
@@ -26,7 +25,7 @@ defineProps<{
 
 <style scoped>
 .contact-item {
-  @apply mx-auto flex items-end gap-4;
+  @apply mx-auto flex items-end gap-8;
 }
 
 .contact-item__icon {
@@ -49,18 +48,12 @@ defineProps<{
   }
 
   .contact-item__link:hover {
-    @apply bg-white text-slate-900;
+    @apply border-0 text-slate-900 bg-gradient-to-r from-[#6BB8FF] to-white;
   }
 }
 
 .contact-item__hint {
-  @apply text-white;
-}
-
-@screen md {
-  .contact-item__hint {
-    @apply text-lg;
-  }
+  @apply text-white mt-2;
 }
 
 :global(.contact-hint) {

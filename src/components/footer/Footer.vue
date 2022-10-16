@@ -4,7 +4,7 @@
       Diseñado en <span class="footer-info--highlight">Figma</span> y desarrollado con
       <span class="footer-info--highlight">Vuejs</span>
     </h3>
-    <i class="footer__metadata">manusanchev &copy; {{ new Date().getFullYear() }}</i>
+    <i class="footer__metadata">manusanchev.com &copy; {{ new Date().getFullYear() }}</i>
   </footer>
 </template>
 
