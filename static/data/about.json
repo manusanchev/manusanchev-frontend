@@ -1,38 +1,18 @@
 [
   {
-    "year": "1998",
-    "text": "Nací un 31 de julio de 1998 en la ciudad de Sevilla, hacía una noche con aire veraniego"
+    "year": "1",
+    "text": "Soy un apasionado del desarrollo web, <span  class='about--marked'>soy autodidacta</span>"
   },
   {
-    "year": "2006",
-    "text": "Me compraron mi primer ordenador con Windows XP, en este año comprendí el potencial de internet y todo lo que se podía hacer"
+    "year": "2",
+    "text": "Me encanta escribir código, código limpio is my passion! pero código limpio con un score de 100 en lighthouse es ya lo más"
   },
   {
-    "year": "2014",
-    "text": "Empecé a preguntarme como se hacían las webs que visitaba en el día a día y comencé a aprender <span class='about--marked'>HTML</span> y <span class='about--marked'>CSS</span> de forma autodidacta a través de w3school.com"
+    "year": "3",
+    "text": "Me encanta crear proyectos ya que soy una mente inquieta, pienso, analizo, desarrollo y lanzo"
   },
   {
-    "year": "2016",
-    "text": "Comencé a aprender de forma autodidacta <span  class='about--marked'>Javascript</span> en plataformas como CodeAcademy cuando era totalmente gratuito y Javascript.info"
-  },
-  {
-    "year": "2016",
-    "text": "Comencé a desarrollar algunas webs con <span  class='about--marked'>PHP</span> sin frameworks y aumentó mi pasión por el desarrollo web"
-  },
-  {
-    "year": "2018",
-    "text": "Comencé el grado superior de desarrollo de aplicaciones web donde entrené mis habilidades para la programación"
-  },
-  {
-    "year": "2020",
-    "text": "Comencé a trabajar como desarrollador web fullstack en una empresa de consultoría y comencé a darme cuenta de a lo que me quería dedicar en mi carrera profesional dentro del desarrollo web"
-  },
-  {
-    "year": "2021",
-    "text": "Dejo mi trabajo en consultoría y comienzo a trabajar en una empresa con producto propio como Frontend Developer, aquí empiezo a conocer el mundo startup, las buenas prácticas, el poder de las decisiones y comienzo a darme cuenta de que realmente eso es lo que me gusta."
-  },
-  {
-    "year": "2022",
-    "text": "En la actualidad sigo en la misma empresa de producto propio, desarrollando siempre de la mano de las buenas prácticas, siguiendo <span  class='about--marked'>SOLID</span> y arquitecturas limpias"
+    "year": "4",
+    "text": "Me encanta el mundo startup, además de desarrollador, me encanta involucrarme en el negocio y la toma de decisiones"
   }
 ]

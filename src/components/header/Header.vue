@@ -2,7 +2,7 @@
   <header>
     <div ref="header" class="header__container">
       <HeaderLogo />
-      <BarsIcon class="header-mobile__icon" @click="toggleMenu = !toggleMenu" />
+      <BarsIcon :convert-to-close="toggleMenu" class="header-mobile__icon" @click="toggleMenu = !toggleMenu" />
       <HeaderNavbarItems class="header__items" :navbar-items-data="navbarItemsData" />
     </div>
     <HeaderMenuMobile
@@ -36,7 +36,9 @@ const navbarItemsData: NavbarItem[] = NavbarItemsData;
 
 <style scoped>
 .header__container {
-  @apply fixed z-10 flex w-full items-center justify-between bg-slate-900 py-5 px-4;
+  @apply fixed z-10 flex w-full items-center justify-between py-5 px-4;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
 }
 
 @screen md {
@@ -58,7 +60,7 @@ const navbarItemsData: NavbarItem[] = NavbarItemsData;
 }
 
 .header-mobile__icon {
-  @apply h-[2.313rem] w-[2.313rem] fill-current text-white;
+  @apply h-7 w-7 fill-current text-white;
 }
 
 @screen md {

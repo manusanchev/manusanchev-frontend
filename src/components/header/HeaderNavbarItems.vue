@@ -36,22 +36,18 @@ defineProps<{
 }
 
 .header-navbar-items__item {
-  @apply text-4xl font-extrabold ;
+  @apply text-4xl text-white;
 }
 
 @screen md {
   .header-navbar-items__item:hover {
-    @apply border-b-2 border-[#4D9BFB];
+    @apply text-gray-100 ;
   }
 
   .header-navbar-items__item {
-    @apply text-lg font-bold;
-  }
-}
-
-@screen lg {
-  .header-navbar-items__item {
-    @apply text-xl;
+    @apply text-[#abacaf] transition-all;
+    transition-duration: 250ms;
+    @apply text-base;
   }
 }
 </style>

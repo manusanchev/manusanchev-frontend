@@ -8,10 +8,10 @@
 <style scoped>
 .about-message {
   @apply mx-auto max-w-xl select-none;
-  @apply p-4 text-center text-xl text-white;
-  @apply border-[5px] border-dashed border-slate-900;
-  background: linear-gradient(#0f172a 0 0) padding-box,
-    linear-gradient(to right, #ac50ae, #4e8bd6 86%) border-box;
+  @apply p-4 text-center text-lg text-gray-200;
+  @apply border-[2px] border-dashed border-black;
+  background: linear-gradient(#000000 0 0) padding-box,
+    linear-gradient(to right, #50aeab, #4e8bd6 86%) border-box;
 }
 
 @screen lg {

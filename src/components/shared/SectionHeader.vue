@@ -1,11 +1,11 @@
 <template>
   <div class="section-header">
-    <h2 class="section-header__title">
+    <h3 class="section-header__title">
       {{ title }}
-    </h2>
-    <h3 class="section-header__subtitle">
-      {{ subtitle }}
     </h3>
+    <h4 class="section-header__subtitle">
+      {{ subtitle }}
+    </h4>
   </div>
 </template>
 
@@ -28,28 +28,29 @@ defineProps<{
 }
 
 .section-header__title {
-  @apply bg-gradient-to-r from-[#60A5FA] to-white/[.7] bg-clip-text text-5xl font-black text-transparent py-3;
+  @apply bg-gradient-to-r from-sky-600 to-sky-200 bg-clip-text text-3xl font-medium text-transparent py-3;
 }
 
 @screen lg {
   .section-header__title {
-    @apply text-6xl;
+    @apply text-4xl;
   }
 }
 
 .section-header__subtitle {
-  @apply text-2xl font-light text-white;
+  @apply text-4xl font-black text-white leading-snug mx-auto;
+  max-width: 20ch;
 }
 
 @screen md {
   .section-header__subtitle {
-    @apply mt-2 text-3xl;
+    @apply mt-2 text-6xl;
   }
 }
 
 @screen lg {
   .section-header__subtitle {
-    @apply mt-2 text-4xl;
+    @apply mt-2 text-6xl;
   }
 }
 </style>

@@ -1,13 +1,14 @@
 <template>
   <h1 class="hero-title">
-    Desarrollador de aplicaciones web
-    <span class="hero-title--highlight"> modernas </span>
+    Desarrollo aplicaciones web
+    <span class="hero-title--highlight"> modernas. </span>
   </h1>
 </template>
 
 <style scoped>
 .hero-title {
-  @apply text-[42px] text-gray-100;
+  @apply text-[50px] text-gray-100 font-black;
+  letter-spacing: -.03em;
 }
 
 @screen md {
@@ -24,11 +25,11 @@
 
 @screen xl {
   .hero-title {
-    @apply text-[80px];
+    @apply text-[90px];
   }
 }
 
 .hero-title--highlight {
-  @apply bg-gradient-to-r from-[#B271DA] via-[#6A94FF] to-[#EFF3FC] bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-blue-600 to-sky-300 bg-clip-text text-transparent;
 }
 </style>

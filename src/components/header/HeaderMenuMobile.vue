@@ -1,16 +1,12 @@
 <template>
-  <Transition name="header-menu-mobile-transition">
-    <div v-if="show" class="header-menu-mobile">
-      <CloseIcon class="header-menu-mobile__close-icon" @click="$emit('closeMenuFullScreen')" />
-      <HeaderNavbarItems
-        :navbar-items-data="navbarItemsData"
-        @close-menu-fullScreen="$emit('closeMenuFullScreen')"
-      />
-    </div>
-  </Transition>
+  <div v-if="show" class="header-menu-mobile">
+    <HeaderNavbarItems
+      :navbar-items-data="navbarItemsData"
+      @close-menu-fullScreen="$emit('closeMenuFullScreen')"
+    />
+  </div>
 </template>
 <script setup lang="ts">
-import CloseIcon from "@components/icons/CloseIcon.vue";
 import HeaderNavbarItems from "@components/header/HeaderNavbarItems.vue";
 import { NavbarItem } from "@services/portfolio/types/NavbarItemsData";
 
@@ -32,7 +28,7 @@ defineProps<{
 }
 
 .header-menu-mobile {
-  @apply fixed h-screen w-full overflow-hidden bg-slate-800;
+  @apply mt-[4.5rem] fixed h-screen w-full overflow-hidden bg-black;
 }
 
 .header-menu-mobile__close-icon {

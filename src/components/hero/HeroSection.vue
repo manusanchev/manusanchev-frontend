@@ -4,7 +4,7 @@
     <div class="hero-section__content">
       <HeroTitle />
       <HeroSubtitle />
-      <Button class="hero-section__button" theme="3dimension" @click="handleClick">
+      <Button class="hero-section__button" theme="shadow" @click="handleClick">
         Contacto
       </Button>
     </div>

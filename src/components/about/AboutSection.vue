@@ -1,6 +1,6 @@
 <template>
   <section>
-    <SectionHeader title="Sobre mi" subtitle="Un poco de mi historia" />
+    <SectionHeader title="Sobre mi" subtitle="Conoce mis cualidades" />
     <div class="about-section__timeline">
       <AboutTimeline :data="aboutMeData" />
     </div>

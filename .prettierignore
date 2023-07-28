@@ -3,11 +3,8 @@ node_modules
 .github
 index.html
 package.json
-package-lock.json
 postcss.config.js
 robots.txt
-server.js
-public/sitemap.xml
 tailwind.config.js
 tsconfig.json
 tsconfig.node.json

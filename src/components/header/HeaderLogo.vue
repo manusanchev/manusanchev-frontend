@@ -4,7 +4,7 @@
 
 <style scoped>
 .header-logo {
-  @apply bg-gradient-to-r from-[#4EA1ED] to-[#FEFDFF] bg-clip-text text-2xl font-extrabold text-transparent;
+  @apply text-white text-2xl font-extrabold;
 }
 
 @screen xl {
@@ -13,3 +13,4 @@
   }
 }
 </style>
+<script setup lang="ts"></script>

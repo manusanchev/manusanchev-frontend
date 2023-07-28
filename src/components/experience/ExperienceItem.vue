@@ -24,7 +24,7 @@ defineProps<{
 
 @screen md {
   .experience-item {
-    @apply relative rounded border border-transparent bg-slate-900 cursor-pointer;
+    @apply relative rounded border border-transparent bg-black cursor-pointer;
   }
 
   .experience-item:hover .experience-item__arrow {
