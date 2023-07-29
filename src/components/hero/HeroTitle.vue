@@ -26,6 +26,7 @@
 @screen xl {
   .hero-title {
     @apply text-[90px];
+    max-width: 40rem;
   }
 }
 
