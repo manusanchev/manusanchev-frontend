@@ -1,43 +1,18 @@
 {
-  "name": "-port",
   "private": true,
-  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "rm -rf dist && vite-ssg build",
-    "build-prod": "vite-ssg build",
-    "preview": "vite preview",
-    "docker-build": "docker build -t manusanchev .",
-    "docker-start": "docker run -dp 3000:3000 manusanchev",
-    "prettier-check": "prettier --check .",
-    "test": "vitest --run",
-    "coverage": "vitest run --coverage",
-    "prettier": "prettier --write ."
-  },
-  "dependencies": {
-    "awilix": "^8.0.1",
-    "cross-fetch": "^4.0.0",
-    "js-cookie": "^3.0.5",
-    "vue": "^3.3.4",
-    "vue-scrollto": "^2.20.0"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@types/js-cookie": "^3.0.3",
-    "@vitejs/plugin-vue": "^4.2.3",
-    "@vue/test-utils": "^2.4.1",
-    "@vueuse/head": "^1.1.26",
-    "autoprefixer": "^10.4.14",
-    "c8": "^8.0.1",
-    "i": "^0.3.7",
-    "jsdom": "^22.1.0",
-    "postcss": "^8.4.27",
-    "prettier": "^3.0.0",
-    "tailwindcss": "^3.3.3",
-    "typescript": "^5.1.6",
-    "vite": "^4.4.7",
-    "vite-ssg": "^0.23.1",
-    "vitest": "^0.33.0",
-    "vue-router": "^4.2.4",
-    "yarn-upgrade-all": "^0.7.2"
+    "@nuxt/content": "^2.8.5",
+    "autoprefixer": "^10.4.16",
+    "nuxt": "^3.8.0",
+    "postcss": "^8.4.31",
+    "prettier": "^3.0.3",
+    "tailwindcss": "^3.3.5"
   }
 }

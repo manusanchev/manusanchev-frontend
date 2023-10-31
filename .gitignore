@@ -1,5 +1,9 @@
 node_modules
-.idea
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.data
+.env
 dist
-coverage
-manusanchev-new

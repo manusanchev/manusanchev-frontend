@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1498c4a1-d482-4a13-bc2d-efc7ffc58f60" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sitemap.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/style/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about/AboutAgeTimeline.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about/AboutMessage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about/AboutSection.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about/AboutTextTimeline.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about/AboutTimeline.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about/AboutTimelineSeparator.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blog/BlogItem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/blog/BlogSection.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contact/ContactItem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contact/ContactSection.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/experience/ExperienceItem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/experience/ExperienceItemsList.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/experience/ExperienceSection.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/generic/PolicyBanner.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/HeaderLogo.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/HeaderMenuMobile.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/HeaderNavbarItems.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hero/HeroAnimation.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hero/HeroSection.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hero/HeroSubtitle.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hero/HeroTitle.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icons/ArrowDownIcon.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icons/ArrowRightIcon.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icons/BarsIcon.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icons/CloseIcon.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icons/EmailIcon.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icons/GithubIcon.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icons/LinkIcon.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icons/LinkedinIcon.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icons/TwitterIcon.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/ProjectsItem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/ProjectsItemLink.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projects/ProjectsSection.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/BaseButton.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/HintSection.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/ItemsListLayout.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/ProgressBar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/Section.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/SectionHeader.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/SectionToggleButtons.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/composables/Cookie.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/composables/PaginateItems.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/composables/PortfolioService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/composables/ScrollToSection.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/composables/ShadowOnScroll.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/portfolio/PortfolioService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/portfolio/types/AboutSectionItem.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/portfolio/types/BlogSectionItem.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/portfolio/types/ContactSectionItem.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/portfolio/types/ExperienceSectionItem.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/portfolio/types/IPortfolioService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/portfolio/types/NavbarItemsData.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/portfolio/types/ProjectSectionItem.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/container.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/data/about.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/data/blog.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/data/contact.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/data/experience.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/data/projects.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/HelloWorld.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.node.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="manusanchev-FEATURE-change-app-arch" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/.github/workflows/manusanchev-ci-cd.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/App.vue" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/assets/style/index.css" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="7dcczcy1" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2AOwlGHgEMYgKpQprjxmvj35fFc" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;14.17.2&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;14.17.2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/manu/Escritorio/manusanchev/assets/fonts/fixel&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/manu/Escritorio/manusanchev/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/snap/webstorm/341/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/fonts/fixel" />
+      <recent name="$PROJECT_DIR$/assets/fonts" />
+      <recent name="$PROJECT_DIR$/components/blocks" />
+      <recent name="$PROJECT_DIR$/manusanchev-new/src" />
+      <recent name="$PROJECT_DIR$/manusanchev-new" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/types/projects" />
+      <recent name="$PROJECT_DIR$/components/aboutSection" />
+      <recent name="$PROJECT_DIR$/assets/fonts/fixel" />
+      <recent name="$PROJECT_DIR$/components/projects" />
+      <recent name="$PROJECT_DIR$/components/hero" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1498c4a1-d482-4a13-bc2d-efc7ffc58f60" name="Changes" comment="" />
+      <created>1654894089084</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654894089084</updated>
+      <workItem from="1654894090355" duration="3449000" />
+      <workItem from="1654925583575" duration="31912000" />
+      <workItem from="1654964043770" duration="5819000" />
+      <workItem from="1655013903988" duration="30763000" />
+      <workItem from="1655096172590" duration="35514000" />
+      <workItem from="1655208332334" duration="7246000" />
+      <workItem from="1655297442008" duration="61000" />
+      <workItem from="1655297862397" duration="4000" />
+      <workItem from="1655357282812" duration="853000" />
+      <workItem from="1655540172362" duration="7387000" />
+      <workItem from="1658566055533" duration="210000" />
+      <workItem from="1665764282875" duration="6686000" />
+      <workItem from="1665816762518" duration="4003000" />
+      <workItem from="1665835984453" duration="8905000" />
+      <workItem from="1665860615971" duration="13945000" />
+      <workItem from="1665902074960" duration="10888000" />
+      <workItem from="1665924254351" duration="5705000" />
+      <workItem from="1666188055041" duration="3000" />
+      <workItem from="1666970603567" duration="93000" />
+      <workItem from="1690209936000" duration="1114000" />
+      <workItem from="1690297772975" duration="12925000" />
+      <workItem from="1690351511392" duration="2685000" />
+      <workItem from="1690367468691" duration="164000" />
+      <workItem from="1690555524271" duration="31000" />
+      <workItem from="1690555556286" duration="7858000" />
+      <workItem from="1690615246291" duration="746000" />
+      <workItem from="1690720594376" duration="175000" />
+      <workItem from="1695830687146" duration="35000" />
+      <workItem from="1695899951683" duration="120000" />
+      <workItem from="1696088792109" duration="1102000" />
+      <workItem from="1696231971367" duration="14000" />
+      <workItem from="1696415228043" duration="1282000" />
+      <workItem from="1696434738686" duration="766000" />
+      <workItem from="1696498647024" duration="40000" />
+      <workItem from="1697093236105" duration="1640000" />
+      <workItem from="1697095043668" duration="4909000" />
+      <workItem from="1698753005942" duration="7819000" />
+      <workItem from="1698763627601" duration="6064000" />
+      <workItem from="1698769959656" duration="3140000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
