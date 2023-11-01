@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1498c4a1-d482-4a13-bc2d-efc7ffc58f60" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/about/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/about/About.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/about/FreelanceContactFooter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/about/FreelanceContactFooter.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/projects/blocks/VideoBlock.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/projects/blocks/VideoBlock.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/about/freelance.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/about/freelance.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/projects/shortlink.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/projects/shortlink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/projects/old-portfolio.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/projects/old-portfolio.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +127,7 @@
       <workItem from="1698753005942" duration="7819000" />
       <workItem from="1698763627601" duration="6064000" />
       <workItem from="1698769959656" duration="5249000" />
-      <workItem from="1698821837683" duration="17565000" />
+      <workItem from="1698821837683" duration="17643000" />
     </task>
     <servers />
   </component>
