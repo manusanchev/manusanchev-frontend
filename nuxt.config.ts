@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
-        lang: "es",
+        lang: "en",
       },
       meta: [
         { charset: "utf-8" },
