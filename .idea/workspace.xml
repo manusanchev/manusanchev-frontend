@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1498c4a1-d482-4a13-bc2d-efc7ffc58f60" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/about/FreelanceContactFooter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/about/FreelanceContactFooter.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/about/header/contactNav/ContactNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/about/header/contactNav/ContactNav.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/projects/new-portfolio.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/projects/new-portfolio.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +53,7 @@
     "WebServerToolWindowFactoryState": "false",
     "javascript.nodejs.core.library.configured.version": "14.17.2",
     "javascript.nodejs.core.library.typings.version": "14.17.2",
-    "last_opened_file_path": "/home/manu/Escritorio/manusanchev/public",
+    "last_opened_file_path": "/home/manu/Escritorio/manusanchev/content/projects",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -71,11 +67,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/content/projects" />
       <recent name="$PROJECT_DIR$/public/images" />
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/videos" />
       <recent name="$PROJECT_DIR$/components/projects/blocks/providers" />
-      <recent name="$PROJECT_DIR$/types/projects/blocks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/videos" />
@@ -132,7 +128,7 @@
       <workItem from="1698753005942" duration="7819000" />
       <workItem from="1698763627601" duration="6064000" />
       <workItem from="1698769959656" duration="5249000" />
-      <workItem from="1698821837683" duration="16375000" />
+      <workItem from="1698821837683" duration="16814000" />
     </task>
     <servers />
   </component>

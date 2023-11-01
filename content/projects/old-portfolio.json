@@ -1,0 +1,24 @@
+{
+  "title": "old Portfolio",
+  "description": "This portfolio was designed with Figma from scratch and built using Vue.js with Vite (alternative tool to webpack) and ViteSSG (plugin to generate static pages at build time). On the other hand we have made use of TailwindCSS and Testing Library.",
+  "date": "26 jul, 2022",
+  "sortDate": "07-26-2022",
+  "blocks": [
+    {
+      "type": "image",
+      "params": {
+        "url": "/old-portfolio.webp",
+        "alt": "Old portfolio image"
+      }
+    },
+    {
+      "type": "provider",
+      "params": [
+        {
+          "name": "github",
+          "url": "https://github.com/manusanchev/manusanchev-frontend"
+        }
+      ]
+    }
+  ]
+}
