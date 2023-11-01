@@ -5,27 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1498c4a1-d482-4a13-bc2d-efc7ffc58f60" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/types/projects/blocks/Block.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/about/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/about/About.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/about/CardInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/about/CardInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/about/FreelanceContactFooter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/about/FreelanceContactFooter.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/about/header/AboutHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/about/header/AboutHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/about/header/contactNav/ContactNavItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/about/header/contactNav/ContactNavItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/projects/ProjectCardItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/projects/card/ProjectCardItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/projects/ProjectCards.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/projects/card/ProjectCards.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/projects/Projects.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/projects/Projects.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/projects/blocks/ImageBlock.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/projects/blocks/ImageBlock.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/projects/blocks/VideoBlock.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/projects/blocks/VideoBlock.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/projects/netflix-extension.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/projects/netflix-extension.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/about/header/contactNav/ContactNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/about/header/contactNav/ContactNav.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/projects/ProjectData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/projects/ProjectData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/projects/blocks/Blocks.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/projects/blocks/ImageBlockParams.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/projects/blocks/ImageBlockParams.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/projects/blocks/VideoBlockParams.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/projects/blocks/VideoBlockParams.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +57,7 @@
     "WebServerToolWindowFactoryState": "false",
     "javascript.nodejs.core.library.configured.version": "14.17.2",
     "javascript.nodejs.core.library.typings.version": "14.17.2",
-    "last_opened_file_path": "/home/manu/Escritorio/manusanchev/public/images",
+    "last_opened_file_path": "/home/manu/Escritorio/manusanchev/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -86,9 +71,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public/videos" />
-      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/components/projects/blocks/providers" />
       <recent name="$PROJECT_DIR$/types/projects/blocks" />
     </key>
@@ -147,7 +132,7 @@
       <workItem from="1698753005942" duration="7819000" />
       <workItem from="1698763627601" duration="6064000" />
       <workItem from="1698769959656" duration="5249000" />
-      <workItem from="1698821837683" duration="14221000" />
+      <workItem from="1698821837683" duration="16375000" />
     </task>
     <servers />
   </component>
