@@ -1,11 +1,24 @@
 {
-  "title": "sss",
-  "description": "",
-  "date": "",
-  "blocks": {
-    "image": {
-      "url": "",
-      "alt": ""
+  "title": "Netflix audio control",
+  "description": "Control the volume of Netflix with the mouse wheel. Extension built for chrome with js.",
+  "date": "30 oct, 2023",
+  "sortDate": "10-30-2023",
+  "blocks": [
+    {
+      "type": "image",
+      "params": {
+        "url": "/netflix-extension.webp",
+        "alt": "The definitive netflix audio control"
+      }
+    },
+    {
+      "type": "provider",
+      "params": [
+        {
+          "name": "github",
+          "url": "https://github.com/manusanchev/netflix-audio-control-extension"
+        }
+      ]
     }
-  }
+  ]
 }

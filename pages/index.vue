@@ -1,14 +1,8 @@
-<script setup lang="ts">
-import type { ProjectData } from "~/types/projects/ProjectData";
-
-const { data } = await useAsyncData(() =>
-  queryContent<ProjectData>("projects").find(),
-);
-</script>
-
 <template>
-  <About class="border-b border-gray-900 pb-[4rem]" />
-  <main class="pt-8">
-    <Projects />
-  </main>
+  <div class="lg:flex">
+    <About class="lg:h-screen lg:sticky lg:top-0 border-b lg:border-r lg:border-b-0 border-gray-500 pb-[4rem] lg:w-[50%]" />
+    <main class="pt-8 lg:w-[50%]">
+      <Projects />
+    </main>
+  </div>
 </template>

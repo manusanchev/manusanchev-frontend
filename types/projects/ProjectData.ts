@@ -1,9 +1,10 @@
 import type { ParsedContentInternalMeta } from "@nuxt/content/dist/runtime/types";
-import type { Blocks } from "~/types/projects/blocks/Blocks";
+import type { Block } from "~/types/projects/blocks/Block";
 
 export interface ProjectData extends ParsedContentInternalMeta {
   title: string;
   description: string;
   date: string;
-  blocks: Blocks;
+  sortDate: string;
+  blocks: Block[];
 }

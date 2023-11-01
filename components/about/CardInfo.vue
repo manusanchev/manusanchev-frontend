@@ -9,10 +9,10 @@ defineProps({
     class="p-[1px] rounded-lg bg-gradient-to-r from-[#EA4949]/40 to-[#838EF3]/50"
   >
     <div class="bg-black rounded-lg p-3">
-      <h2 class="font-black tracking-widest text-2xl stroke mb-2">
+      <h2 class="font-black tracking-widest text-2xl lg:text-3xl stroke mb-2">
         {{ title }}
       </h2>
-      <p>{{ description }}</p>
+      <p class="lg:text-lg">{{ description }}</p>
       <div>
         <slot />
       </div>

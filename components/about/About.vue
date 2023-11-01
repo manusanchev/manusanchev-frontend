@@ -15,14 +15,18 @@ const { data } = await useAsyncData(async () =>
 </script>
 
 <template>
-  <div class="p-4">
+  <div class="p-4 md:p-8">
     <AboutHeader />
-    <p class="font-semibold text-2xl mt-10">
+    <p
+      class="font-semibold text-2xl mt-10 lg:text-3xl lg:max-w-[40ch] lg:mt-14"
+    >
       Frontend web developer making SaaS projects and freelancing jobs.
     </p>
     <section class="flex flex-col gap-y-4 mt-8">
       <CardInfo
-        v-for="info in data"
+        class="lg:max-w-[70ch]"
+        v-for="(info, index) in data"
+        :key="index"
         :title="info.title"
         :description="info.description"
       >
