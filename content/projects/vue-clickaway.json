@@ -1,6 +1,6 @@
 {
   "title": "vue3-clickaway npm package",
-  "description": "Vue 3 directive to detect clickaway events.",
+  "description": "Vue 3 directive to detect if a click event happened outside of an element.",
   "date": "28 oct, 2023",
   "sortDate": "10-28-2023",
   "blocks": [
