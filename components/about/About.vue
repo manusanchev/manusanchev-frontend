@@ -20,7 +20,7 @@ const { data } = await useAsyncData(async () =>
     <p
       class="font-semibold text-2xl mt-10 lg:text-3xl lg:max-w-[40ch] lg:mt-14"
     >
-      Frontend web developer making SaaS projects and freelancing jobs.
+      Frontend web developer doing SaaS projects and freelance work.
     </p>
     <section class="flex flex-col gap-y-4 mt-8">
       <CardInfo

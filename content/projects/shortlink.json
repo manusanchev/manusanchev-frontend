@@ -1,6 +1,6 @@
 {
   "title": "The definitive url shortener",
-  "description": "Url shortener built with vue3 and supabase as backend. Just send the link and get the short link back in seconds, no sign up required, it's that simple.",
+  "description": "Url shortener built with vue3 and supabase as backend. Just send the link and get the short link back in seconds, no need to register, it's that simple.",
   "date": "29 oct, 2023",
   "sortDate": "10-29-2023",
   "blocks": [

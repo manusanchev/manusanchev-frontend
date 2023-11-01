@@ -8,8 +8,8 @@ defineProps({
 </script>
 <template>
   <video
-    width="600"
-    height="600"
+    width="700"
+    height="700"
     class="rounded-lg mb-4 border border-gray-800"
     controls
     :autoplay="params.autoplay"

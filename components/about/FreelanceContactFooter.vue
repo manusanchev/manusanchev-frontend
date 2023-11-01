@@ -8,7 +8,7 @@
       target="_blank"
       class="bg-[#292828] px-4 py-1 rounded-md lg:hover:bg-[#292828]/80 lg:transition-colors"
     >
-      Contact
+      Contact me
     </NuxtLink>
   </div>
 </template>
