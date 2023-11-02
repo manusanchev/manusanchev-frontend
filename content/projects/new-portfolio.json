@@ -1,6 +1,6 @@
 {
   "title": "Portfolio redesigned",
-  "description": "Proudly redesigned portfolio designed with figma and built with nuxt 3 and TailwindCSS. I've built a block system to automatically insert blocks as image, video or links into the article project section",
+  "description": "I have built this new portfolio using nuxt3 and TailwindCSS. To show the projects I have built a block system that allows me to choose the type of content (image, video..) that suits what I want to transmit. I wanted a project focused on content, where the projects were the main piece.",
   "date": "01 nov, 2023",
   "sortDate": "11-01-2023",
   "blocks": [

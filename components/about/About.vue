@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import AboutHeader from "~/components/about/header/AboutHeader.vue";
-import CardInfo from "~/components/about/CardInfo.vue";
+import AboutCard from "~/components/about/AboutCard.vue";
 import FreelanceContactFooter from "~/components/about/FreelanceContactFooter.vue";
 import type { InfoData } from "~/types/about/InfoData";
 import type { Component } from "@nuxt/schema";
@@ -23,7 +23,7 @@ const { data } = await useAsyncData(async () =>
       Frontend web developer doing SaaS projects and freelance work.
     </p>
     <section class="flex flex-col gap-y-4 mt-8">
-      <CardInfo
+      <AboutCard
         class="lg:max-w-[70ch]"
         v-for="(info, index) in data"
         :key="index"
@@ -34,7 +34,7 @@ const { data } = await useAsyncData(async () =>
           v-if="info.component"
           :is="additionalInfo.get(info.component)"
         ></component>
-      </CardInfo>
+      </AboutCard>
     </section>
   </div>
 </template>

@@ -1,6 +1,6 @@
 {
   "title": "old Portfolio",
-  "description": "This portfolio was designed with Figma from scratch and built using Vue.js with Vite (alternative tool to webpack) and ViteSSG (plugin to generate static pages at build time). On the other hand we have made use of TailwindCSS and Testing Library.",
+  "description": "My old portfolio was designed with Figma from scratch and built using Vue.js with Vite (alternative tool to webpack) and ViteSSG (plugin to generate static pages at build time). I wanted to showcase my skills and competencies on the content I could generate, but it didn't really make an impact on what I could do. ",
   "date": "26 jul, 2022",
   "sortDate": "07-26-2022",
   "blocks": [
