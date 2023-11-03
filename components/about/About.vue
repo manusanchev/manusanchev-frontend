@@ -8,9 +8,11 @@ import type { Component } from "@nuxt/schema";
 const additionalInfo = new Map<string, any>([
   ["freelance", FreelanceContactFooter],
 ]);
-
+const { locale, t } = useI18n({
+  useScope: "local",
+});
 const { data } = await useAsyncData(async () =>
-  queryContent<InfoData>("about").find(),
+  queryContent<InfoData>("about").locale(locale.value).find(),
 );
 </script>
 
@@ -20,7 +22,7 @@ const { data } = await useAsyncData(async () =>
     <p
       class="font-semibold text-2xl mt-10 lg:text-3xl lg:max-w-[40ch] lg:mt-14"
     >
-      Frontend web developer doing SaaS projects and freelance work.
+      {{ t("About.Title") }}
     </p>
     <section class="flex flex-col gap-y-4 mt-8">
       <AboutCard
@@ -38,3 +40,18 @@ const { data } = await useAsyncData(async () =>
     </section>
   </div>
 </template>
+
+<i18n>
+{
+  "es": {
+    "About": {
+      "Title": "Desarrollador web frontend realizando proyectos SaaS y trabajos freelance."
+    }
+  },
+  "en": {
+    "About": {
+      "Title": " Frontend web developer doing SaaS projects and freelance work."
+    }
+  }
+}
+</i18n>
