@@ -11,6 +11,8 @@ const additionalInfo = new Map<string, any>([
 const { locale, t } = useI18n({
   useScope: "local",
 });
+const switchLocalePath = useSwitchLocalePath();
+
 const { data } = await useAsyncData(async () =>
   queryContent<InfoData>("about").locale(locale.value).find(),
 );
@@ -19,6 +21,10 @@ const { data } = await useAsyncData(async () =>
 <template>
   <div class="p-4 md:p-8">
     <AboutHeader />
+    <div class="flex gap-x-4 mt-3 px-3 text-gray-400 w-full justify-end">
+      <NuxtLink :to="switchLocalePath('en')">EN</NuxtLink>
+      <NuxtLink :to="switchLocalePath('es')">ES</NuxtLink>
+    </div>
     <p
       class="font-semibold text-2xl mt-10 lg:text-3xl lg:max-w-[40ch] lg:mt-14"
     >
@@ -55,3 +61,11 @@ const { data } = await useAsyncData(async () =>
   }
 }
 </i18n>
+
+
+
+<style scoped>
+.router-link-exact-active {
+  @apply text-white;
+}
+</style>

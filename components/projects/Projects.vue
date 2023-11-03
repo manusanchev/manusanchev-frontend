@@ -1,19 +1,11 @@
 <script setup lang="ts">
 import ProjectCards from "~/components/projects/card/ProjectCards.vue";
-const switchLocalePath = useSwitchLocalePath();
 
-const { t } = useI18n({
-  useScope: "local",
-});
+const { t } = useI18n();
 </script>
 
 <template>
-  <div class="pl-4 lg:pl-8">
-    <div class="flex gap-x-3 mb-4 text-gray-400">
-      <NuxtLink class="p-2 rounded" :to="switchLocalePath('en')">EN</NuxtLink>
-      <NuxtLink class="p-2" :to="switchLocalePath('es')">ES</NuxtLink>
-    </div>
-
+  <div class="pl-4 lg:pl-8 lg:pt-8">
     <p class="font-black text-3xl lg:text-5xl mb-2">
       {{ t("Projects.Title") }}
     </p>
@@ -41,9 +33,3 @@ const { t } = useI18n({
   }
 }
 </i18n>
-
-<style scoped>
-.router-link-exact-active {
-  @apply text-white;
-}
-</style>
