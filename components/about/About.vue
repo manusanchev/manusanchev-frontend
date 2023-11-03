@@ -21,7 +21,7 @@ const { data } = await useAsyncData(async () =>
 <template>
   <div class="p-4 md:p-8">
     <AboutHeader />
-    <div class="flex gap-x-4 mt-3 px-3 text-gray-400 w-full justify-end">
+    <div class="flex gap-x-4 mt-3 lg:mt-0 px-3 text-gray-400 w-full justify-end">
       <NuxtLink :to="switchLocalePath('en')">EN</NuxtLink>
       <NuxtLink :to="switchLocalePath('es')">ES</NuxtLink>
     </div>

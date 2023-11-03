@@ -11,11 +11,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        fixel: ['Fixel', "sans-serif"],
-      },
-      colors: {
-        base: "#000",
-      },
+        fixel: ["Fixel", "sans-serif"],
+      }
     },
   },
   plugins: [],

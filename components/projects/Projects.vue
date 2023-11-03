@@ -13,7 +13,6 @@ const { t } = useI18n();
       {{ t("Projects.Subtitle") }}
     </p>
   </div>
-
   <ProjectCards />
 </template>
 
