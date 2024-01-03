@@ -51,12 +51,12 @@ const { data } = await useAsyncData(async () =>
 {
   "es": {
     "About": {
-      "Title": "Desarrollador web frontend realizando proyectos SaaS y trabajos freelance."
+      "Title": "Desarrollador web con más de 3 años de experiencia construyendo producto"
     }
   },
   "en": {
     "About": {
-      "Title": " Frontend web developer doing SaaS projects and freelance work."
+      "Title": "Web developer with more than 3 years of experience building product."
     }
   }
 }
