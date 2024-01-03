@@ -51,7 +51,7 @@ const { data } = await useAsyncData(async () =>
 {
   "es": {
     "About": {
-      "Title": "Desarrollador web con más de 3 años de experiencia construyendo producto"
+      "Title": "Desarrollador web con más de 3 años de experiencia construyendo producto."
     }
   },
   "en": {
