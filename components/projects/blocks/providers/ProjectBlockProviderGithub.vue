@@ -12,7 +12,7 @@ const { t } = useI18n({
 <template>
   <NuxtLink
     :href="url"
-    class="bg-[#31373c] text-sm px-2 py-1 flex items-center gap-x-2 max-w-fit rounded-lg lg:hover:bg-[#49525A] lg:transition-colors"
+    class="bg-[#272727] text-sm px-2 py-1 flex items-center gap-x-2 max-w-fit rounded-lg lg:hover:bg-[#303030] lg:transition-colors"
     target="_blank"
     ><GithubIcon class="w-4 h-4" />
     {{ t("Title") }}
