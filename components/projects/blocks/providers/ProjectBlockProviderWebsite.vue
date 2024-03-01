@@ -20,7 +20,7 @@ const { t } = useI18n({
 <i18n>
 {
   "es": {
-    "Title": "Ver proyecto"
+    "Title": "Ver Proyecto"
   },
   "en": {
     "Title": "View project"
