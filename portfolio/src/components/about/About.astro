@@ -1,0 +1,73 @@
+---
+import AboutHeader from "~/components/about/header/AboutHeader.astro";
+import AboutCard from "./AboutCard.astro";
+import FreelanceContactFooter from "./FreelanceContactFooter.astro";
+import type { InfoData } from "~/types/about/InfoData";
+
+// const additionalInfo = new Map<string, any>([
+//   ["freelance", FreelanceContactFooter],
+// ]);
+// const { locale, t } = useI18n({
+//   useScope: "local",
+// });
+// const switchLocalePath = useSwitchLocalePath();
+//
+// const { data } = await useAsyncData(async () =>
+//   queryContent<InfoData>("about").locale(locale.value).find(),
+// );
+import { getCollection} from 'astro:content';
+// const allBlogPosts = await getCollection('');
+
+
+---
+
+
+  <div class="p-4 md:p-8">
+    <AboutHeader />
+    <div class="flex gap-x-4 mt-3 lg:mt-0 px-3 text-gray-400 w-full justify-end">
+      <a href="/en">EN</a>
+      <a href="/es">ES</a>
+    </div>
+    <p
+      class="font-semibold text-2xl mt-10 lg:text-3xl lg:max-w-[40ch] lg:mt-14"
+    >
+      <!--{{ t("About.Title") }}-->
+    </p>
+    <section class="flex flex-col gap-y-4 mt-8">
+      <!--<AboutCard-->
+      <!--  class="lg:max-w-[70ch]"-->
+      <!--  v-for="(info, index) in data"-->
+      <!--  :key="index"-->
+      <!--  :title="info.title"-->
+      <!--  :description="info.description"-->
+      <!--&gt;-->
+      <!--  <component-->
+      <!--    v-if="info.component"-->
+      <!--    :is="additionalInfo.get(info.component)"-->
+      <!--  ></component>-->
+      <!--</AboutCard>-->
+    </section>
+  </div>
+
+<!--<i18n>-->
+<!--{-->
+<!--  "es": {-->
+<!--    "About": {-->
+<!--      "Title": "Desarrollador web con más de 3 años de experiencia construyendo producto."-->
+<!--    }-->
+<!--  },-->
+<!--  "en": {-->
+<!--    "About": {-->
+<!--      "Title": "Web developer with more than 3 years of experience building product."-->
+<!--    }-->
+<!--  }-->
+<!--}-->
+<!--</i18n>-->
+
+
+
+<!--<style>-->
+<!--.router-link-exact-active {-->
+<!--  @apply text-white;-->
+<!--}-->
+<!--</style>-->

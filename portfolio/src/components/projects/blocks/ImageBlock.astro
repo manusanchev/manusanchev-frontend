@@ -1,0 +1,10 @@
+---
+import type { ImageBlockParams } from "~/types/projects/blocks/ImageBlockParams";
+import { Image } from 'astro:assets';
+
+interface Props {
+  params: ImageBlockParams
+}
+const {params} = Astro.props
+---
+<Image class="rounded-lg mb-4 object-cover" width="700" height="500" src={`/images${params.url}`} alt={params.alt} />

@@ -1,0 +1,22 @@
+---
+import type { VideoBlockParams } from "~/types/projects/blocks/VideoBlockParams";
+
+interface Props {
+  params: VideoBlockParams
+}
+const {params} = Astro.props
+
+---
+
+  <video
+    width="700"
+    height="700"
+    class="rounded-lg mb-4 border border-gray-800"
+    controls
+    autoplay={params.autoplay}
+    muted={params.autoplay}
+    loop={params.loop}
+  >
+    <source src={`/videos${params.url}`} type="video/webm" />
+  </video>
+

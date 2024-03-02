@@ -1,0 +1,25 @@
+---
+import type { ProviderBlockParams } from "~/types/projects/blocks/ProviderBlockParams";
+import  { ProviderName } from "~/types/projects/blocks/ProviderBlockParams";
+import ProjectBlockProviderGithub from "~/components/projects/blocks/providers/ProjectBlockProviderGithub.astro";
+import ProjectBlockProviderNPM from "~/components/projects/blocks/providers/ProjectBlockProviderNPM.astro";
+import ProjectBlockProviderWebsite from "~/components/projects/blocks/providers/ProjectBlockProviderWebsite.astro";
+
+interface Props {
+  params: ProviderBlockParams[]
+}
+const {params} = Astro.props
+
+const providerType = new Map<ProviderName, any>([
+  [ProviderName.Github, ProjectBlockProviderGithub],
+  [ProviderName.Npm, ProjectBlockProviderNPM],
+  [ProviderName.Website, ProjectBlockProviderWebsite],
+]);
+
+function getComponentByType(type: ProviderName) {
+  return providerType.get(type);
+}
+---
+  <div class="flex items-center gap-x-3 mb-2">
+    <!--<component v-for="(provider, index) in params" :key="index" :is="getComponentByType(provider.name)" :url="provider.url" />-->
+  </div>

@@ -1,0 +1,28 @@
+---
+import LinkednIcon from "../../../shared/icons/LinkednIcon.astro";
+import ContactNavItem from "./ContactNavItem.astro";
+import GithubIcon from "../../../shared/icons/GithubIcon.astro";
+import EmailIcon from "../../../shared/icons/EmailIcon.astro";
+---
+
+<template>
+  <nav>
+    <ul class="flex items-center gap-x-4">
+      <ContactNavItem href="https:">
+        <a aria-label="linkedin" href="https://www.linkedin.com/in/manusanchev/" target="_blank">
+          <LinkednIcon class="-mt-1" />
+        </a>
+      </ContactNavItem>
+      <ContactNavItem>
+        <a aria-label="github" href="https://github.com/manusanchev" target="_blank">
+          <GithubIcon />
+        </a>
+      </ContactNavItem>
+      <ContactNavItem>
+        <a aria-label="email" href="mailto:manuvempleo@gmail.com" target="_blank">
+          <EmailIcon />
+        </a>
+      </ContactNavItem>
+    </ul>
+  </nav>
+</template>
