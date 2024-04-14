@@ -17,6 +17,7 @@
     "tailwindcss": "^3.3.5"
   },
   "dependencies": {
-    "@nuxt/image": "^1.0.0"
+    "@nuxt/image": "^1.0.0",
+    "@vercel/analytics": "^1.2.2"
   }
 }
