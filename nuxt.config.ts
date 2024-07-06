@@ -7,12 +7,15 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+
   modules: ["@nuxt/content", "@nuxt/image", "@nuxtjs/i18n"],
   css: ["~/assets/css/main.css"],
+
   content: {
     locales: ["en", "es"],
     defaultLocale: "en",
   },
+
   i18n: {
     defaultLocale: "en",
     detectBrowserLanguage: false,
@@ -29,10 +32,13 @@ export default defineNuxtConfig({
       },
     ],
   },
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
+  compatibilityDate: "2024-07-06",
 });

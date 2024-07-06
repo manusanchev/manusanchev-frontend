@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import AboutHeader from "~/components/about/header/AboutHeader.vue";
 import AboutCard from "~/components/about/AboutCard.vue";
-import FreelanceContactFooter from "~/components/about/FreelanceContactFooter.vue";
 import type { InfoData } from "~/types/about/InfoData";
 import type { Component } from "@nuxt/schema";
 
 const additionalInfo = new Map<string, any>([
-  ["freelance", FreelanceContactFooter],
+  ["freelance"],
 ]);
 const { locale, t } = useI18n({
   useScope: "local",
@@ -26,7 +25,7 @@ const { data } = await useAsyncData(async () =>
       <NuxtLink :to="switchLocalePath('es')">ES</NuxtLink>
     </div>
     <p
-      class="font-semibold text-2xl mt-10 lg:text-3xl lg:max-w-[40ch] lg:mt-14"
+      class="text-2xl mt-10 lg:text-3xl lg:max-w-[40ch] lg:mt-14"
     >
       {{ t("About.Title") }}
     </p>
@@ -51,12 +50,12 @@ const { data } = await useAsyncData(async () =>
 {
   "es": {
     "About": {
-      "Title": "Desarrollador web con más de 3 años de experiencia construyendo producto."
+      "Title": "Desarrollador web con más de 4 años de experiencia construyendo producto."
     }
   },
   "en": {
     "About": {
-      "Title": "Web developer with more than 3 years of experience building product."
+      "Title": "Web developer with more than 4 years of experience building product."
     }
   }
 }
