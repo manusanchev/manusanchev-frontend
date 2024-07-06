@@ -2,11 +2,7 @@
 import AboutHeader from "~/components/about/header/AboutHeader.vue";
 import AboutCard from "~/components/about/AboutCard.vue";
 import type { InfoData } from "~/types/about/InfoData";
-import type { Component } from "@nuxt/schema";
 
-const additionalInfo = new Map<string, any>([
-  ["freelance"],
-]);
 const { locale, t } = useI18n({
   useScope: "local",
 });
@@ -36,12 +32,7 @@ const { data } = await useAsyncData(async () =>
         :key="index"
         :title="info.title"
         :description="info.description"
-      >
-        <component
-          v-if="info.component"
-          :is="additionalInfo.get(info.component)"
-        ></component>
-      </AboutCard>
+     />
     </section>
   </div>
 </template>

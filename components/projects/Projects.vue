@@ -9,7 +9,7 @@ const { t } = useI18n();
     <p class="font-black text-3xl lg:text-5xl mb-2">
       {{ t("Projects.Title") }}
     </p>
-    <p class="text-lg text-gray-300 lg:text-xl">
+    <p class="text-lg text-gray-400 lg:text-xl">
       {{ t("Projects.Subtitle") }}
     </p>
   </div>
