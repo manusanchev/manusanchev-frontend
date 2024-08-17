@@ -1,7 +1,7 @@
 <template>
   <nav>
     <ul class="flex items-center gap-x-4">
-      <ContactNavItem href="https:">
+      <ContactNavItem>
         <NuxtLink aria-label="linkedin" href="https://www.linkedin.com/in/manusanchev/" target="_blank">
           <LinkednIcon class="-mt-1" />
         </NuxtLink>
@@ -11,11 +11,18 @@
           <GithubIcon />
         </NuxtLink>
       </ContactNavItem>
-      <ContactNavItem>
-        <NuxtLink aria-label="email" href="mailto:manuvempleo@gmail.com" target="_blank">
-          <EmailIcon />
-        </NuxtLink>
-      </ContactNavItem>
+      <ClientOnly fallbackTag="div">
+        <ContactNavItem>
+          <NuxtLink aria-label="email" href="mailto:manuvempleo@gmail.com" target="_blank">
+            <EmailIcon />
+          </NuxtLink>
+        </ContactNavItem>
+        <template #fallback>
+          <ContactNavItem>
+              <EmailIcon />
+          </ContactNavItem>
+        </template>
+      </ClientOnly>
     </ul>
   </nav>
 </template>
