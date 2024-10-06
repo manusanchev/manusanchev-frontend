@@ -34,8 +34,8 @@ function componentByType(type: BlockType) {
         :is="componentByType(block.type)"
         :params="block.params"
       />
-      <p class="font-bold mb-1 text-lg lg:text-xl">{{ project.title }}</p>
-      <p class="lg:text-lg max-w-[50ch]">{{ project.description }}</p>
+      <p class="font-bold mb-1 text-lg">{{ project.title }}</p>
+      <p class="max-w-[60ch] leading-relaxed">{{ project.description }}</p>
     </div>
   </article>
 </template>
