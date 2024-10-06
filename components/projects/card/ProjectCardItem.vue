@@ -24,8 +24,8 @@ function componentByType(type: BlockType) {
 <template>
   <article>
     <header class="flex items-center gap-x-2">
-      <div class="w-2 lg:w-6 h-[0.025rem] bg-white/20" />
-      <time class="text-gray-300">{{ project.date }}</time>
+      <div class="w-2 lg:w-6 h-[0.025rem] border border-separator" />
+      <time class="text-title">{{ project.date }}</time>
     </header>
     <div class="px-4 lg:px-8 mt-4">
       <Component

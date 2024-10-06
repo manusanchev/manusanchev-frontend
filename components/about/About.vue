@@ -14,7 +14,7 @@ const { data } = await useAsyncData(async () =>
 </script>
 
 <template>
-  <div class="p-4 md:p-8">
+  <div class="p-4 md:p-8 ">
     <AboutHeader />
     <div class="flex gap-x-4 mt-3 lg:mt-0 px-3 text-gray-400 w-full justify-end">
       <NuxtLink :to="switchLocalePath('en')">EN</NuxtLink>
@@ -27,7 +27,6 @@ const { data } = await useAsyncData(async () =>
     </p>
     <section class="flex flex-col gap-y-4 mt-8">
       <AboutCard
-        class="lg:max-w-[70ch]"
         v-for="(info, index) in data"
         :key="index"
         :title="info.title"

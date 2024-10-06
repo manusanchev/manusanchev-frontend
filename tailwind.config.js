@@ -12,7 +12,11 @@ export default {
     extend: {
       fontFamily: {
         fixel: ["Fixel", "sans-serif"],
-      }
+      },
+      colors: {
+        separator: "#1f1f1f",
+        title: "#cbd5e1"
+      },
     },
   },
   plugins: [],

@@ -6,10 +6,10 @@ defineProps({
 </script>
 <template>
   <article
-    class="p-[1px] rounded-lg bg-gradient-to-r from-[#EA4949]/40 to-[#838EF3]/50 shadow"
+    class="p-[1px] rounded-lg bg-gradient-to-r from-red-300/50 to-[#838EF3]/50 shadow"
   >
-    <div class="bg-black rounded-lg p-3">
-      <h2 class="font-semibold text-2xl lg:text-2xl mb-2">
+    <div class="bg-[#0a0a0a] rounded-lg p-3">
+      <h2 class="text-title mb-2 underline decoration-wavy">
         {{ title }}
       </h2>
       <p class="lg:text-lg">{{ description }}</p>
