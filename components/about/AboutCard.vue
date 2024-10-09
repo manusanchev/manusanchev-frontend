@@ -4,15 +4,16 @@ defineProps({
   description: { type: String, required: true },
 });
 </script>
+
 <template>
   <article
-    class="p-[1px] rounded-lg bg-gradient-to-r from-red-300/50 to-[#838EF3]/50 shadow"
+    class="p-[1px] rounded-lg bg-gradient-to-r from-gray-300/30 via-gray-500/30 to-gray-600/30 shadow-md hover:shadow-lg transition-shadow duration-300"
   >
-    <div class="bg-[#0a0a0a] rounded-lg p-3">
-      <h2 class="text-title mb-2 underline decoration-wavy">
+    <div class="bg-[#0a0a0a]/60 rounded-lg p-4">
+      <h2 class="text-xl font-medium text-white mb-3 border-gray-500 pb-1">
         {{ title }}
       </h2>
-      <p class="lg:text-lg">{{ description }}</p>
+      <p class="text-base text-gray-300 leading-relaxed">{{ description }}</p>
       <div>
         <slot />
       </div>

@@ -14,24 +14,27 @@ const { data } = await useAsyncData(async () =>
 </script>
 
 <template>
-  <div class="p-4 md:p-8 ">
+  <div class="p-4 md:p-8">
     <AboutHeader />
-    <div class="flex gap-x-4 mt-3 lg:mt-0 px-3 text-gray-400 w-full justify-end">
+    <div
+      class="flex gap-x-4 mt-3 lg:mt-0 px-3 text-gray-400 w-full justify-end"
+    >
       <NuxtLink :to="switchLocalePath('en')">EN</NuxtLink>
       <NuxtLink :to="switchLocalePath('es')">ES</NuxtLink>
     </div>
     <p
-      class="text-2xl mt-10 lg:text-3xl lg:max-w-[40ch] lg:mt-14"
+      class="text-2xl font-semibold mt-10 lg:text-4xl lg:max-w-[40ch] lg:mt-14 transition-all duration-300 hover:text-gray-700 hover:underline decoration-2 decoration-gray-300"
     >
       {{ t("About.Title") }}
     </p>
+
     <section class="flex flex-col gap-y-4 mt-8">
       <AboutCard
         v-for="(info, index) in data"
         :key="index"
         :title="info.title"
         :description="info.description"
-     />
+      />
     </section>
   </div>
 </template>
@@ -50,8 +53,6 @@ const { data } = await useAsyncData(async () =>
   }
 }
 </i18n>
-
-
 
 <style scoped>
 .router-link-exact-active {

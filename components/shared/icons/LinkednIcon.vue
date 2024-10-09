@@ -1,24 +1,19 @@
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="27"
-    height="27"
-    viewBox="0 0 27 27"
-    fill="currentColor"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
   >
-    <g clip-path="url(#clip0_105_95)">
-      <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M14.3622 9.00001V11.8548C14.962 10.9423 15.7888 10.2013 16.7613 9.70459C17.7339 9.2079 18.8189 8.97255 19.9098 9.02161C25.74 9.02161 27 12.654 27 17.379V27H21.6V18.4716C21.6 16.4376 21.1878 13.8204 18.009 13.8204C14.9256 13.8204 14.4 16.0344 14.4 18.3204V27H9.0162V9.00001H14.3622ZM5.4 4.47661C5.4 5.1927 5.11554 5.87945 4.60919 6.3858C4.10284 6.89215 3.41608 7.17661 2.7 7.17661C1.98392 7.17661 1.29716 6.89215 0.790812 6.3858C0.284463 5.87945 0 5.1927 0 4.47661C0 3.76053 0.284463 3.07377 0.790812 2.56742C1.29716 2.06107 1.98392 1.77661 2.7 1.77661C3.41608 1.77661 4.10284 2.06107 4.60919 2.56742C5.11554 3.07377 5.4 3.76053 5.4 4.47661Z"
-        fill="currentColor"
-      />
-      <path d="M5.4 9.02161H0V27H5.4V9.02161Z" fill="currentColor" />
-    </g>
-    <defs>
-      <clipPath id="clip0_105_95">
-        <rect width="27" height="27" fill="currentColor" />
-      </clipPath>
-    </defs>
+    <path
+      d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+    />
+    <rect width="4" height="12" x="2" y="9" />
+    <circle cx="4" cy="4" r="2" />
   </svg>
 </template>
