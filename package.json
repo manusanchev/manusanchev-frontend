@@ -19,7 +19,6 @@
   "dependencies": {
     "@nuxt/image": "^1.8.1",
     "@vercel/analytics": "^1.3.1",
-    "@vercel/speed-insights": "^1.0.12",
-    "lucide-vue-next": "^0.451.0"
+    "@vercel/speed-insights": "^1.0.12"
   }
 }
