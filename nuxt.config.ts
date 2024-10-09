@@ -2,12 +2,11 @@
 export default defineNuxtConfig({
   devtools: {
     enabled: true,
-
     timeline: {
       enabled: true,
     },
   },
-
+  debug: true,
   modules: ["@nuxt/content", "@nuxt/image", "@nuxtjs/i18n"],
   css: ["~/assets/css/main.css"],
 
