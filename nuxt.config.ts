@@ -10,12 +10,12 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
 
   content: {
-    locales: ["en", "es"],
-    defaultLocale: "en",
+    locales: ["es", "en"],
+    defaultLocale: "es",
   },
 
   i18n: {
-    defaultLocale: "en",
+    defaultLocale: "es",
     detectBrowserLanguage: false,
     baseUrl: "https://www.manusanchev.com",
     locales: [
