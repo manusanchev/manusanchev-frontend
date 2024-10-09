@@ -23,9 +23,9 @@ function componentByType(type: BlockType) {
 
 <template>
   <article>
-    <header class="flex items-center gap-x-2">
-      <div class="w-2 lg:w-6 h-[0.025rem] border border-separator" />
-      <time class="text-title">{{ project.date }}</time>
+    <header class="flex items-center gap-x-2 max-w-fit">
+      <hr class="w-2 lg:w-6 border-separator" />
+      <time class="text-neutral-300 text-sm">{{ project.date }}</time>
     </header>
     <div class="px-4 lg:px-8 mt-4">
       <Component
@@ -34,8 +34,10 @@ function componentByType(type: BlockType) {
         :is="componentByType(block.type)"
         :params="block.params"
       />
-      <p class="font-bold mb-1 text-lg">{{ project.title }}</p>
-      <p class="max-w-[60ch] leading-relaxed">{{ project.description }}</p>
+      <p class="font-bold text-neutral-200 mb-1 text-lg">{{ project.title }}</p>
+      <p class="max-w-[60ch] text-neutral-300 leading-relaxed">
+        {{ project.description }}
+      </p>
     </div>
   </article>
 </template>

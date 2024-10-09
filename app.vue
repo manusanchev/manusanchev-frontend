@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { t } = useI18n({
-  useScope: "local"
+  useScope: "local",
 });
 
 const i18nHead = useLocaleHead({
@@ -30,6 +30,8 @@ useHead({
     { charset: "utf-8" },
     { name: "viewport", content: "width=device-width, initial-scale=1" },
     { name: "twitter:domain", content: "manusanchev.com" },
+    { rel: "preconnect", href: "https://fonts.googleapis.com" },
+    { rel: "preconnect", href: "https://fonts.gstatic.com" },
     ...(i18nHead.value.meta || []),
   ],
   link: [
@@ -40,7 +42,7 @@ useHead({
 </script>
 
 <template>
- <NuxtLayout>
+  <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
 </template>

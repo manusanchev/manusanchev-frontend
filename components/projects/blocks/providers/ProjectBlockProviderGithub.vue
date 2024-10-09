@@ -6,13 +6,13 @@ defineProps({
 });
 
 const { t } = useI18n({
-  useScope: "local"
+  useScope: "local",
 });
 </script>
 <template>
   <NuxtLink
     :href="url"
-    class="bg-[#272727] text-sm px-2 py-1 flex items-center gap-x-2 max-w-fit rounded-lg lg:hover:bg-[#303030] lg:transition-colors"
+    class="bg-white/90 text-neutral-800 text-xs px-2 py-1 flex items-center gap-x-2 max-w-fit rounded-lg lg:hover:bg-white lg:transition-colors"
     target="_blank"
     ><GithubIcon class="w-4 h-4" />
     {{ t("Title") }}
@@ -22,10 +22,10 @@ const { t } = useI18n({
 <i18n>
 {
   "es": {
-    "Title": "Ver en Github"
+    "Title": "Github"
   },
   "en": {
-    "Title": "View on Github"
+    "Title": "Github"
   }
 }
 </i18n>

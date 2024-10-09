@@ -2,7 +2,7 @@
   <header class="flex items-center justify-between">
     <div class="relative">
       <NuxtLink href="https://manusanchev.com">
-        <h1 class="font-bold text-3xl lg:text-6xl">
+        <h1 class="font-black text-3xl lg:text-6xl font-fixel">
           Manuel <br />
           Sánchez.
         </h1>

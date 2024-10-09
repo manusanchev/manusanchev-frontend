@@ -1,5 +1,5 @@
 @layer base {
   body {
-    @apply bg-black text-white font-fixel;
+    @apply bg-black/[.98] text-white font-inter;
   }
 }

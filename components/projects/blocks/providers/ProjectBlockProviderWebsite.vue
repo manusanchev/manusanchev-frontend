@@ -1,31 +1,32 @@
 <script setup lang="ts">
+import GlobeIcon from "~/components/shared/icons/GlobeIcon.vue";
+
 defineProps({
   url: { type: String, required: true },
 });
 
 const { t } = useI18n({
-  useScope: "local"
+  useScope: "local",
 });
 </script>
 <template>
-    <NuxtLink
-        :href="url"
-        class="text-sm bg-[#272727] px-2 py-1 flex items-center gap-x-1 max-w-fit rounded-lg lg:hover:bg-[#303030] lg:transition-colors "
-        target="_blank"
-    >
-      {{ t("Title") }}
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-    </NuxtLink>
-
+  <NuxtLink
+    :href="url"
+    class="text-xs bg-white/90 text-neutral-800 px-2 py-1 flex items-center gap-x-1 max-w-fit rounded-lg lg:hover:bg-white lg:transition-colors"
+    target="_blank"
+  >
+    <GlobeIcon class="w-4 h-4" />
+    {{ t("Title") }}
+  </NuxtLink>
 </template>
 
 <i18n>
 {
   "es": {
-    "Title": "Ver proyecto"
+    "Title": "Demo"
   },
   "en": {
-    "Title": "View project"
+    "Title": "Demo"
   }
 }
 </i18n>
