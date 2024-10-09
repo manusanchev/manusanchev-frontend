@@ -30,16 +30,12 @@ import AboutHeaderMobile from "~/components/about/header/AboutHeaderMobile.vue";
 
 const showHeader = ref(false);
 onMounted(() => {
-  if (import.meta.client) {
-    window.addEventListener("scroll", onScroll);
-    onScroll();
-  }
+  window.addEventListener("scroll", onScroll);
+  onScroll();
 });
 
 onUnmounted(() => {
-  if (import.meta.client) {
-    window.removeEventListener("scroll", onScroll);
-  }
+  window.removeEventListener("scroll", onScroll);
 });
 
 const onScroll = () => {
