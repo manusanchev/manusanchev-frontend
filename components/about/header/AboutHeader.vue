@@ -17,5 +17,7 @@
 </template>
 <script setup lang="ts">
 import GradientIcon from "~/components/shared/icons/GradientIcon.vue";
-import ContactNav from "~/components/about/header/contactNav/ContactNav.vue";
+const ContactNav = defineAsyncComponent(
+  () => import("~/components/about/header/contactNav/ContactNav.vue"),
+);
 </script>
