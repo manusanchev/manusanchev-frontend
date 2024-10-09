@@ -1,5 +1,5 @@
 @layer base {
   body {
-    @apply bg-black/[.98] text-white font-inter;
+    @apply bg-[#08090a] text-white font-inter;
   }
 }

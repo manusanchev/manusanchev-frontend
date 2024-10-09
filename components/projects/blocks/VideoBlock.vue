@@ -10,8 +10,7 @@ defineProps({
   <video
     width="700"
     height="700"
-    class="rounded-lg mb-4 border border-gray-800"
-    controls
+    class="rounded-lg mb-4"
     :autoplay="params.autoplay"
     :muted="params.autoplay"
     :loop="params.loop"

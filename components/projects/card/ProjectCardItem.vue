@@ -35,7 +35,7 @@ function componentByType(type: BlockType) {
         :params="block.params"
       />
       <p class="font-bold text-neutral-200 mb-1 text-lg">{{ project.title }}</p>
-      <p class="max-w-[60ch] text-neutral-300 leading-relaxed">
+      <p class="max-w-[70ch] text-neutral-300 leading-relaxed">
         {{ project.description }}
       </p>
     </div>
