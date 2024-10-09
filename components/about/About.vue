@@ -23,7 +23,7 @@ const { data } = await useAsyncData(async () =>
       <NuxtLink :to="switchLocalePath('es')">ES</NuxtLink>
     </div>
     <p
-      class="text-2xl font-semibold mt-10 lg:text-4xl lg:max-w-[40ch] lg:mt-14 transition-all duration-300 hover:text-gray-700 hover:underline decoration-2 decoration-gray-300"
+      class="text-2xl font-semibold mt-10 lg:text-4xl lg:max-w-[40ch] lg:mt-14"
     >
       {{ t("About.Title") }}
     </p>
