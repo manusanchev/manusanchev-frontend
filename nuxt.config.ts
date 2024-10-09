@@ -19,6 +19,7 @@ export default defineNuxtConfig({
   i18n: {
     defaultLocale: "en",
     detectBrowserLanguage: false,
+    baseUrl: "https://www.manusanchev.com",
     locales: [
       {
         code: "en",
@@ -40,5 +41,5 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: "2024-07-06",
+  compatibilityDate: "2024-10-09",
 });
