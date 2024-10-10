@@ -1,0 +1,13 @@
+{
+  "title": "Control de audio de Netflix",
+  "description": "Controla el volumen de Netflix con la rueda del ratón. Extensión construida para chrome con Javascript",
+  "date": "30 oct, 2023",
+  "sortDate": "10-30-2023",
+  "image": {
+    "url": "../../../assets/images/netflix-extension.webp",
+    "alt": "El control de audio definitivo de Netflix"
+  },
+  "links": {
+    "github": "https://github.com/manusanchev/netflix-audio-control-extension"
+  }
+}

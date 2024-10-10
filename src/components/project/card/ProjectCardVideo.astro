@@ -1,0 +1,17 @@
+---
+interface Props {
+    video: any;
+}
+
+const { video } = Astro.props;
+const { url } = video;
+---
+<video
+        width="700"
+        height="700"
+        class="rounded-lg mb-4"
+        autoplay
+        loop
+>
+    <source src={url} type="video/webm" />
+</video>
