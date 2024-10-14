@@ -1,0 +1,13 @@
+{
+  "title": "Antiguo portfolio",
+  "description": "Mi antiguo portfolio fue diseñado con Figma desde cero y construido usando Vue.js con Vite (herramienta alternativa a webpack) y ViteSSG (plugin para generar páginas estáticas en tiempo de compilación). Quería mostrar mis habilidades y competencias en el contenido que podía generar, pero realmente no hizo un impacto en lo que podía hacer. ",
+  "date": "26 jul, 2022",
+  "sortDate": "07-26-2022",
+  "image": {
+    "url": "../../../assets/images/old-portfolio.webp",
+    "alt": "Old portfolio image"
+  },
+  "links": {
+    "github": "https://github.com/manusanchev/manusanchev-frontend/tree/old-portfolio"
+  }
+}

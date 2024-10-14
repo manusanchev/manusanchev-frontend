@@ -1,0 +1,17 @@
+---
+import HeaderContactNav from "./contact/HeaderContactNav.astro";
+import { Icon } from 'astro-icon/components'
+---
+
+<header class="flex items-center justify-between">
+    <div class="relative">
+        <a href="https://manusanchev.com">
+            <h1 class="font-black text-3xl lg:text-6xl font-fixel">
+                Manuel <br />
+                Sánchez.
+            </h1>
+        </a>
+        <Icon name="GradientIcon" class="size-[10rem] animate-pulse absolute -top-[1rem] h-[8rem] blur-xl -z-10 lg:h-[14rem] lg:-right-0" />
+    </div>
+    <HeaderContactNav />
+</header>

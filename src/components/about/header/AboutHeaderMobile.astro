@@ -1,0 +1,44 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+
+    <div
+            class="md:hidden fixed bottom-4 left-8 bg-gradient-to-r from-white/30 via-gray-200/20 to-white/30 backdrop-blur-lg border border-white/10 rounded-lg p-3 shadow-lg right-8 shadow-white/10"
+    >
+        <div class="flex items-center justify-around">
+            <a
+                    aria-label="github"
+                    href="https://github.com/manusanchev"
+                    target="_blank"
+            >
+                <Icon name="GithubIcon" class="size-5" />
+            </a>
+                <a
+                        aria-label="email"
+                        href="mailto:manuvempleo@gmail.com"
+                        target="_blank"
+                >
+                    <Icon name="EmailIcon" class="size-5" />
+                </a>
+
+            <a
+                    aria-label="linkedin"
+                    href="https://www.linkedin.com/in/manusanchev/"
+                    target="_blank"
+            >
+                <Icon name="LinkednIcon" class="size-5" />
+            </a>
+            <div class="w-[1px] h-5 bg-gray-400" />
+            <Icon name="CircleArrowUp" class="size-5" id="arrow-up"/>
+        </div>
+    </div>
+<script>
+
+    document?.getElementById("arrow-up")?.addEventListener("click", scrollToTop);
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+</script>
+

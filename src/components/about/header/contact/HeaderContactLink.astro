@@ -1,0 +1,18 @@
+---
+interface Props {
+    link: string;
+    ariaLabel: string;
+    target: string;
+    icon: string;
+}
+
+const { link, ariaLabel, target, icon } = Astro.props;
+import { Icon } from 'astro-icon/components'
+---
+
+<li>
+   <a href={link} class="flex items-center justify-center w-[2.75rem] h-[2.75rem] border border-white/40 text-white/80 lg:text-white/55 transition lg:hover:border-white lg:hover:text-white rounded-full lg:w-[4.5rem] lg:h-[4.5rem]" aria-label={ariaLabel} target={target}>
+       <Icon name={icon} class="w-[1.5rem] h-[1.5rem] lg:w-[2.5rem] lg:h-[2.5rem]" />
+   </a>
+</li>
+
