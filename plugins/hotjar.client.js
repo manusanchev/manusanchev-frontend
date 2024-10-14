@@ -1,6 +1,5 @@
 export default defineNuxtPlugin({
   name: "hotjar",
-  parallel: true,
   async setup() {
     if (process.env.NODE_ENV !== "production") {
       return;
