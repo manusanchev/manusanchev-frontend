@@ -1,8 +1,9 @@
 ---
 import { getCollection } from "astro:content";
 import ProjectCard from "@/components/project/card/ProjectCard.astro";
+import { collections } from "@/types/Collections";
 
-const allProjects = await getCollection("projects");
+const allProjects = await getCollection(collections.PROJECTS);
 const sortedProjects = allProjects.sort(
   (a, b) =>
     Number(new Date(b.data.sortDate)) - Number(new Date(a.data.sortDate)),
