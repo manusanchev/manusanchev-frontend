@@ -1,15 +1,15 @@
 @font-face {
-    font-family: "Fixel";
-    font-style: normal;
-    font-weight: 900;
-    src: url("../fonts/fixel/FixelBlack.woff2") format("woff2");
-    font-display: swap;
+  font-family: "Fixel";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/fixel/FixelBlack.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400 700;
-    src: url('../fonts/inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
-    font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 700;
+  src: url("../fonts/inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-display: swap;
 }

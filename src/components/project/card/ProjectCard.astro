@@ -1,30 +1,51 @@
 ---
+import ProjectCardLink from "@/components/project/card/ProjectCardLink.astro";
+import ProjectCardVideo from "@/components/project/card/ProjectCardVideo.astro";
+import ProjectCardImage from "@/components/project/card/ProjectCardImage.astro";
+
 interface Props {
-    project: any;
+  project: any;
 }
 
-import ProjectCardLink from './ProjectCardLink.astro';
-import ProjectCardVideo from './ProjectCardVideo.astro';
-import ProjectCardImage from './ProjectCardImage.astro';
 const { project } = Astro.props;
 ---
 
 <article>
-    <header class="flex items-center gap-x-2 max-w-fit">
-        <hr class="w-2 lg:w-6 border-separator" />
-        <time class="text-neutral-300 text-sm">{ project.date }</time>
-    </header>
-    <div class="px-4 lg:px-8 mt-4">
-        {project.image && <ProjectCardImage image={project.image} />}
-        {project.video && <ProjectCardVideo video={project.video} />}
-        <div class="flex items-center gap-x-3 mb-2">
-            {project.links.github && <ProjectCardLink url={project.links.github} icon="GithubIcon" name="Github" />}
-            {project.links.npm && <ProjectCardLink url={project.links.npm} icon="NpmIcon" name="Npm" />}
-            {project.links.website && <ProjectCardLink url={project.links.website} icon="GlobeIcon" name="Website" />}
-        </div>
-        <p class="font-bold text-neutral-200 mb-1 text-lg">{ project.title }</p>
-        <p class="max-w-[70ch] text-neutral-300 leading-relaxed">
-            { project.description }
-        </p>
+  <header class="flex items-center gap-x-2 max-w-fit">
+    <hr class="w-2 lg:w-6 border-separator" />
+    <time class="text-neutral-300 text-sm">{project.date}</time>
+  </header>
+  <div class="px-4 lg:px-8 mt-4">
+    {project.image && <ProjectCardImage image={project.image} />}
+    {project.video && <ProjectCardVideo video={project.video} />}
+    <div class="flex items-center gap-x-3 mb-2">
+      {
+        project.links.github && (
+          <ProjectCardLink
+            url={project.links.github}
+            icon="GithubIcon"
+            name="Github"
+          />
+        )
+      }
+      {
+        project.links.npm && (
+          <ProjectCardLink url={project.links.npm} icon="NpmIcon" name="Npm" />
+        )
+      }
+      {
+        project.links.website && (
+          <ProjectCardLink
+            url={project.links.website}
+            icon="GlobeIcon"
+            name="Website"
+          />
+        )
+      }
     </div>
+    <p class="font-bold text-neutral-200 mb-1 text-lg">{project.title}</p>
+    <p class="max-w-[70ch] text-neutral-300 leading-relaxed">
+      {project.description}
+    </p>
+  </div>
 </article>

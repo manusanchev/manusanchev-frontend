@@ -1,12 +1,18 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 interface Props {
-    image: any;
+  image: any;
 }
 
 const { image } = Astro.props;
 const { url, alt } = image;
 ---
 
- <Image class="rounded-lg mb-4 object-cover" width="700" height="500" src={url} alt={alt} />
+<Image
+  class="rounded-lg mb-4 object-cover"
+  width="700"
+  height="500"
+  src={url}
+  alt={alt}
+/>

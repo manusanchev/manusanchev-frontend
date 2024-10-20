@@ -7,8 +7,8 @@
     "url": "/videos/urlshortener.webm",
     "alt": "Demo de urlshortener"
   },
-  "links":  {
-    "github":  "https://github.com/manusanchev/shortlink",
+  "links": {
+    "github": "https://github.com/manusanchev/shortlink",
     "demo": "https://shortlink-murex.vercel.app/"
   }
 }

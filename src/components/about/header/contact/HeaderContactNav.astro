@@ -1,12 +1,26 @@
 ---
-import HeaderContactLink from './HeaderContactLink.astro';
+import HeaderContactLink from "@/components/about/header/contact/HeaderContactLink.astro";
 ---
 
-
 <nav>
-    <ul class="flex items-center gap-x-4">
-        <HeaderContactLink link="https://www.linkedin.com/in/manusanchev/" ariaLabel="linkedin" target="_blank" icon="LinkednIcon" />
-        <HeaderContactLink link="https://github.com/manusanchev" ariaLabel="github" target="_blank" icon="GithubIcon" />
-        <HeaderContactLink link="mailto:manuvempleo@gmail.com" ariaLabel="email" target="_blank" icon="EmailIcon" />
-    </ul>
+  <ul class="flex items-center gap-x-4">
+    <HeaderContactLink
+      link="https://www.linkedin.com/in/manusanchev/"
+      ariaLabel="linkedin"
+      target="_blank"
+      icon="LinkednIcon"
+    />
+    <HeaderContactLink
+      link="https://github.com/manusanchev"
+      ariaLabel="github"
+      target="_blank"
+      icon="GithubIcon"
+    />
+    <HeaderContactLink
+      link="mailto:manuvempleo@gmail.com"
+      ariaLabel="email"
+      target="_blank"
+      icon="EmailIcon"
+    />
+  </ul>
 </nav>

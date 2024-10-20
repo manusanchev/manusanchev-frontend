@@ -1,24 +1,27 @@
 ---
-import { getCollection } from 'astro:content';
-import ProjectCard from './card/ProjectCard.astro';
-// se puede crear enum para esto CONTENT.PROJECTS
-const allProjects = await getCollection('projects');
+import { getCollection } from "astro:content";
+import ProjectCard from "@/components/project/card/ProjectCard.astro";
 
-const sortedProjects = allProjects.sort((a, b) => Number(new Date(b.data.sortDate)) - Number(new Date(a.data.sortDate)));
+const allProjects = await getCollection("projects");
+const sortedProjects = allProjects.sort(
+  (a, b) =>
+    Number(new Date(b.data.sortDate)) - Number(new Date(a.data.sortDate)),
+);
 ---
 
 <div class="pl-4 lg:pl-8 lg:pt-8">
-    <p class="font-black text-3xl lg:text-5xl mb-2 font-fixel">
-        Proyectos que he ido construyendo.
-    </p>
-    <p class="text-lg text-neutral-400 lg:text-xl">
-        al menos aquellos que vieron la luz
-    </p>
-
+  <p class="font-black text-3xl lg:text-5xl mb-2 font-fixel">
+    Proyectos que he ido construyendo.
+  </p>
+  <p class="text-lg text-neutral-400 lg:text-xl">
+    al menos aquellos que vieron la luz
+  </p>
 </div>
 
 <section class="flex flex-col gap-y-8 lg:gap-y-14 mt-4 lg:mt-[2rem] mb-10">
-    {sortedProjects.map((project) => {
-        return <ProjectCard project={project.data} />
-    })}
+  {
+    sortedProjects.map((project) => {
+      return <ProjectCard project={project.data} />;
+    })
+  }
 </section>

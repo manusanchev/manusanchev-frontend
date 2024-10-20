@@ -4,7 +4,7 @@
   "date": "30 oct, 2023",
   "sortDate": "10-30-2023",
   "image": {
-    "url": "../../../assets/images/netflix-extension.webp",
+    "url": "@/assets/images/netflix-extension.webp",
     "alt": "El control de audio definitivo de Netflix"
   },
   "links": {
