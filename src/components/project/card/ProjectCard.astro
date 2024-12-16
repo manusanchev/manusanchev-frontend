@@ -10,39 +10,39 @@ interface Props {
 const { project } = Astro.props;
 ---
 
-<article>
-  <header class="flex items-center gap-x-2 max-w-fit">
-    <hr class="w-2 lg:w-6 border-separator" />
-    <time class="text-neutral-300 text-sm">{project.date}</time>
-  </header>
-  <div class="px-4 lg:px-8 mt-4">
+<article class="border border-neutral-800 rounded-xl">
+  <!--<header class="flex items-center gap-x-2 max-w-fit">-->
+  <!--  <hr class="w-2 lg:w-6 border-separator" />-->
+  <!--  <time class="text-neutral-300 text-sm">{project.date}</time>-->
+  <!--</header>-->
+  <div class="px-4 lg:px-8 mt-4 flex">
     {project.image && <ProjectCardImage image={project.image} />}
     {project.video && <ProjectCardVideo video={project.video} />}
-    <div class="flex items-center gap-x-3 mb-2">
-      {
-        project.links.github && (
-          <ProjectCardLink
-            url={project.links.github}
-            icon="GithubIcon"
-            name="Github"
-          />
-        )
-      }
-      {
-        project.links.npm && (
-          <ProjectCardLink url={project.links.npm} icon="NpmIcon" name="Npm" />
-        )
-      }
-      {
-        project.links.website && (
-          <ProjectCardLink
-            url={project.links.website}
-            icon="GlobeIcon"
-            name="Website"
-          />
-        )
-      }
-    </div>
+    <!--<div class="flex items-center gap-x-3 mb-2">-->
+    <!--  {-->
+    <!--    project.links.github && (-->
+    <!--      <ProjectCardLink-->
+    <!--        url={project.links.github}-->
+    <!--        icon="GithubIcon"-->
+    <!--        name="Github"-->
+    <!--      />-->
+    <!--    )-->
+    <!--  }-->
+    <!--  {-->
+    <!--    project.links.npm && (-->
+    <!--      <ProjectCardLink url={project.links.npm} icon="NpmIcon" name="Npm" />-->
+    <!--    )-->
+    <!--  }-->
+    <!--  {-->
+    <!--    project.links.website && (-->
+    <!--      <ProjectCardLink-->
+    <!--        url={project.links.website}-->
+    <!--        icon="GlobeIcon"-->
+    <!--        name="Website"-->
+    <!--      />-->
+    <!--    )-->
+    <!--  }-->
+    <!--</div>-->
     <p class="font-bold text-neutral-200 mb-1 text-lg">{project.title}</p>
     <p class="max-w-[70ch] text-neutral-300 leading-relaxed">
       {project.description}

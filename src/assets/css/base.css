@@ -1,5 +1,5 @@
 @layer base {
   body {
-    @apply bg-[#08090a] text-white font-inter;
+    @apply bg-neutral-900 text-white font-geist;
   }
 }

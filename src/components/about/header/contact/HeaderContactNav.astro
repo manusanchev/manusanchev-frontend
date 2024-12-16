@@ -1,9 +1,27 @@
 ---
 import HeaderContactLink from "@/components/about/header/contact/HeaderContactLink.astro";
+import { Icon } from "astro-icon/components";
+
+let isDarkMode = false;
+
+// Verificar el tema almacenado o el preferido del sistema
+if (typeof window !== "undefined") {
+  const storedTheme = localStorage.getItem("theme");
+  isDarkMode =
+    storedTheme === "dark" ||
+    (!storedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches);
+}
+
+// Función para alternar el tema
+const toggleDarkMode = () => {
+  isDarkMode = !isDarkMode;
+  document.documentElement.classList.toggle("dark", isDarkMode);
+  localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+};
 ---
 
 <nav>
-  <ul class="flex items-center gap-x-4">
+  <ul class="flex items-center gap-x-4 px-2.5">
     <HeaderContactLink
       link="https://www.linkedin.com/in/manusanchev/"
       ariaLabel="linkedin"
@@ -21,6 +39,11 @@ import HeaderContactLink from "@/components/about/header/contact/HeaderContactLi
       ariaLabel="email"
       target="_blank"
       icon="EmailIcon"
+    />
+    <Icon
+      id="toggle-theme"
+      name={isDarkMode ? "SunIcon" : "MoonIcon"}
+      class="size-5 hover:animate-spin cursor-pointer transition hover:text-white text-neutral-300"
     />
   </ul>
 </nav>
