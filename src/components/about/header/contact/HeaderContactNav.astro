@@ -1,23 +1,6 @@
 ---
 import HeaderContactLink from "@/components/about/header/contact/HeaderContactLink.astro";
 import { Icon } from "astro-icon/components";
-
-let isDarkMode = false;
-
-// Verificar el tema almacenado o el preferido del sistema
-if (typeof window !== "undefined") {
-  const storedTheme = localStorage.getItem("theme");
-  isDarkMode =
-    storedTheme === "dark" ||
-    (!storedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches);
-}
-
-// Función para alternar el tema
-const toggleDarkMode = () => {
-  isDarkMode = !isDarkMode;
-  document.documentElement.classList.toggle("dark", isDarkMode);
-  localStorage.setItem("theme", isDarkMode ? "dark" : "light");
-};
 ---
 
 <nav>
@@ -41,9 +24,28 @@ const toggleDarkMode = () => {
       icon="EmailIcon"
     />
     <Icon
-      id="toggle-theme"
-      name={isDarkMode ? "SunIcon" : "MoonIcon"}
-      class="size-5 hover:animate-spin cursor-pointer transition hover:text-white text-neutral-300"
+      id="toggle-theme-light"
+      name="SunIcon"
+      class="size-5 hidden dark:block hover:rotate-90 cursor-pointer transition dark:hover:text-white text-neutral-500 hover:text-neutral-900 dark:text-neutral-300"
+    />
+    <Icon
+      id="toggle-theme-dark"
+      name="MoonIcon"
+      class="size-5 dark:hidden cursor-pointer transition dark:hover:text-white dark:text-neutral-300 text-neutral-500 hover:text-neutral-900"
     />
   </ul>
 </nav>
+
+<script>
+  const toggleTheme = () => {
+    const theme = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("theme", theme ? "dark" : "light");
+  };
+
+  document
+    .getElementById("toggle-theme-light")
+    ?.addEventListener("click", toggleTheme);
+  document
+    .getElementById("toggle-theme-dark")
+    ?.addEventListener("click", toggleTheme);
+</script>

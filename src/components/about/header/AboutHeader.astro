@@ -3,9 +3,11 @@ import HeaderContactNav from "@/components/about/header/contact/HeaderContactNav
 import { Icon } from "astro-icon/components";
 ---
 
-<header>
+<header
+  class="flex items-center justify-between border px-2 py-1.5 rounded-xl bg-neutral-200 dark:bg-neutral-800 dark:border-neutral-700 border-neutral-300 sticky top-4"
+>
   <a
-    class="rounded-xl px-2.5 py-1.5 text-neutral-300 hover:text-white hover:bg-neutral-700 transition-colors gap-x-2 flex items-center"
+    class="rounded-xl px-2.5 py-1.5 dark:text-neutral-300 dark:hover:text-white text-neutral-600 hover:text-neutral-900 hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors gap-x-2 flex items-center"
     href="https://manusanchev.com"
   >
     <Icon name="HouseIcon" />
