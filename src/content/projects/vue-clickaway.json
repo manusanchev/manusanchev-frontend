@@ -1,6 +1,6 @@
 {
-  "title": "paquete npm vue3-clickaway",
-  "description": "Directiva de Vue 3 para detectar si un evento de clic ha ocurrido fuera de un elemento",
+  "title": "cliviu",
+  "description": "Detectar si un evento de clic ha ocurrido fuera de un elemento",
   "date": "28 oct, 2023",
   "sortDate": "10-28-2023",
   "links": {

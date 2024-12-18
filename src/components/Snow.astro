@@ -1,0 +1,34 @@
+---
+
+---
+
+<div class="fixed inset-0 z-50 pointer-events-none overflow-hidden">
+  <div id="snow-container" class="w-full h-full relative"></div>
+</div>
+
+<script>
+  const snowContainer = document.getElementById("snow-container");
+  let snowInterval;
+  // Función para crear copos de nieve
+  function createSnowflake() {
+    const snowflake = document.createElement("div");
+    snowflake.textContent = "❄"; // Puedes cambiar a otro símbolo o imagen
+    snowflake.className =
+      "absolute top-[-10%] text-white opacity-80 animate-fall";
+
+    snowflake.style.left = Math.random() * 100 + "%";
+    snowflake.style.fontSize = Math.random() * 1.5 + 1 + "rem";
+    snowflake.style.animationDuration = Math.random() * 5 + 5 + "s";
+    snowflake.style.animationDelay = Math.random() * 1.5 + "s";
+
+    snowContainer?.appendChild(snowflake);
+
+    snowflake.addEventListener("animationend", () => {
+      snowflake.remove();
+    });
+  }
+  snowInterval = setInterval(createSnowflake, 500);
+  setTimeout(() => {
+    clearInterval(snowInterval);
+  }, 3000);
+</script>

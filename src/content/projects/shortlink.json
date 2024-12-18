@@ -1,10 +1,9 @@
 {
-  "title": "El acortador de url definitivo",
-  "description": "Acortador de url construido con vue3 y supabase como backend. Sólo tienes que enviar el enlace y obtener el enlace corto de vuelta en cuestión de segundos, sin necesidad de registrarse, es así de simple.",
+  "title": "sholin",
+  "description": "Mejora tu engagement en redes sociales acortando urls",
   "date": "29 oct, 2023",
   "sortDate": "10-29-2023",
   "video": {
-    "url": "/videos/urlshortener.webm",
     "alt": "Demo de urlshortener"
   },
   "links": {

@@ -2,31 +2,15 @@
 import Layout from "@/layouts/Layout.astro";
 import About from "@/components/about/About.astro";
 import ProjectSection from "@/components/project/ProjectSection.astro";
-import AboutHeaderMobile from "@/components/about/header/AboutHeaderMobile.astro";
-
-export async function getStaticPaths() {
-  return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
-}
-
-const lang = Astro.params.lang;
-// let content = {
-// 	en: {
-// 		title: "Welcome to my website",
-// 		description: "This is the English version of the website."
-// 	},
-// 	es: {
-// 		title: "Bienvenido a mi sitio web",
-// 		description: "Esta es la versión en español del sitio web."
-// 	}
-// }[lang];
+import Snow from "@/components/Snow.astro";
 ---
 
-<Layout lang={lang}>
-  <div class="w-[70ch] mx-auto">
+<Layout>
+  <div class="relative">
+    <Snow />
+  </div>
+  <div class="w-full flex flex-col gap-y-8 px-4 lg:px-0 lg:w-[70ch] lg:mx-auto">
     <About />
-    <!--<main class="pt-8 pb-[5rem] lg:pb-0 lg:w-">-->
-    <!--<ProjectSection />-->
-    <!--</main>-->
-    <!--<AboutHeaderMobile />-->
+    <ProjectSection />
   </div>
 </Layout>

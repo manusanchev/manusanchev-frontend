@@ -10,10 +10,15 @@ const sortedProjects = allProjects.sort(
 );
 ---
 
-<section class="flex flex-col gap-y-8 lg:gap-y-14 mt-4 lg:mt-[2rem] mb-10">
-  {
-    sortedProjects.map((project) => {
-      return <ProjectCard project={project.data} />;
-    })
-  }
-</section>
+<div>
+  <p class="text-lg text-neutral-800 dark:text-neutral-300 mb-2 font-bold">
+    Proyectos
+  </p>
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {
+      sortedProjects.map((project) => {
+        return <ProjectCard project={project.data} />;
+      })
+    }
+  </section>
+</div>
