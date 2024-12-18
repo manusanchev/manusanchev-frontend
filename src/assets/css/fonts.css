@@ -2,6 +2,6 @@
   font-family: "Geist";
   font-style: normal;
   font-weight: 400 700;
-  src: url("../fonts/geist/Geist-VariableFont_wght.ttf") format("truetype");
+  src: url("/fonts/geist/Geist-VariableFont_wght.ttf") format("truetype");
   font-display: swap;
 }
