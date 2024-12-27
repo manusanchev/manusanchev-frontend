@@ -9,14 +9,14 @@ const hasDemoAndLinks = project.links.demo || project.links.npm;
 ---
 
 <article
-  class="border dark:border-neutral-800 border-neutral-200 transition-colors dark:hover:bg-neutral-800 hover:bg-neutral-200/50 rounded-lg"
+  class="border dark:border-neutral-800 border-neutral-200 transition-colors md:dark:hover:bg-neutral-800 md:hover:bg-neutral-200/50 rounded-lg"
 >
   <div class="px-4 py-2 flex flex-col">
     <div class="flex items-center justify-between">
       <p
         class={`font-medium dark:text-neutral-200 ${
           hasDemoAndLinks
-            ? "hover:underline decoration-wavy decoration-neutral-700 dark:decoration-neutral-300 underline-offset-2 cursor-pointer"
+            ? "underline md:no-underline md:hover:underline decoration-wavy decoration-neutral-700 dark:decoration-neutral-300 underline-offset-2 cursor-pointer"
             : ""
         }`}
       >
