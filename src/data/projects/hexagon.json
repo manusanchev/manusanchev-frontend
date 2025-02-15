@@ -1,0 +1,9 @@
+{
+  "title": "Hexagon",
+  "description": "Programa siguiendo buenas prácticas y no sacrifiques performance",
+  "date": "15 feb, 2025",
+  "sortDate": "02-15-2025",
+  "links": {
+    "github": "https://github.com/manusanchev/vue3-hexagonal-architecture/tree/master"
+  }
+}
