@@ -1,8 +1,5 @@
-// @ts-check
 import { defineConfig } from "astro/config";
-
-import tailwind from "@astrojs/tailwind";
-
+import tailwindcss from "@tailwindcss/vite";
 import icon from "astro-icon";
 
 // https://astro.build/config
@@ -10,10 +7,10 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  vite: {
+    plugins: [tailwindcss()],
+  },
   integrations: [
-    tailwind({
-      applyBaseStyles: false,
-    }),
     icon({
       iconDir: "src/components/icons",
     }),

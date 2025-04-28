@@ -3,8 +3,19 @@ import "@/assets/css/main.css";
 ---
 
 <!doctype html>
-<html lang="es" class="dark">
+<html lang="es">
   <head>
+    <script>
+      (function () {
+        const theme =
+          localStorage.getItem("theme") ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+        document.documentElement.classList.add(theme);
+      })();
+    </script>
+
     <meta charset="UTF-8" />
     <link
       rel="preload"
