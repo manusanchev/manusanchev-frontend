@@ -1,7 +1,29 @@
+---
+import "@/assets/css/main.css";
+---
+
 <!doctype html>
 <html lang="es">
   <head>
+    <script>
+      (function () {
+        const theme =
+          localStorage.getItem("theme") ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+        document.documentElement.classList.add(theme);
+      })();
+    </script>
+
     <meta charset="UTF-8" />
+    <link
+      rel="preload"
+      href="/fonts/geist/Geist-VariableFont_wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -22,6 +44,7 @@
     />
     <meta name="og:url" content="https://www.manusanchev.com" />
   </head>
+
   <body>
     <slot />
   </body>

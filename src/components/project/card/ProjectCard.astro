@@ -1,50 +1,47 @@
 ---
-import ProjectCardLink from "@/components/project/card/ProjectCardLink.astro";
-import ProjectCardVideo from "@/components/project/card/ProjectCardVideo.astro";
-import ProjectCardImage from "@/components/project/card/ProjectCardImage.astro";
-
 interface Props {
   project: any;
 }
-
+import { Icon } from "astro-icon/components";
 const { project } = Astro.props;
+
+const hasDemoAndLinks = project.links.demo || project.links.npm;
 ---
 
-<article>
-  <header class="flex items-center gap-x-2 max-w-fit">
-    <hr class="w-2 lg:w-6 border-separator" />
-    <time class="text-neutral-300 text-sm">{project.date}</time>
-  </header>
-  <div class="px-4 lg:px-8 mt-4">
-    {project.image && <ProjectCardImage image={project.image} />}
-    {project.video && <ProjectCardVideo video={project.video} />}
-    <div class="flex items-center gap-x-3 mb-2">
+<article
+  class="border dark:border-neutral-800 border-neutral-200 transition-colors group md:dark:hover:bg-neutral-800/30 md:hover:bg-neutral-200/50 rounded-lg"
+>
+  <div class="px-4 py-2 flex flex-col">
+    <div class="flex items-center justify-between">
+      <p
+        class={`font-medium dark:text-neutral-200 ${
+          hasDemoAndLinks
+            ? "underline md:no-underline md:group-hover:underline decoration-wavy decoration-neutral-700 dark:decoration-neutral-300 underline-offset-2 cursor-pointer"
+            : ""
+        }`}
+      >
+        <a
+          href={project.links.demo ? project.links.demo : project.links.npm}
+          target="_blank"
+        >
+          {project.title}
+        </a>
+      </p>
       {
-        project.links.github && (
-          <ProjectCardLink
-            url={project.links.github}
-            icon="GithubIcon"
-            name="Github"
-          />
-        )
-      }
-      {
-        project.links.npm && (
-          <ProjectCardLink url={project.links.npm} icon="NpmIcon" name="Npm" />
-        )
-      }
-      {
-        project.links.website && (
-          <ProjectCardLink
-            url={project.links.website}
-            icon="GlobeIcon"
-            name="Website"
-          />
+        project.links?.github && (
+          <a href={project.links.github} target="_blank">
+            <Icon
+              name="GithubIcon"
+              class="size-4 dark:text-neutral-300 text-neutral-500 hover:text-neutral-900  transition-colors dark:hover:text-neutral-100 "
+            />
+          </a>
         )
       }
     </div>
-    <p class="font-bold text-neutral-200 mb-1 text-lg">{project.title}</p>
-    <p class="max-w-[70ch] text-neutral-300 leading-relaxed">
+
+    <p
+      class="max-w-[70ch] dark:text-neutral-400 text-neutral-700 leading-relaxed text-sm"
+    >
       {project.description}
     </p>
   </div>

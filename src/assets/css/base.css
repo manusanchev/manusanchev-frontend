@@ -1,5 +1,11 @@
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-geist: "Geist", sans-serif;
+}
+
 @layer base {
-  body {
-    @apply bg-[#08090a] text-white font-inter;
-  }
+    body {
+        @apply bg-white text-neutral-800 dark:bg-[#09090B] dark:text-neutral-300 font-geist;
+    }
 }

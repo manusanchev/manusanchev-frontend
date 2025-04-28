@@ -3,18 +3,31 @@ import HeaderContactNav from "@/components/about/header/contact/HeaderContactNav
 import { Icon } from "astro-icon/components";
 ---
 
-<header class="flex items-center justify-between">
-  <div class="relative">
-    <a href="https://manusanchev.com">
-      <h1 class="font-black text-3xl lg:text-6xl font-fixel">
-        Manuel <br />
-        Sánchez.
-      </h1>
-    </a>
-    <Icon
-      name="GradientIcon"
-      class="size-[10rem] animate-pulse absolute -top-[1rem] h-[8rem] blur-xl -z-10 lg:h-[14rem] lg:-right-0"
-    />
-  </div>
+<header
+  class="flex items-center justify-between border px-2 py-1.5 rounded-lg bg-neutral-200/50 dark:bg-neutral-900 dark:border-neutral-800 border-neutral-200 sticky top-4"
+>
+  <a
+    class="rounded-lg px-2.5 py-1.5 dark:text-neutral-300 dark:hover:text-neutral-300 text-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors gap-x-2 flex items-center"
+    href="https://manusanchev.com"
+  >
+    <!-- <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="size-5"
+  ><path
+    d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z"
+  ></path><path d="M12 22v-3"></path></svg
+>-->
+
+    <Icon name="HouseIcon" />
+    <span class="text-sm">Desarrollador Frontend</span>
+  </a>
   <HeaderContactNav />
 </header>

@@ -1,9 +1,10 @@
 ---
 import HeaderContactLink from "@/components/about/header/contact/HeaderContactLink.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <nav>
-  <ul class="flex items-center gap-x-4">
+  <ul class="flex items-center gap-x-4 px-2.5">
     <HeaderContactLink
       link="https://www.linkedin.com/in/manusanchev/"
       ariaLabel="linkedin"
@@ -22,5 +23,33 @@ import HeaderContactLink from "@/components/about/header/contact/HeaderContactLi
       target="_blank"
       icon="EmailIcon"
     />
+    <li class="hidden dark:block">
+      <Icon
+        id="toggle-theme-light"
+        name="SunIcon"
+        class="size-4 hover:rotate-90 cursor-pointer transition dark:hover:text-white text-neutral-600 hover:text-neutral-900 dark:text-neutral-300"
+      />
+    </li>
+    <li class="dark:hidden">
+      <Icon
+        id="toggle-theme-dark"
+        name="MoonIcon"
+        class="size-4 cursor-pointer transition dark:hover:text-white dark:text-neutral-300 text-neutral-600 hover:text-neutral-900"
+      />
+    </li>
   </ul>
 </nav>
+
+<script>
+  const toggleTheme = () => {
+    const theme = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("theme", theme ? "dark" : "light");
+  };
+
+  document
+    .getElementById("toggle-theme-light")
+    ?.addEventListener("click", toggleTheme);
+  document
+    .getElementById("toggle-theme-dark")
+    ?.addEventListener("click", toggleTheme);
+</script>

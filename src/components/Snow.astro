@@ -1,0 +1,81 @@
+---
+interface Props {
+  duration?: number
+  intensity?: 'light' | 'medium' | 'heavy'; 
+  symbol?: string;
+}
+
+const { 
+  duration = 3000, 
+  intensity = 'medium',
+  symbol = '❄'
+} = Astro.props;
+---
+
+<div class="fixed inset-0 z-50 pointer-events-none overflow-hidden">
+  <div id="snow-container" class="w-full h-full relative"></div>
+</div>
+
+<script define:vars={{ duration, intensity, symbol }}>
+  class SnowEffect {
+    constructor() {
+      this.container = document.getElementById("snow-container");
+      this.interval = null;
+      this.isActive = false;
+      
+      this.intensitySettings = {
+        light: 1000,
+        medium: 500,
+        heavy: 200
+      };
+    }
+
+    createSnowflake() {
+      if (!this.container || !this.isActive) return;
+
+      const snowflake = document.createElement("div");
+      snowflake.textContent = symbol;
+      snowflake.className = "absolute top-[-10%] text-neutral-700 dark:text-white opacity-80 animate-fall";
+
+      snowflake.style.left = `${Math.random() * 100}%`;
+      snowflake.style.fontSize = `${Math.random() * 1.5 + 1}rem`;
+      snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`;
+      snowflake.style.animationDelay = `${Math.random() * 1.5}s`;
+
+      snowflake.style.transform = `translateX(${Math.random() * 10 - 5}px)`;
+
+      this.container.appendChild(snowflake);
+
+      snowflake.addEventListener("animationend", () => {
+        snowflake.remove();
+      }, { once: true });
+    }
+
+    start() {
+      this.isActive = true;
+      this.interval = setInterval(
+        () => this.createSnowflake(), 
+        this.intensitySettings[intensity]
+      );
+
+      setTimeout(() => this.stop(), duration);
+    }
+
+    stop() {
+      this.isActive = false;
+      if (this.interval) {
+        clearInterval(this.interval);
+        this.interval = null;
+      }
+    }
+  }
+
+  const snowEffect = new SnowEffect();
+  snowEffect.start();
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      snowEffect.stop();
+    }
+  });
+</script>

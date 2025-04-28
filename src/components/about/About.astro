@@ -1,16 +1,16 @@
 ---
 import AboutHeader from "@/components/about/header/AboutHeader.astro";
-import AboutCard from "@/components/about/AboutCard.astro";
-
-const { class: inheritedClass } = Astro.props;
 ---
 
-<div class={`p-4 md:p-8 ${inheritedClass}`}>
+<div>
   <AboutHeader />
-  <section class="mt-8">
-    <AboutCard
-      title="Sobre mi"
-      description="Desarrollador web con 5 años de experiencia, especializado en desarrollo frontend. Me apasiona crear software escalable, mantenible y eficiente en rendimiento. Siempre con ganas de seguir creciendo y aportando soluciones innovadoras a problemas complejos."
-    />
+  <section class="mt-10">
+    <p class="leading-loose">
+      Soy <b class="dark:text-white">Manuel</b>, Desarrollador web con 5 años de
+      experiencia, especializado en desarrollo frontend. Me apasiona crear
+      software escalable, mantenible y eficiente en rendimiento. Siempre con
+      ganas de seguir creciendo y aportando soluciones innovadoras a problemas
+      complejos.
+    </p>
   </section>
 </div>
