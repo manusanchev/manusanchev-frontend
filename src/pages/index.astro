@@ -8,7 +8,11 @@ import ProjectSection from "@/components/project/ProjectSection.astro";
   <div
     class="w-full flex flex-col gap-y-8 px-4 lg:px-0 lg:w-[45rem] lg:mx-auto"
   >
-    <About />
-    <ProjectSection />
+    <div class="animate-fade-in">
+      <About />
+    </div>
+    <div class="animate-fade-in" style="animation-delay: 0.3s">
+      <ProjectSection />
+    </div>
   </div>
 </Layout>
