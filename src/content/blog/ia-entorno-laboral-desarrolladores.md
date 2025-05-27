@@ -9,7 +9,7 @@ draft: false
 
 Hace unos años, cuando alguien mencionaba "inteligencia artificial", la mayoría pensábamos en robots de ciencia ficción o en HAL 9000 diciéndonos *"I'm sorry Dave, I can't do that"*. Hoy en día, la IA está tan presente en nuestro día a día que probablemente has usado ChatGPT para escribir un email, GitHub Copilot para completar una función, o al menos has visto a tu compañero de trabajo preguntándole a Claude cómo optimizar una consulta SQL.
 
-Y aquí estamos, en 2024, en medio de una revolución tecnológica que está dividiendo a la comunidad de desarrolladores como nunca antes. **¿La IA viene a quitarnos el trabajo o a hacernos más productivos?** Spoiler alert: la respuesta no es tan simple como un `true` o `false`.
+Y aquí estamos, en 2025, en medio de una revolución tecnológica que está dividiendo a la comunidad de desarrolladores como nunca antes. **¿La IA viene a quitarnos el trabajo o a hacernos más productivos?** Spoiler alert: la respuesta no es tan simple como un `true` o `false`.
 
 ## El auge imparable de la IA entre desarrolladores
 
