@@ -1,0 +1,20 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<a
+  href="/blog"
+  class="group inline-flex items-center gap-x-2 px-4 py-2 bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg text-neutral-800 dark:text-neutral-200 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all duration-300 hover:scale-105 hover:shadow-lg dark:hover:shadow-neutral-900/50"
+>
+  <Icon 
+    name="BlogIcon" 
+    class="size-4 transition-transform duration-300 group-hover:rotate-12" 
+  />
+  <span class="text-sm font-medium">Blog</span>
+  <div class="w-0 group-hover:w-auto transition-all duration-300 overflow-hidden">
+    <Icon 
+      name="ArrowLeftIcon" 
+      class="size-3 opacity-0 group-hover:opacity-100 flex-shrink-0 transition-opacity duration-300" 
+    />
+  </div>
+</a>

@@ -2,21 +2,21 @@
 import Layout from "@/layouts/Layout.astro";
 import About from "@/components/about/About.astro";
 import ProjectSection from "@/components/project/ProjectSection.astro";
+import BlogButton from "@/components/blog/BlogButton.astro";
 ---
 
 <Layout>
-  <div
-    class="w-full flex flex-col gap-y-8 px-4 lg:px-0 lg:w-[45rem] lg:mx-auto"
-  >
-    <div class="animate-fade-in">
-      <About />
-    </div>
-    <div class="animate-fade-in" style="animation-delay: 0.3s">
-      <ProjectSection />
-    </div>
-    <div class="absolute select-none flex items-center gap-x-2 bottom-4 xl:top-4 xl:bottom-auto xl:hover:top-5 transition-all bg-neutral-200/50 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-800 rounded-lg px-4 py-1 max-w-fit right-4 font-light text-xs text-neutral-800 dark:text-neutral-300">
-      <div class="size-2 bg-green-800 dark:bg-green-600 rounded-full animate-pulse " />
-      All Systems Operational :)
-    </div>
+  <div class="animate-fade-in" style="animation-delay: 0.1s">
+    <About />
+  </div>
+  <div class="animate-fade-in" style="animation-delay: 0.3s">
+    <ProjectSection />
+  </div>
+  <div class="animate-fade-in flex justify-center" style="animation-delay: 0.6s">
+    <BlogButton />
+  </div>
+  <div class="absolute select-none flex items-center gap-x-2 bottom-4 xl:top-4 xl:bottom-auto xl:hover:top-5 transition-all bg-neutral-200/50 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-800 rounded-lg px-4 py-1 max-w-fit right-4 font-light text-xs text-neutral-800 dark:text-neutral-300">
+    <div class="size-2 bg-green-800 dark:bg-green-600 rounded-full animate-pulse " />
+    All Systems Operational :)
   </div>
 </Layout>

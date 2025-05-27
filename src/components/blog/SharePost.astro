@@ -1,0 +1,222 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  title: string;
+  description: string;
+  url: string;
+}
+
+const { title, description, url } = Astro.props;
+
+// URLs para compartir
+const shareUrls = {
+  twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${title}\n\n${description}`)}&url=${encodeURIComponent(url)}`,
+  linkedin: `https://www.linkedin.com/feed/?shareActive=true&text=${encodeURIComponent(`${title}\n\n${description}\n\n${url}`)}`,
+  email: `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(`${description}\n\n${url}`)}`
+};
+---
+
+<div class="share-post">
+  <h3 class="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-4">
+    Compartir este post
+  </h3>
+  
+  <div class="flex flex-wrap gap-3">
+    <!-- Twitter/X -->
+    <a 
+      href={shareUrls.twitter}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="share-button group"
+      aria-label="Compartir en Twitter"
+    >
+      <Icon name="TwitterIcon" class="size-4" />
+      <span>Twitter</span>
+    </a>
+
+    <!-- LinkedIn -->
+    <button 
+      class="share-button group linkedin-share-btn"
+      data-url={url}
+      data-title={title}
+      data-description={description}
+      aria-label="Compartir en LinkedIn"
+    >
+      <Icon name="LinkednIcon" class="size-4" />
+      <span>LinkedIn</span>
+    </button>
+
+    <!-- Email -->
+    <a 
+      href={shareUrls.email}
+      class="share-button group"
+      aria-label="Compartir por email"
+    >
+      <Icon name="EmailIcon" class="size-4" />
+      <span>Email</span>
+    </a>
+
+    <!-- Copiar enlace -->
+    <button 
+      class="share-button group copy-link-btn"
+      data-url={url}
+      aria-label="Copiar enlace"
+    >
+      <Icon name="CopyIcon" class="size-4" />
+      <span class="copy-text">Copiar enlace</span>
+    </button>
+  </div>
+</div>
+
+<style>
+  .share-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background-color: rgb(245 245 245);
+    border: 1px solid rgb(229 229 229);
+    border-radius: 0.5rem;
+    color: rgb(64 64 64);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .dark .share-button {
+    background-color: rgb(64 64 64);
+    border-color: rgb(115 115 115);
+    color: rgb(212 212 212);
+  }
+
+  .share-button:hover {
+    background-color: rgb(229 229 229);
+    border-color: rgb(163 163 163);
+    transform: scale(1.02);
+  }
+
+  .dark .share-button:hover {
+    background-color: rgb(115 115 115);
+    border-color: rgb(163 163 163);
+  }
+
+  .share-button:active {
+    transform: scale(0.98);
+  }
+
+  /* Iconos con colores sutiles en hover */
+  .share-button:hover [astro-icon="TwitterIcon"] {
+    color: rgb(29 161 242);
+  }
+
+  .share-button:hover [astro-icon="LinkednIcon"] {
+    color: rgb(0 119 181);
+  }
+
+  .share-button:hover [astro-icon="EmailIcon"] {
+    color: rgb(234 67 53);
+  }
+
+  .share-button:hover [astro-icon="CopyIcon"] {
+    color: rgb(16 185 129);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Funcionalidad para copiar enlace
+    const copyButtons = document.querySelectorAll('.copy-link-btn');
+    
+    copyButtons.forEach(button => {
+      button.addEventListener('click', async () => {
+        const url = button.getAttribute('data-url');
+        const copyText = button.querySelector('.copy-text');
+        
+        if (!url || !copyText) return;
+        
+        try {
+          await navigator.clipboard.writeText(url);
+          
+          // Feedback visual
+          const originalText = copyText.textContent;
+          copyText.textContent = '¡Copiado!';
+          
+          setTimeout(() => {
+            copyText.textContent = originalText;
+          }, 2000);
+          
+        } catch (err) {
+          console.error('Error al copiar:', err);
+          
+          // Fallback para navegadores que no soportan clipboard API
+          const textArea = document.createElement('textarea');
+          textArea.value = url;
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textArea);
+          
+          const originalText = copyText.textContent;
+          copyText.textContent = '¡Copiado!';
+          
+          setTimeout(() => {
+            copyText.textContent = originalText;
+          }, 2000);
+        }
+      });
+    });
+
+    // Funcionalidad para LinkedIn
+    const linkedinButtons = document.querySelectorAll('.linkedin-share-btn');
+    
+    linkedinButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.getAttribute('data-url');
+        const title = button.getAttribute('data-title');
+        const description = button.getAttribute('data-description');
+        
+        if (!url || !title) return;
+        
+        // Usar Web Share API si está disponible
+        if (navigator.share) {
+          navigator.share({
+            title: title,
+            text: description,
+            url: url
+          }).catch(err => {
+            console.log('Error sharing:', err);
+            // Fallback a LinkedIn
+            fallbackLinkedInShare(url, title, description);
+          });
+        } else {
+          // Fallback a LinkedIn
+          fallbackLinkedInShare(url, title, description);
+        }
+      });
+    });
+
+    function fallbackLinkedInShare(url, title, description) {
+      // Método más confiable para LinkedIn
+      const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+      
+      // Abrir en nueva ventana
+      const popup = window.open(
+        linkedinUrl,
+        'linkedin-share',
+        'width=600,height=600,scrollbars=yes,resizable=yes'
+      );
+      
+      // Opcional: cerrar popup después de un tiempo
+      if (popup) {
+        setTimeout(() => {
+          if (!popup.closed) {
+            popup.focus();
+          }
+        }, 1000);
+      }
+    }
+  });
+</script> 

@@ -1,0 +1,78 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BlogCard from "@/components/blog/BlogCard.astro";
+import { getCollection } from "astro:content";
+import { collections } from "@/types/collections";
+import { Icon } from "astro-icon/components";
+
+const allPosts = await getCollection(collections.BLOG);
+const publishedPosts = allPosts
+  .filter(post => !post.data.draft)
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+// SEO data
+const blogTitle = "Blog | Manuel Sánchez";
+const blogDescription = "Últimas noticias y actualizaciones sobre desarrollo frontend, tecnologías web y mis experiencias como desarrollador.";
+const blogUrl = new URL("/blog", Astro.site || 'http://localhost:3002').toString();
+---
+
+<Layout
+  title={blogTitle}
+  description={blogDescription}
+  ogTitle="Blog - Manuel Sánchez"
+  ogDescription={blogDescription}
+  ogUrl={blogUrl}
+  canonical={blogUrl}
+>
+  <!-- Header del blog -->
+  <div class="animate-fade-in" style="animation-delay: 0.1s">
+      <div class="flex items-center gap-x-3 mb-6">
+        <a 
+          href="/" 
+          class="inline-flex items-center gap-x-2 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200 transition-colors"
+        >
+          <Icon name="ArrowLeftIcon" class="size-4 rotate-180" />
+          <span class="text-sm">Volver al inicio</span>
+        </a>
+      </div>
+      
+      <div class="border-b border-neutral-200 dark:border-neutral-800 pb-6">
+        <h1 class="text-3xl font-bold dark:text-neutral-200 text-neutral-900 mb-2">
+          Blog
+        </h1>
+        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+          Últimas noticias y actualizaciones sobre desarrollo frontend, tecnologías web y mis experiencias como desarrollador.
+        </p>
+      </div>
+    </div>
+
+  <!-- Lista de posts -->
+  <div class="animate-fade-in" style="animation-delay: 0.3s">
+    {publishedPosts.length > 0 ? (
+      <div class="grid grid-cols-1 gap-4">
+        {publishedPosts.map((post) => (
+          <BlogCard post={post} />
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-12">
+        <p class="text-neutral-500 dark:text-neutral-400">
+          No hay posts publicados aún. ¡Vuelve pronto para ver nuevo contenido!
+        </p>
+      </div>
+    )}
+  </div>
+
+  <!-- Footer del blog -->
+  <div class="animate-fade-in text-center py-8" style="animation-delay: 0.5s">
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      ¿Tienes alguna sugerencia para un post? 
+      <a 
+        href="mailto:contact@manusanchev.com" 
+        class="text-neutral-700 dark:text-neutral-300 hover:underline"
+      >
+        Contáctame
+      </a>
+    </p>
+  </div>
+</Layout> 

@@ -1,0 +1,54 @@
+---
+interface Props {
+  post: any;
+}
+
+const { post } = Astro.props;
+
+// Formatear la fecha
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('es-ES', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+};
+---
+
+<a 
+  href={`/blog/${post.id}`}
+  class="block border dark:border-neutral-800 border-neutral-200 transition-all duration-300 group md:dark:hover:bg-neutral-800/30 md:hover:bg-neutral-200/50 rounded-lg cursor-pointer"
+>
+  <article class="px-4 py-3 flex flex-col gap-y-2">
+    <div class="flex items-start justify-between">
+      <div class="flex-1">
+        <h3 class="font-medium dark:text-neutral-200 text-neutral-900 underline md:no-underline md:group-hover:underline decoration-wavy decoration-neutral-700 dark:decoration-neutral-300 underline-offset-2">
+          {post.data.title}
+        </h3>
+        <p class="text-xs text-neutral-500 dark:text-neutral-400 mt-1">
+          {formatDate(post.data.date)} • {post.data.author}
+        </p>
+      </div>
+    </div>
+
+    <p class="max-w-[70ch] dark:text-neutral-400 text-neutral-700 leading-relaxed text-sm">
+      {post.data.description}
+    </p>
+
+    {post.data.tags && post.data.tags.length > 0 && (
+      <div class="flex flex-wrap gap-1 mt-2">
+        {post.data.tags.slice(0, 3).map((tag: string) => (
+          <span class="px-2 py-1 text-xs bg-neutral-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 rounded-md">
+            {tag}
+          </span>
+        ))}
+        {post.data.tags.length > 3 && (
+          <span class="px-2 py-1 text-xs text-neutral-500 dark:text-neutral-400">
+            +{post.data.tags.length - 3} más
+          </span>
+        )}
+      </div>
+    )}
+  </article>
+</a> 

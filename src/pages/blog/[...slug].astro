@@ -1,0 +1,142 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+import { collections } from "@/types/collections";
+import { Icon } from "astro-icon/components";
+import SharePost from "@/components/blog/SharePost.astro";
+import "@/assets/css/blog.css";
+
+export async function getStaticPaths() {
+  const posts = await getCollection(collections.BLOG);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+// Formatear la fecha
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('es-ES', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+};
+
+// Calcular tiempo de lectura estimado
+const calculateReadingTime = (content: string) => {
+  const wordsPerMinute = 200;
+  const words = content.split(/\s+/).length;
+  const minutes = Math.ceil(words / wordsPerMinute);
+  return minutes;
+};
+
+// Obtener URL completa del post
+const currentUrl = new URL(Astro.url.pathname, Astro.site || 'http://localhost:3002').toString();
+
+// SEO data
+const seoTitle = `${post.data.title} | Manuel Sánchez`;
+const seoDescription = post.data.description;
+const ogImage = "/og-blog-image.jpg"; // Puedes crear una imagen específica para blog posts
+---
+
+<Layout
+  title={seoTitle}
+  description={seoDescription}
+  ogTitle={post.data.title}
+  ogDescription={seoDescription}
+  ogImage={ogImage}
+  ogUrl={currentUrl}
+  twitterTitle={post.data.title}
+  twitterDescription={seoDescription}
+  twitterImage={ogImage}
+  canonical={currentUrl}
+  type="article"
+  author={post.data.author}
+  publishedTime={post.data.date}
+  tags={post.data.tags}
+>
+  <!-- Navegación -->
+  <div class="animate-fade-in" style="animation-delay: 0.1s">
+      <div class="flex items-center gap-x-3">
+        <a 
+          href="/blog" 
+          class="inline-flex items-center gap-x-2 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200 transition-colors"
+        >
+          <Icon name="ArrowLeftIcon" class="size-4 rotate-180" />
+          <span class="text-sm">Volver al blog</span>
+        </a>
+      </div>
+    </div>
+
+  <!-- Header del post -->
+  <div class="animate-fade-in" style="animation-delay: 0.2s">
+    <header class="border-b border-neutral-200 dark:border-neutral-800 pb-8">
+      <h1 class="text-3xl lg:text-4xl font-bold dark:text-neutral-200 text-neutral-900 mb-4 leading-tight">
+        {post.data.title}
+      </h1>
+      
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-neutral-600 dark:text-neutral-400 mb-4">
+        <span>{formatDate(post.data.date)}</span>
+        <span>•</span>
+        <span>Por {post.data.author}</span>
+        <span>•</span>
+        <span>{calculateReadingTime(post.body)} min de lectura</span>
+      </div>
+
+      <p class="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed mb-6">
+        {post.data.description}
+      </p>
+
+      {post.data.tags && post.data.tags.length > 0 && (
+        <div class="flex flex-wrap gap-2">
+          {post.data.tags.map((tag: string) => (
+            <span class="px-3 py-1 text-sm bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full border border-neutral-200 dark:border-neutral-700">
+              #{tag}
+            </span>
+          ))}
+        </div>
+      )}
+    </header>
+  </div>
+
+  <!-- Contenido del post -->
+  <div class="animate-fade-in" style="animation-delay: 0.3s">
+    <article class="blog-content">
+      <Content />
+    </article>
+  </div>
+
+  <!-- Compartir post -->
+  <div class="animate-fade-in border-t border-neutral-200 dark:border-neutral-800 pt-8 mt-8" style="animation-delay: 0.35s">
+    <SharePost 
+      title={post.data.title}
+      description={post.data.description}
+      url={currentUrl}
+    />
+  </div>
+
+  <!-- Footer del post -->
+  <div class="animate-fade-in border-t border-neutral-200 dark:border-neutral-800 pt-12 mt-16" style="animation-delay: 0.4s">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+      <div class="text-neutral-600 dark:text-neutral-400">
+        <p class="text-base leading-relaxed">¿Te gustó este post? Compártelo con otros desarrolladores.</p>
+      </div>
+      <div class="flex gap-3">
+        <a 
+          href="/blog"
+          class="inline-flex items-center gap-x-2 px-5 py-2.5 bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-xl text-neutral-800 dark:text-neutral-200 hover:bg-neutral-200 dark:hover:bg-neutral-700 hover:border-neutral-300 dark:hover:border-neutral-600 transition-all duration-200 text-sm font-medium"
+        >
+          <Icon name="BlogIcon" class="size-4" />
+          Más posts
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+ 
