@@ -203,6 +203,7 @@
 /* Emphasis */
 .blog-content em {
   font-style: italic;
+  font-size: inherit;
   color: rgb(64 64 64);
 }
 
@@ -273,14 +274,3 @@
 .dark .blog-content img {
   border-color: rgb(64 64 64);
 }
-
-/* First paragraph special styling */
-.blog-content > p:first-of-type {
-  font-size: 1.125rem;
-  line-height: 1.75;
-  color: rgb(64 64 64);
-}
-
-.dark .blog-content > p:first-of-type {
-  color: rgb(212 212 212);
-} 
