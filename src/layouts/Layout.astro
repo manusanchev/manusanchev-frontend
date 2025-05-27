@@ -1,6 +1,7 @@
 ---
 import "@/assets/css/main.css";
 import AboutHeader from "@/components/about/header/AboutHeader.astro";
+import VercelAnalytics from "@/components/VercelAnalytics.astro";
 
 interface Props {
   title?: string;
@@ -137,5 +138,8 @@ const {
         <slot />
       </div>
     </div>
+    
+    <!-- Vercel Analytics -->
+    <VercelAnalytics />
   </body>
 </html>
