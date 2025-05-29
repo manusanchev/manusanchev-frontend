@@ -2,6 +2,7 @@
 import "@/assets/css/main.css";
 import AboutHeader from "@/components/about/header/AboutHeader.astro";
 import SpeedInsights from '@vercel/speed-insights/astro';
+import Analytics from '@vercel/analytics/astro';
 
 interface Props {
   title?: string;
@@ -124,6 +125,7 @@ const {
         })
       }
     </script>
+     <Analytics />
   </head>
 
   <body>
@@ -138,7 +140,6 @@ const {
         <slot />
       </div>
     </div>
+    <SpeedInsights />
   </body>
 </html>
-
-<SpeedInsights />
