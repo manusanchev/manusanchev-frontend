@@ -130,97 +130,99 @@ const shareUrls = {
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Funcionalidad para copiar enlace
+  const copyToClipboard = async (text: string): Promise<boolean> => {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch (error) {
+      console.error('Error al copiar al portapapeles:', error);
+      return false;
+    }
+  };
+
+  const showTemporaryMessage = (element: Element, message: string, duration: number = 2000): void => {
+    const originalText = element.textContent;
+    element.textContent = message;
+    
+    setTimeout(() => {
+      element.textContent = originalText;
+    }, duration);
+  };
+
+  const openLinkedInShare = (url: string): void => {
+    const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+    
+    window.open(
+      linkedinUrl,
+      'linkedin-share',
+      'width=600,height=600,scrollbars=yes,resizable=yes'
+    );
+  };
+
+  const shareViaWebAPI = async (shareData: ShareData): Promise<boolean> => {
+    if (!navigator.share) return false;
+    
+    try {
+      await navigator.share(shareData);
+      return true;
+    } catch (error) {
+      console.log('Error sharing:', error);
+      return false;
+    }
+  };
+
+  const handleCopyClick = async (button: Element): Promise<void> => {
+    const url = button.getAttribute('data-url');
+    const copyText = button.querySelector('.copy-text') || button;
+    
+    if (!url) return;
+
+    const success = await copyToClipboard(url);
+    const message = success ? '¡Copiado!' : 'Error al copiar';
+    
+    showTemporaryMessage(copyText, message);
+  };
+
+  const handleLinkedInClick = async (button: Element): Promise<void> => {
+    const url = button.getAttribute('data-url');
+    const title = button.getAttribute('data-title');
+    const description = button.getAttribute('data-description');
+    
+    if (!url || !title) return;
+
+    const shareData: ShareData = {
+      title,
+      text: description || '',
+      url
+    };
+
+    const webShareSuccess = await shareViaWebAPI(shareData);
+    
+    if (!webShareSuccess) {
+      openLinkedInShare(url);
+    }
+  };
+
+  const initCopyButtons = (): void => {
     const copyButtons = document.querySelectorAll('.copy-link-btn');
     
     copyButtons.forEach(button => {
-      button.addEventListener('click', async () => {
-        const url = button.getAttribute('data-url');
-        const copyText = button.querySelector('.copy-text');
-        
-        if (!url || !copyText) return;
-        
-        try {
-          await navigator.clipboard.writeText(url);
-          
-          // Feedback visual
-          const originalText = copyText.textContent;
-          copyText.textContent = '¡Copiado!';
-          
-          setTimeout(() => {
-            copyText.textContent = originalText;
-          }, 2000);
-          
-        } catch (err) {
-          console.error('Error al copiar:', err);
-          
-          // Fallback para navegadores que no soportan clipboard API
-          const textArea = document.createElement('textarea');
-          textArea.value = url;
-          document.body.appendChild(textArea);
-          textArea.select();
-          document.execCommand('copy');
-          document.body.removeChild(textArea);
-          
-          const originalText = copyText.textContent;
-          copyText.textContent = '¡Copiado!';
-          
-          setTimeout(() => {
-            copyText.textContent = originalText;
-          }, 2000);
-        }
-      });
+      button.addEventListener('click', () => handleCopyClick(button));
     });
+  };
 
-    // Funcionalidad para LinkedIn
+  const initLinkedInButtons = (): void => {
     const linkedinButtons = document.querySelectorAll('.linkedin-share-btn');
     
     linkedinButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const url = button.getAttribute('data-url');
-        const title = button.getAttribute('data-title');
-        const description = button.getAttribute('data-description');
-        
-        if (!url || !title) return;
-        
-        // Usar Web Share API si está disponible
-        if (navigator.share) {
-          navigator.share({
-            title: title,
-            text: description,
-            url: url
-          }).catch(err => {
-            console.log('Error sharing:', err);
-            // Fallback a LinkedIn
-            fallbackLinkedInShare(url, title, description);
-          });
-        } else {
-          // Fallback a LinkedIn
-          fallbackLinkedInShare(url, title, description);
-        }
-      });
+      button.addEventListener('click', () => handleLinkedInClick(button));
     });
+  };
 
-    function fallbackLinkedInShare(url, title, description) {
-      // Método más confiable para LinkedIn
-      const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
-      
-      // Abrir en nueva ventana
-      const popup = window.open(
-        linkedinUrl,
-        'linkedin-share',
-        'width=600,height=600,scrollbars=yes,resizable=yes'
-      );
-      
-      // Opcional: cerrar popup después de un tiempo
-      if (popup) {
-        setTimeout(() => {
-          if (!popup.closed) {
-            popup.focus();
-          }
-        }, 1000);
-      }
-    }
-  });
+  const initSharePost = (): void => {
+    initCopyButtons();
+    initLinkedInButtons();
+  };
+
+  document.addEventListener('DOMContentLoaded', initSharePost);
 </script> 

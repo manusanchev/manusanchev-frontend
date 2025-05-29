@@ -5,7 +5,6 @@ interface Props {
 
 const { post } = Astro.props;
 
-// Formatear la fecha
 const formatDate = (dateString: string) => {
   const date = new Date(dateString);
   return date.toLocaleDateString('es-ES', {

@@ -16,7 +16,7 @@ const {
   <div id="snow-container" class="w-full h-full relative"></div>
 </div>
 
-<script define:vars={{ duration, intensity, symbol }}>
+<script is:inline define:vars={{ duration, intensity, symbol }}>
   class SnowEffect {
     constructor() {
       this.container = document.getElementById("snow-container");

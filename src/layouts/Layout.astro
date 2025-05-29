@@ -1,7 +1,7 @@
 ---
 import "@/assets/css/main.css";
 import AboutHeader from "@/components/about/header/AboutHeader.astro";
-import VercelAnalytics from "@/components/VercelAnalytics.astro";
+import SpeedInsights from '@vercel/speed-insights/astro';
 
 interface Props {
   title?: string;
@@ -95,7 +95,7 @@ const {
     <meta name="twitter:url" content={ogUrl} />
     
     <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
+    <script is:inline type="application/ld+json">
       {
         JSON.stringify({
           "@context": "https://schema.org",
@@ -138,8 +138,7 @@ const {
         <slot />
       </div>
     </div>
-    
-    <!-- Vercel Analytics -->
-    <VercelAnalytics />
   </body>
 </html>
+
+<SpeedInsights />
