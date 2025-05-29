@@ -19,9 +19,5 @@ export default defineConfig({
       iconDir: "src/components/icons",
     }),
   ],
-  adapter: vercel({
-    webAnalytics: {
-      enabled: true,
-    },
-  }),
+  adapter: vercel(),
 });
