@@ -27,18 +27,18 @@ const blogUrl = new URL("/blog", Astro.site || 'http://localhost:3002').toString
       <div class="flex items-center gap-x-3 mb-6">
         <a 
           href="/" 
-          class="inline-flex items-center gap-x-2 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200 transition-colors"
+          class="inline-flex items-center gap-x-2 text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 transition-colors"
         >
           <Icon name="ArrowLeftIcon" class="size-4 rotate-180" />
           <span class="text-sm">Volver al inicio</span>
         </a>
       </div>
       
-      <div class="border-b border-neutral-200 dark:border-neutral-800 pb-6">
-        <h1 class="text-3xl font-bold dark:text-neutral-200 text-neutral-900 mb-2">
+      <div class="border-b border-stone-300 dark:border-stone-700 pb-6">
+        <h1 class="text-3xl font-bold dark:text-stone-100 text-stone-900 mb-2">
           Blog
         </h1>
-        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+        <p class="text-stone-600 dark:text-stone-400 leading-relaxed">
           Últimas noticias y actualizaciones sobre desarrollo frontend, tecnologías web y mis experiencias como desarrollador.
         </p>
       </div>
@@ -53,7 +53,7 @@ const blogUrl = new URL("/blog", Astro.site || 'http://localhost:3002').toString
       </div>
     ) : (
       <div class="text-center py-12">
-        <p class="text-neutral-500 dark:text-neutral-400">
+        <p class="text-stone-500 dark:text-stone-400">
           No hay posts publicados aún. ¡Vuelve pronto para ver nuevo contenido!
         </p>
       </div>
@@ -61,13 +61,13 @@ const blogUrl = new URL("/blog", Astro.site || 'http://localhost:3002').toString
   </div>
 
   <div class="animate-fade-in text-center py-8" style="animation-delay: 0.5s">
-    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+    <p class="text-sm text-stone-500 dark:text-stone-400">
       ¿Tienes alguna sugerencia para un post? 
       <a 
         href="https://www.linkedin.com/in/manusanchev/"
         target="_blank"
         rel="noopener noreferrer"
-        class="text-neutral-700 dark:text-neutral-300 hover:underline"
+        class="text-stone-700 dark:text-stone-300 hover:underline"
       >
         Contáctame
       </a>

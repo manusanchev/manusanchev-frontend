@@ -9,14 +9,14 @@ const hasDemoAndLinks = project.links.demo || project.links.npm;
 ---
 
 <article
-  class="border dark:border-neutral-800 border-neutral-200 transition-colors group md:dark:hover:bg-neutral-800/30 md:hover:bg-neutral-200/50 rounded-lg"
+  class="border dark:border-stone-700 border-stone-300 transition-colors group md:dark:hover:bg-stone-800/50 md:hover:bg-stone-200 rounded-lg"
 >
   <div class="px-4 py-2 flex flex-col">
     <div class="flex items-center justify-between">
       <p
-        class={`font-medium dark:text-neutral-200 ${
+        class={`font-medium dark:text-stone-100 text-stone-900 ${
           hasDemoAndLinks
-            ? "underline md:no-underline md:group-hover:underline decoration-wavy decoration-neutral-700 dark:decoration-neutral-300 underline-offset-2 cursor-pointer"
+            ? "underline md:no-underline md:group-hover:underline decoration-wavy decoration-stone-600 dark:decoration-stone-400 underline-offset-2 cursor-pointer"
             : ""
         }`}
       >
@@ -32,7 +32,7 @@ const hasDemoAndLinks = project.links.demo || project.links.npm;
           <a href={project.links.github} target="_blank">
             <Icon
               name="GithubIcon"
-              class="size-4 dark:text-neutral-300 text-neutral-500 hover:text-neutral-900  transition-colors dark:hover:text-neutral-100 "
+              class="size-4 dark:text-stone-400 text-stone-600 hover:text-stone-900  transition-colors dark:hover:text-stone-200 "
             />
           </a>
         )
@@ -40,7 +40,7 @@ const hasDemoAndLinks = project.links.demo || project.links.npm;
     </div>
 
     <p
-      class="max-w-[70ch] dark:text-neutral-400 text-neutral-700 leading-relaxed text-sm"
+      class="max-w-[70ch] dark:text-stone-400 text-stone-600 leading-relaxed text-sm"
     >
       {project.description}
     </p>
