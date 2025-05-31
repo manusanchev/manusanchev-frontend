@@ -6,6 +6,6 @@
 
 @layer base {
     body {
-        @apply bg-white text-neutral-800 dark:bg-[#09090B] dark:text-neutral-300 font-geist;
+        @apply bg-white text-neutral-800 dark:bg-stone-900 dark:text-neutral-300 font-geist;
     }
 }
