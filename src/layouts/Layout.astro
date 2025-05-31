@@ -26,7 +26,7 @@ const {
   description = "Desarrollador web en Valencia, España",
   ogTitle = title,
   ogDescription = description,
-  ogImage = "/og-image.jpg",
+  ogImage = "/ogImage.webp",
   ogUrl = Astro.url.toString(),
   twitterTitle = ogTitle,
   twitterDescription = ogDescription,
@@ -62,7 +62,11 @@ const {
       crossorigin="anonymous"
     />
     <meta name="viewport" content="width=device-width" />
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
     <meta name="generator" content={Astro.generator} />
     
     <!-- SEO Meta Tags -->
