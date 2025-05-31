@@ -100,34 +100,33 @@ const {
     <meta name="twitter:url" content={ogUrl} />
     
     <!-- JSON-LD Structured Data -->
-    <script is:inline type="application/ld+json">
-      {
-        JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": type === "article" ? "BlogPosting" : "WebSite",
-          "name": ogTitle,
-          "description": ogDescription,
-          "url": ogUrl,
-          "image": ogImage,
-          ...(type === "article" && author && {
-            "author": {
-              "@type": "Person",
-              "name": author
-            }
-          }),
-          ...(type === "article" && publishedTime && {
-            "datePublished": publishedTime
-          }),
-          ...(type === "article" && tags && {
-            "keywords": tags.join(", ")
-          }),
-          "publisher": {
+    <script is:inline type="application/ld+json" set:html={
+      JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": type === "article" ? "BlogPosting" : "WebSite",
+        "name": ogTitle,
+        "description": ogDescription,
+        "url": ogUrl,
+        "image": ogImage,
+        "publisher": {
+          "@type": "Person",
+          "name": "Manuel Sánchez",
+          "url": "https://manusanchev.com"
+        },
+        ...(type === "article" && author ? {
+          "author": {
             "@type": "Person",
-            "name": "Manuel Sánchez",
-            "url": "https://manusanchev.com"
+            "name": author
           }
-        })
-      }
+        } : {}),
+        ...(type === "article" && publishedTime ? {
+          "datePublished": publishedTime
+        } : {}),
+        ...(type === "article" && tags && tags.length > 0 ? {
+          "keywords": tags.join(", ")
+        } : {})
+      })
+    }>
     </script>
      <Analytics />
   </head>
