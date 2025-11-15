@@ -3,9 +3,13 @@ import Layout from "@/layouts/Layout.astro";
 import About from "@/components/about/About.astro";
 import ProjectSection from "@/components/project/ProjectSection.astro";
 import BlogButton from "@/components/blog/BlogButton.astro";
+import Snow from "@/components/Snow.astro";
 ---
 
 <Layout>
+  <div class="relative">
+    <Snow />
+  </div>
   <div class="animate-fade-in" style="animation-delay: 0.1s">
     <About />
   </div>
