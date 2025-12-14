@@ -3,20 +3,6 @@
 @import "@/assets/css/fonts.css";
 @import "@/assets/css/base.css";
 
-
-@keyframes fall {
-    0% {
-        transform: translateY(-10vh);
-    }
-    100% {
-        transform: translateY(110vh);
-    }
-}
-
-.animate-fall {
-    animation: fall linear infinite;
-}
-
 @keyframes fadeIn {
     0% {
         opacity: 0;

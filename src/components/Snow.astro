@@ -1,81 +1,97 @@
 ---
-interface Props {
-  duration?: number
-  intensity?: 'light' | 'medium' | 'heavy'; 
-  symbol?: string;
-}
-
-const { 
-  duration = 3000, 
-  intensity = 'medium',
-  symbol = '❄'
-} = Astro.props;
+const duration = 5000
+const interval = 150
+const symbol = '❄'
 ---
 
-<div class="fixed inset-0 z-50 pointer-events-none overflow-hidden">
-  <div id="snow-container" class="w-full h-full relative"></div>
-</div>
+<div 
+  id="snow-container" 
+  class="fixed inset-0 z-50 pointer-events-none overflow-hidden"
+  aria-hidden="true"
+  data-duration={duration}
+  data-interval={interval}
+  data-symbol={symbol}
+></div>
 
-<script is:inline define:vars={{ duration, intensity, symbol }}>
-  class SnowEffect {
-    constructor() {
-      this.container = document.getElementById("snow-container");
-      this.interval = null;
-      this.isActive = false;
-      
-      this.intensitySettings = {
-        light: 1000,
-        medium: 500,
-        heavy: 200
-      };
-    }
+<script>
+  const container = document.getElementById('snow-container')
+  
+  if (container) {
+    const duration = Number(container.dataset.duration)
+    const interval = Number(container.dataset.interval)
+    const symbol = container.dataset.symbol ?? '❄'
+    
+    let isActive = true
+    let intervalId: ReturnType<typeof setInterval> | null = null
 
-    createSnowflake() {
-      if (!this.container || !this.isActive) return;
-
-      const snowflake = document.createElement("div");
-      snowflake.textContent = symbol;
-      snowflake.className = "absolute top-[-10%] text-stone-600 dark:text-white opacity-80 animate-fall";
-
-      snowflake.style.left = `${Math.random() * 100}%`;
-      snowflake.style.fontSize = `${Math.random() * 1.5 + 1}rem`;
-      snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`;
-      snowflake.style.animationDelay = `${Math.random() * 1.5}s`;
-
-      snowflake.style.transform = `translateX(${Math.random() * 10 - 5}px)`;
-
-      this.container.appendChild(snowflake);
-
-      snowflake.addEventListener("animationend", () => {
-        snowflake.remove();
-      }, { once: true });
-    }
-
-    start() {
-      this.isActive = true;
-      this.interval = setInterval(
-        () => this.createSnowflake(), 
-        this.intensitySettings[intensity]
-      );
-
-      setTimeout(() => this.stop(), duration);
-    }
-
-    stop() {
-      this.isActive = false;
-      if (this.interval) {
-        clearInterval(this.interval);
-        this.interval = null;
+    const createSnowflake = () => {
+      if (!isActive) {
+        return
       }
+
+      const snowflake = document.createElement('span')
+      snowflake.textContent = symbol
+      snowflake.className = 'snowflake absolute text-stone-600 dark:text-white opacity-80'
+      
+      const left = Math.random() * 100
+      const size = Math.random() * 1.5 + 0.8
+      const fallDuration = Math.random() * 4 + 4
+      const drift = (Math.random() - 0.5) * 100
+
+      snowflake.style.cssText = `
+        left: ${left}%;
+        font-size: ${size}rem;
+        --fall-duration: ${fallDuration}s;
+        --drift: ${drift}px;
+      `
+
+      container.appendChild(snowflake)
+
+      setTimeout(() => {
+        snowflake.remove()
+      }, fallDuration * 1000)
+    }
+
+    const stop = () => {
+      isActive = false
+      if (intervalId) {
+        clearInterval(intervalId)
+        intervalId = null
+      }
+    }
+
+    intervalId = setInterval(createSnowflake, interval)
+    setTimeout(stop, duration)
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        stop()
+      }
+    }, { once: true })
+  }
+</script>
+
+<style is:global>
+  @keyframes snowfall {
+    0% {
+      transform: translateY(-5vh) translateX(0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(105vh) translateX(var(--drift));
+      opacity: 0;
     }
   }
 
-  const snowEffect = new SnowEffect();
-  snowEffect.start();
-
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-      snowEffect.stop();
-    }
-  });
-</script>
+  .snowflake {
+    top: 0;
+    animation: snowfall var(--fall-duration) linear forwards;
+    will-change: transform;
+  }
+</style>

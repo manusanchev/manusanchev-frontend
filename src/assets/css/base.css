@@ -6,6 +6,20 @@
 
 @layer base {
     body {
-        @apply bg-stone-50 text-stone-900 dark:bg-stone-900 dark:text-stone-200 font-geist;
+        @apply text-stone-950 dark:text-stone-200 font-geist;
+        background: 
+            radial-gradient(ellipse 80% 50% at 50% -20%, rgba(214, 211, 209, 0.4) 0%, transparent 50%),
+            radial-gradient(ellipse 60% 40% at 100% 100%, rgba(168, 162, 158, 0.2) 0%, transparent 40%),
+            linear-gradient(180deg, #ffffff 0%, #fafaf9 50%, #f5f5f4 100%);
+        background-attachment: fixed;
+    }
+
+    html.dark body {
+        background: 
+            radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 113, 108, 0.15) 0%, transparent 50%),
+            radial-gradient(ellipse 60% 40% at 100% 0%, rgba(168, 162, 158, 0.08) 0%, transparent 40%),
+            radial-gradient(ellipse 50% 30% at 0% 100%, rgba(87, 83, 78, 0.12) 0%, transparent 50%),
+            linear-gradient(180deg, #1c1917 0%, #0c0a09 100%);
+        background-attachment: fixed;
     }
 }

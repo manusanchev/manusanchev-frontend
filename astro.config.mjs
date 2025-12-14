@@ -13,6 +13,10 @@ export default defineConfig({
     port: 3000,
   },
 
+  experimental: {
+    svgo: true,
+  },
+
   vite: {
     plugins: [tailwindcss()],
     resolve: {
