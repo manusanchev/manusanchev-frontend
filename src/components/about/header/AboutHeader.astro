@@ -1,6 +1,7 @@
 ---
 import HeaderContactNav from "@/components/about/header/contact/HeaderContactNav.astro";
 import { Icon } from "astro-icon/components";
+import { isChristmasSeason } from "@/utils/season";
 ---
 
 <header
@@ -10,27 +11,26 @@ import { Icon } from "astro-icon/components";
     class="rounded-lg px-2.5 py-1.5 dark:text-stone-300 dark:hover:text-stone-200 text-stone-700 hover:bg-stone-200/60 dark:hover:bg-stone-700/60 transition-all duration-200 gap-x-2 flex items-center"
     href="https://manusanchev.com"
   >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="size-5"
-    >
-      <path
-        d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z"
+    {isChristmasSeason ? (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="size-5"
       >
-      </path>
-      <path d="M12 22v-3"> </path>
-    </svg>
-    <!--<Icon name="HouseIcon" />-->
-    <!--<span class="text-sm">Desarrollador Frontend</span>-->
-    <span class="text-sm">Felices Fiestas</span>
+        <path d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z"></path>
+        <path d="M12 22v-3"></path>
+      </svg>
+    ) : (
+      <Icon name="HouseIcon" />
+    )}
+    <span class="text-sm">{isChristmasSeason ? "Felices Fiestas" : "Desarrollador Frontend"}</span>
   </a>
   <HeaderContactNav />
 </header>

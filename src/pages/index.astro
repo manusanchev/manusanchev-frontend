@@ -4,10 +4,11 @@ import About from "@/components/about/About.astro";
 import ProjectSection from "@/components/project/ProjectSection.astro";
 import BlogButton from "@/components/blog/BlogButton.astro";
 import Snow from "@/components/Snow.astro";
+import { isChristmasSeason } from "@/utils/season";
 ---
 
 <Layout>
-  <Snow />
+  {isChristmasSeason && <Snow />}
   <div class="animate-fade-in" style="animation-delay: 0.1s">
     <About />
   </div>
